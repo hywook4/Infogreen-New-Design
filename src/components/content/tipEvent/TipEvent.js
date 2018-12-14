@@ -4,7 +4,7 @@ import './TipEvent.css';
 export const TipEvent = ()=>{
     return(
         <div className="tipEvent_container">
-            <div className="container">
+            <div className="tip_container_inner">
                 <div className="event_tip">
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-12 tip-event-inner">

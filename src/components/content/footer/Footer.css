@@ -5,17 +5,38 @@
     position: relative;
 }
 
-footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
-.logofooter {height: 129px;font-size:25px; color:#fff; font-weight:700;}
+footer { 
+	/* background-color:#0c1a1e;
+	 min-height:350px;
+	  font-family: 'Open Sans', sans-serif; */
+	  width: 90%;
+    margin: 0 auto;
+    padding: 20px 15px;
+	 }
+.logofooter {
+	/* height: 129px; */
+	font-size:25px; 
+	color:#fff;
+	width: 100px;
+	 /* font-weight:700; */
+	}
 
 .footer-col p { color:#fff; font-size:12px; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
 .footer-col p i { width:20px; color:#999;}
 .copyright { min-height:40px; background-color:#000000;}
 .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0;}
-.col-md-6.footer-col p {color: black;}
+/* .col-md-6.footer-col p {color: black;} */
 .bg{background-color: #e6e6e6;}
-.dim{height: 146px;width: 31%;}
-ul.tobottom{position: absolute;bottom:17%;left: 50%;}
+.dim
+	{
+	/* height: 146px; */
+	width: 100%;
+}
+/* ul.tobottom{
+	position: absolute;
+	bottom:17%;
+	left: 50%;
+} */
 .bg .container{padding-bottom: 26px;}
 
 
@@ -25,14 +46,17 @@ ul.tobottom{position: absolute;bottom:17%;left: 50%;}
 
 /* footer social icons */
 ul.social-network {
-	list-style: none;
+	/* list-style: none;
 	display: inline;
 	margin-left:0 !important;
-	padding: 0;
+	padding: 0; */
+	position: relative;
+    top: 100px;
+    bottom: 0;
 }
 ul.social-network li {
 	display: inline;
-    padding: 0 6px;
+    padding: 0 10px;
 }
 
 .social-network a.icoFacebook:hover {
@@ -59,22 +83,20 @@ a.socialIcon:hover, .socialHoverClass {
 }
 
 .social-circle li a {
-	display:inline-block;
-	position:relative;
-	margin:0 auto 0 auto;
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	text-align:center;
-	width: 50px;
-	height: 50px;
-    font-size:20px;
+	display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
     background-color: darkgrey;
 }
 .social-circle li i {
-	margin:0;
-	line-height:50px;
-	text-align: center;
+	margin: 0;
+    line-height: 40px;
+    text-align: center;
 }
 
 .social-circle li a:hover i, .triggeredHover {
@@ -97,6 +119,29 @@ a.socialIcon:hover, .socialHoverClass {
 	transition: all 0.8s;
 }
 
-a {
+/* a {
  background-color: #D3D3D3;   
+} */
+
+p.footer_para{
+	color: gray;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+p.footer_para span{
+	padding-right: 20px;
+	color: gray;
+    letter-spacing: 1px;
+}
+
+p.footer_para span b{
+	padding-left: 20px;
+}
+
+p.footer_para-heading{
+	color: gray;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 12px;
 }

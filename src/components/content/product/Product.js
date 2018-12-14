@@ -32,7 +32,7 @@ export const Product=()=>{
                                 <li><p>Household Product</p>
                                 <ul className="prod_ctgy_inner">
                                     <li>
-                                        <Link to={"/laundary"}>Laundary Detergent</Link>
+                                        <Link to={"/"}>Laundary Detergent</Link>
                                     </li>
                                     <li>
                                         <Link to={"/fabric"}>Fabric Softener</Link>
@@ -85,6 +85,7 @@ export const Product=()=>{
 
                     <div className="content-info">
                         <Route exact path="/laundary" exact={true} component={Laundary} />
+                        <Route exact path="/" exact={true} component={Laundary} />
                         <Route path="/fabric" component={Fabric} />
                         <Route path="/dishwashing" component={Dishwashing} />
                         <Route path="/odor" component={Odor} />

@@ -9,22 +9,22 @@ export const Footer = ()=>{
         <div className="footer_container">
              {/* <h1>footer</h1> */}
             <div className="container-fluid bg">
-                <div className="container footer">
+                <div className="footer">
                     <div className="row">
                         <div className="col-md-6 footer-col">
                             <div className="logofooter">
                                 <img className="img-responsive dim" src={require('../../../assets/images/MOMGUIDE_LOGO_WHITE.png')} />
                             </div>
-                            <p><span><b> Lorem Ipsum    |</b></span>
-                                <span> <b>Lorem Ipsum     | </b></span>      
-                                <span> <b>Lorem Ipsum</b></span>
+                            <p className="footer_para"><span>Lorem Ipsum<b> |</b></span>
+                                <span>Lorem Ipsum <b> | </b></span>      
+                                <span>Lorem Ipsum <b></b></span>
                             </p>
-                            <p>
+                            <p className="footer_para-heading">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                             </p>
     
-                            <p>Copyrights @INFOGREENC Inc. All rights reserved.</p>
+                            <p className="footer_para-heading">Copyrights @INFOGREENC Inc. All rights reserved.</p>
     
           
                         </div>
