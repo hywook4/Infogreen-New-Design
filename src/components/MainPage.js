@@ -21,9 +21,6 @@ export const MainPage = ()=>{
                     <Product/>
                     <TipEvent/>
                     <Footer/>
-                    
-                  
-                    {/* <SliderDemo/> */}
                     </div>
                 </div>
             </div>

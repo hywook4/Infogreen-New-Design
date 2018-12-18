@@ -38,7 +38,7 @@ export const Header = ()=>{
                             </li>
                         </ul>
                          <div className="header_search">
-                            <input type="text" placeholder="Search"/>
+                            <input type="text" placeholder="검색"/>
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </div>
                         
