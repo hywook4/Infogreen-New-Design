@@ -1,11 +1,20 @@
-.productHeading{
+.productHeading {
     width: 90%;
     margin: 0px auto;
     position: relative;
 }
 
-.rightDiv{
+.rightDiv {
     width: 100%;
     position: relative;
     margin: 0px auto;
+}
+
+.ui.card {
+    box-shadow: 5px 5px 10px 0px grey !important;
+}
+
+.ui.card>.image, .ui.cards>.card>.image {
+    width: 400px;
+    height: 250px;
 }

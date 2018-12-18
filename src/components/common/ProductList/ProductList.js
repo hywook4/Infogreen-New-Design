@@ -5,7 +5,6 @@ import axios from 'axios';
 
 import 'semantic-ui-css';
 import styles from '../../common/CommonCSS/CommonCSS.css';
-import fabric1 from '../../../assets/images/fabric1.jpg';
 
 export class ProductList extends React.Component {
     state = {
