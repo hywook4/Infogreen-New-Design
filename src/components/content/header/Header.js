@@ -21,24 +21,20 @@ export const Header = ()=>{
                 <Router>
                     <div className="header_router">
                         <ul>
-                         
                             <li>
-                                <Link to="/">Tips</Link>
+                                <Link to="/">홈</Link>
                             </li>
                             <li>
-                                <Link to="/about">About</Link>
+                                <Link to="/category">카테고리</Link>
                             </li>
                             <li>
-                                <Link to="/category">Category</Link>
+                                <Link to="/tips">꿀팁</Link>
                             </li>
                             <li>
-                                <Link to="/request">Request</Link>
+                                <Link to="/request">Q&amp;A</Link>
                             </li>
                             <li>
-                                <Link to="/category">Category</Link>
-                            </li>
-                            <li>
-                                <Link to="/request">Request</Link>
+                                <Link to="/about">소개</Link>
                             </li>
                         </ul>
                          <div className="header_search">
@@ -46,26 +42,22 @@ export const Header = ()=>{
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </div>
                         
-                            <ul>
-                                <li>
-                                    <Link to="/signup">Signup</Link>
-                                </li>
-                                <li>
-                                    <Link to="/login">LogIn</Link>
-                                </li>
-                            </ul>
-                            
-
-                        <Route exact path="/" component={Tips} />
+                        <ul>
+                            <li>
+                                <Link to="/signup">회원가입</Link>
+                            </li>
+                            <li>
+                                <Link to="/login">로그인</Link>
+                            </li>
+                        </ul>
+                        <Route exact path="/tips" component={Tips} />
                         <Route path="/about" component={About} />
                         <Route path="/category" component={Category} />
                         <Route exact path="/request" component={Request} />
                         <Route path="/signup" component={Signup} />
                         <Route exact path="/login" component={Login} />
                     </div>
-                   
-                   
-
+    
                 </Router>
             </div>
 
