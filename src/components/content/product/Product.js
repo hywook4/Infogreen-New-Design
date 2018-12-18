@@ -84,8 +84,8 @@ export const Product=()=>{
                     </div>
 
                     <div className="content-info">
-                        <Route exact path="/laundary" exact={true} component={Laundary} />
-                        <Route exact path="/" exact={true} component={Laundary} />
+                        <Route path="/laundary" exact={true} component={Laundary} />
+                        <Route path="/" exact={true} component={Laundary} />
                         <Route path="/fabric" component={Fabric} />
                         <Route path="/dishwashing" component={Dishwashing} />
                         <Route path="/odor" component={Odor} />
@@ -94,7 +94,7 @@ export const Product=()=>{
                         {/* <Route path="/other" component={Other} /> */}
                     </div> 
                     <div className="content-info-below">
-                        <Route exact path="/soap" exact={true} component={Soap} />
+                        <Route path="/soap" exact={true} component={Soap} />
                         <Route path="/lotion" component={Lotion} />
                         <Route path="/cream" component={Cream} />
                         <Route path="/oil" component={Oil} />
@@ -116,12 +116,5 @@ export const Product=()=>{
 
             </div>
         </div>
-      
-
-
-
-
-    //   waste
-    
     )
 }
