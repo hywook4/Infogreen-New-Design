@@ -29,55 +29,57 @@ export const Product=()=>{
                                 <h4>Menu</h4>
                             </div>
                             <ul className="product_category">
-                                <li><p>Household Product</p>
-                                <ul className="prod_ctgy_inner">
-                                    <li>
-                                        <Link to={"/"}>Laundary Detergent</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/fabric"}>Fabric Softener</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/dishwashing"}>Dishwashing Liquid</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/odor"}>Odor Eliminator</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/other"}>Other</Link>
-                                    </li>
-                                </ul>
+                                <li>
+                                    <p>Household Product</p>
+                                    <ul className="prod_ctgy_inner">
+                                        <li>
+                                            <Link to={"/"}>Laundary Detergent</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/fabric"}>Fabric Softener</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/dishwashing"}>Dishwashing Liquid</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/odor"}>Odor Eliminator</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/other"}>Other</Link>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li><p>Cosmetics</p>
-                                <ul className="prod_ctgy_inner">
-                                    <li>
-                                        <Link to={"/soap"}>Soap</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/lotion"}>Lotion</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/cream"}>Cream</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/oil"}>Oil</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/powder"}>Powder</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/hair"}>Hair</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/suncare"}>SunCare</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/babywipes"}>BabyWipes</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/othercosmetics"}>OtherCosmetics</Link>
-                                    </li>
-                                </ul>
+                                <li>
+                                    <p>Cosmetics</p>
+                                    <ul className="prod_ctgy_inner">
+                                        <li>
+                                            <Link to={"/soap"}>Soap</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/lotion"}>Lotion</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/cream"}>Cream</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/oil"}>Oil</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/powder"}>Powder</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/hair"}>Hair</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/suncare"}>SunCare</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/babywipes"}>BabyWipes</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/othercosmetics"}>OtherCosmetics</Link>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -107,12 +109,6 @@ export const Product=()=>{
 
                 </div>
             </Router>    
-               
-
-
-
-
-            {/* product again */}
 
             </div>
         </div>
