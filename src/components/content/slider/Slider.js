@@ -1,19 +1,13 @@
 import React from 'react';
-// import ReactBootstrapCarousel from '../../../../node_modules/react-bootstrap-carousel';
-// import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 import '../../../../node_modules/react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
 import './Slider.css';
-// import $ from 'jquery';
-// $('.carousel').carousel();
-// import la from '../../../assets/images/la.jpg';
-// import MOMGUIDE_LOGO_WHITE from '../../../assets/images/MOMGUIDE_LOGO_WHITE.png';
 
 
 export const Slider = ()=>{
     return (
         <div className="slider">
             <div className="slider-inner">
-                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="3000">
+                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="4000">
                     <ol className="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
