@@ -12,14 +12,14 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 export const Header = ()=>{
     return(
-        <div className="header">
-            <div className="header_container">
-                <div className="header-inner">
+        <div className="navbar">
+            <div className="navbar_container">
+                <div className="navbar-inner">
                     <img src={MOMGUIDE_LOGO_WHITE} alt=""/>
                     {/* <img src={ require('../../assets/images/MOMGUIDE_LOGO_WHITE.png') } /> */}
                 </div>
                 <Router>
-                    <div className="header_router">
+                    <div className="navbar_router">
                         <ul>
                             <li>
                                 <Link to="/">홈</Link>
@@ -37,7 +37,7 @@ export const Header = ()=>{
                                 <Link to="/about">소개</Link>
                             </li>
                         </ul>
-                         <div className="header_search">
+                         <div className="navbar_search">
                             <input type="text" placeholder="검색"/>
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </div>
