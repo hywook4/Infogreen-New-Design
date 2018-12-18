@@ -33,7 +33,7 @@
     border: 1px solid gray;
     padding: 15px 10px;
     outline: 0;
-    box-shadow: 0px 0px 16px 3px grey;
+    box-shadow: 4px 4px 10px 0px grey;
 }
 
 .search_box i{
