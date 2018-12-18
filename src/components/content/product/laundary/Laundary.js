@@ -1,19 +1,22 @@
 import React from 'react';
 import ProductCard from '../../../common/ProductCard/ProductCard';
 
-import './Laundary.css';
+import { Card } from 'semantic-ui-react';
+import 'semantic-ui-css';
+
+import styles from '../../../common/CommonCSS/CommonCSS.css';
 import fabric1 from '../../../../assets/images/fabric1.jpg';
 
 export const Laundary =()=>{
     return(
-        <div className="laundary">
+        <div className={styles.productHeading}>
             <div className="tip-heading">
                 <i class="fa fa-heart" aria-hidden="true"></i>
-                <h4>Laundary Detergent</h4>
+                <h4>Laundry Detergent</h4>
             </div>
-            <div className="right-div">
+            <div className={styles.rightDiv}>
                 <div className="row">
-                    <div className="col-lg-4 col-md-4 col-sm-12">
+                    <Card.Group itemsPerRow={4}>
                         <ProductCard 
                             src={fabric1}
                             category={"주방세제"}
@@ -21,7 +24,56 @@ export const Laundary =()=>{
                             description={"어떤 설명"}
                             rating={3}
                         />
-                    </div>
+                        <ProductCard 
+                            src={fabric1}
+                            category={"주방세제"}
+                            name={"어떤 세제"}
+                            description={"어떤 설명"}
+                            rating={3}
+                        />
+                        <ProductCard 
+                            src={fabric1}
+                            category={"주방세제"}
+                            name={"어떤 세제"}
+                            description={"어떤 설명"}
+                            rating={3}
+                        />
+                        <ProductCard 
+                            src={fabric1}
+                            category={"주방세제"}
+                            name={"어떤 세제"}
+                            description={"어떤 설명"}
+                            rating={3}
+                        />
+                        <ProductCard 
+                            src={fabric1}
+                            category={"주방세제"}
+                            name={"어떤 세제"}
+                            description={"어떤 설명"}
+                            rating={3}
+                        />
+                        <ProductCard 
+                            src={fabric1}
+                            category={"주방세제"}
+                            name={"어떤 세제"}
+                            description={"어떤 설명"}
+                            rating={3}
+                        />
+                        <ProductCard 
+                            src={fabric1}
+                            category={"주방세제"}
+                            name={"어떤 세제"}
+                            description={"어떤 설명"}
+                            rating={3}
+                        />
+                        <ProductCard 
+                            src={fabric1}
+                            category={"주방세제"}
+                            name={"어떤 세제"}
+                            description={"어떤 설명"}
+                            rating={3}
+                        />
+                    </Card.Group>
                 </div>
             </div>
         </div>
