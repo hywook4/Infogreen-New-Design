@@ -6,6 +6,7 @@ import {Footer} from './content/footer/Footer';
 import {Search} from './content/search/Search';
 import {TipEvent} from './content/tipEvent/TipEvent';
 import {Product} from './content/product/Product';
+import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route} from "react-router-dom"
@@ -50,7 +51,7 @@ export const MainPage = ()=>{
                                         <Route exact path="/request" component={placeHolder} />
                                         <Route path="/signup" component={placeHolder} />
                                         <Route exact path="/login" component={placeHolder} />
-                                        <Route path="/product-details/:id" component={placeHolder} />
+                                        <Route path="/product-details/:id" component={ProductSpecification} />
                                 </div>
                             </React.Fragment>
                         </Router>
