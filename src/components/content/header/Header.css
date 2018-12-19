@@ -11,11 +11,11 @@
 }
 
 
-.navbar{
+.header{
     width: 100%;
     margin: 0 auto;
     position: relative;
-    top: 8px;
+    top: 0;
     right: 0;
     padding: 0px 20px;
     left: 0;
@@ -23,29 +23,29 @@
     bottom: 0;
     float: left;
 }
-.navbar .navbar_container{
+.header .header_container{
     width: 100%;
     margin: 0 auto;
     position: relative;
     top: 0;
     bottom: 0;
-    left: 5%;
+    left: 0;
     right: 0;
     float: left;
 }
 
-.navbar-inner{
+.header-inner{
     width: 100px;
     margin: 0 auto;
     display: inline-block;
     float: left;
 }
-.navbar-inner img{
+.header-inner img{
     width: 100%;
     margin: 0 auto;
     float: left;
 }
-.navbar_router{
+.header_router{
     width: 90%;
     margin: 0 auto;
     position: relative;
@@ -53,7 +53,7 @@
     display: inline-block;
     top: 20px;
 }
-.navbar_router ul{
+.header_router ul{
     width: 40%;
     margin: 0 auto;
     position: relative;
@@ -61,7 +61,7 @@
     color: gray;
     display: inline;
 }
-.navbar_router ul li{
+.header_router ul li{
     display: inline-block;
     color: gray;
     padding: 0 20px;
@@ -71,18 +71,18 @@
     letter-spacing: 1.5px;
 }
 
-.navbar_router ul li a{
+.header_router ul li a{
    text-decoration: none;
     color: gray;
 }
-.navbar_search{
+.header_search{
     display: inline-block;
     width: 37%;
     margin: 0 auto;
     position: relative;
     left: 10%;
 }
-.navbar_search input{
+.header_search input{
     width: 70%;
     margin: 0 auto;
     border-radius: 15px;
@@ -94,7 +94,7 @@
 
 }
 
-.navbar_search i{
+.header_search i{
     font-size: 20px;
     color: skyblue;
     padding-left: 10px;
