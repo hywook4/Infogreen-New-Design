@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import 'semantic-ui-css';
 import styles from '../../common/CommonCSS/CommonCSS.css';
+import fabric1 from '../../../assets/images/fabric1.jpg';
 
 export class ProductList extends React.Component {
     state = {
@@ -24,7 +25,7 @@ export class ProductList extends React.Component {
         return(
             <div className={styles.productHeading}>
                 <div className="tip-heading">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i className="fa fa-heart" aria-hidden="true"></i>
                     <h4>{this.props.category}</h4>
                 </div>
                 <div className={styles.rightDiv}>
@@ -33,6 +34,7 @@ export class ProductList extends React.Component {
                         { 
                             this.state.chemicals.map((chemical, index) =>
                             <ProductCard 
+                                key={index}
                                 src={"http://13.125.89.0/chemical/item_img/" + chemical.image}
                                 category={chemical.category}
                                 name={chemical.name}

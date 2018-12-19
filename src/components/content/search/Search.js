@@ -7,7 +7,7 @@ export const Search =()=>{
             <div className="container">
                 <div className="search_box">
                     <input type="text" placeholder="검색 예) 세제"/>
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i className="fa fa-search" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
