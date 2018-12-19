@@ -51,6 +51,7 @@ export const MainPage = ()=>{
                                         <Route exact path="/request" component={placeHolder} />
                                         <Route path="/signup" component={placeHolder} />
                                         <Route exact path="/login" component={placeHolder} />
+                                        <Route exact path="/events" component={placeHolder} />
                                         <Route path="/product-details/:id" component={ProductSpecification} />
                                 </div>
                             </React.Fragment>
