@@ -34,6 +34,7 @@ export class ProductList extends React.Component {
                         { 
                             this.state.chemicals.map((chemical, index) =>
                             <ProductCard 
+                                payload={chemical}
                                 key={index}
                                 src={"http://13.125.89.0/chemical/item_img/" + chemical.image}
                                 category={chemical.category}

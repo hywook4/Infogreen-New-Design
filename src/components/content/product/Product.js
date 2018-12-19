@@ -1,22 +1,79 @@
 import React from 'react';
 import './Product.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import {Laundary} from '../product/laundary/Laundary';
-import {Fabric} from '../product/fabric/Fabric';
-import {Dishwashing} from '../product/dishwashing/Dishwashing';
-import {Odor} from '../product/odor/Odor';
-import {Other} from '../product/other/Other';
-import {BabyWipes} from '../product/babyWipes/BabyWipes';
-import {Cream} from '../product/cream/Cream';
-import {Hair} from '../product/hair/Hair';
-import {Lotion} from '../product/lotion/Lotion';
-import {Oil} from '../product/oil/Oil';
-import {OtherCosmetics} from '../product/otherCosmetics/OtherCosmetics';
-import {Powder} from '../product/powder/Powder';
-import {Soap} from '../product/soap/Soap';
-import {SunCare} from '../product/sunCare/SunCare';
+import {HashRouter as Router, Route, Link} from "react-router-dom";
+import { ProductList } from '../../common/ProductList/ProductList';
 
 export const Product=()=>{
+    const houseHold = [
+        {
+            path:'/',
+            name:'Laundary Detergent',
+            category:'일반 세제'
+        },
+        {
+            path:'/fabric',
+            name:'Fabric Softener',
+            category:'Fabric'
+        },
+        {
+            path:'/dishwashing',
+            name:'Dishwashing Liquid',
+            category:'Dish Washing'
+        },
+        {
+            path:'/odor',
+            name:'Odor Eliminator',
+            category:'Odor'
+        }
+    ];
+    const cosmetics = [
+        {
+            path:'/soap',
+            name:'Soap',
+            category:'Soap'
+        },
+        {
+            path:'/lotion',
+            name:'Lotion',
+            category:'Lotion'
+        },
+        {
+            path:'/cream',
+            name:'Cream',
+            category:'Cream'
+        },
+        {
+            path:'/oil',
+            name:'Oil',
+            category:'Oil'
+        },
+        {
+            path:'/powder',
+            name:'Powder',
+            category:'Powder'
+        },
+        {
+            path:'/hair',
+            name:'Hair',
+            category:'Hair'
+        },
+        {
+            path:'/suncare',
+            name:'Suncare',
+            category:'Sun Care'
+        },
+        {
+            path:'/babywipes',
+            name:'Babywipes',
+            category:'Baby Wipes'
+        },
+        {
+            path:'/othercosmetics',
+            name:'Other cosmetics',
+            category:'Other Costmetics'
+        },
+    ]
+
     return(
        <div className="product">
            <div className="product_inner">
@@ -32,53 +89,13 @@ export const Product=()=>{
                                 <li>
                                     <p>Household Product</p>
                                     <ul className="prod_ctgy_inner">
-                                        <li>
-                                            <Link to={"/"}>Laundary Detergent</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/fabric"}>Fabric Softener</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/dishwashing"}>Dishwashing Liquid</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/odor"}>Odor Eliminator</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/other"}>Other</Link>
-                                        </li>
+                                        {houseHold.map((d,i)=><li key={i}><Link to={d.path}>{d.name}</Link></li>)}
                                     </ul>
                                 </li>
                                 <li>
                                     <p>Cosmetics</p>
                                     <ul className="prod_ctgy_inner">
-                                        <li>
-                                            <Link to={"/soap"}>Soap</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/lotion"}>Lotion</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/cream"}>Cream</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/oil"}>Oil</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/powder"}>Powder</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/hair"}>Hair</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/suncare"}>SunCare</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/babywipes"}>BabyWipes</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/othercosmetics"}>OtherCosmetics</Link>
-                                        </li>
+                                        {cosmetics.map((d,i)=><li key={i}><Link to={d.path}>{d.name}</Link></li>)}
                                     </ul>
                                 </li>
                             </ul>
@@ -86,25 +103,10 @@ export const Product=()=>{
                     </div>
 
                     <div className="content-info">
-                        <Route path="/laundary" exact={true} component={Laundary} />
-                        <Route path="/" exact={true} component={Laundary} />
-                        <Route path="/fabric" component={Fabric} />
-                        <Route path="/dishwashing" component={Dishwashing} />
-                        <Route path="/odor" component={Odor} />
-                        <Route path="/other" component={Other} />
-                        
-                        {/* <Route path="/other" component={Other} /> */}
+                        {houseHold.map((d,i)=><Route key={i} path={d.path} exact={true} component={()=><ProductList category={d.category}/>} />)}
                     </div> 
                     <div className="content-info-below">
-                        <Route path="/soap" exact={true} component={Soap} />
-                        <Route path="/lotion" component={Lotion} />
-                        <Route path="/cream" component={Cream} />
-                        <Route path="/oil" component={Oil} />
-                        <Route path="/powder" component={Powder} />
-                        <Route path="/hair" component={Hair} />
-                        <Route path="/suncare" component={SunCare} />
-                        <Route path="/babywipes" component={BabyWipes} />
-                        <Route path="/othercosmetics" component={OtherCosmetics} />
+                        {cosmetics.map((d,i)=><Route key={i} path={d.path} exact={true} component={()=><ProductList category={d.category}/>} />)}
                     </div>  
 
                 </div>
