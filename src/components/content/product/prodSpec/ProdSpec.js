@@ -1,31 +1,7 @@
-// import React from 'react';
-// import './ProdSpec.css';
-// // import {Header} from '../../header/Header';
-
-
-// export class ProdSpec extends React.Component{
-//     render(){
-//         return(
-//             <div>
-//                 {/* <header/> */}
-//                 <h1>Prodspec</h1>
-//             </div>
-//         )
-//     }
-// }
-
-
 import React from 'react';
 import './ProdSpec.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-// import {Popup} from '../content/Popup';
-
-
 
 export class ProdSpec extends React.Component{
-    constructor(){
-        super();
-    }
     render(){
         return(
             <div className="prod_spec">

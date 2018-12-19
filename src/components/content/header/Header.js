@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import MOMGUIDE_LOGO_WHITE from '../../../assets/images/MOMGUIDE_LOGO_WHITE.png';
  
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 export const Header = ()=>{
     return(
