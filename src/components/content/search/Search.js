@@ -5,12 +5,9 @@ export const Search =()=>{
     return(
         <div className="search-div">
             <div className="container">
-                <div className="search_heading">
-                    <h3>Search Heading</h3>
-                </div>
                 <div className="search_box">
-                    <input type="text" placeholder="Search"/>
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="검색 예) 세제"/>
+                    <i className="fa fa-search" aria-hidden="true"></i>
                 </div>
             </div>
         </div>

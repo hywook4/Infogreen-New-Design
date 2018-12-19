@@ -1,14 +1,11 @@
 import React from 'react';
 import './MainPage.css';
 import {Header} from './content/header/Header';
-import {Product} from './content/product/Product';
 import {Slider} from './content/slider/Slider';
 import {Footer} from './content/footer/Footer';
 import {Search} from './content/search/Search';
 import {TipEvent} from './content/tipEvent/TipEvent';
-// import {Product} from './content/product/Product';
-// import {ProdSpec} from './content/ProdSpec';
-// import {Route} from './content/product/Route';
+import {Product} from './content/product/Product';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
@@ -24,14 +21,6 @@ export const MainPage = ()=>{
                     <Product/>
                     <TipEvent/>
                     <Footer/>
-                    {/* <Product/> */}
-                    {/* <ProdSpec/> */}
-                    {/* <ProdSpec/> */}
-                    
-                    {/* {this.props.children} */}
-                    
-                  
-                    {/* <SliderDemo/> */}
                     </div>
                 </div>
             </div>
