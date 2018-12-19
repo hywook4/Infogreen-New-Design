@@ -25,7 +25,7 @@ export const Product=()=>{
                     <div className="product-left-div">
                         <div className="product-menu">
                             <div className="product-menu-div">
-                                <i class="fa fa-bars"></i>
+                                <i className="fa fa-bars"></i>
                                 <h4>Menu</h4>
                             </div>
                             <ul className="product_category">

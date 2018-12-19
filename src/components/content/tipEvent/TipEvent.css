@@ -40,12 +40,11 @@
 
 .tip-img{
     width: 100%;
-    border: 1px solid gray;
     margin: 0 auto;
     /* height: 300px; */
     border-radius: 10px;
     position: relative;
-    box-shadow: 0px 0px 16px 3px grey;
+    box-shadow: 5px 5px 16px 0 grey;
 }
 .img-responsive.adjust{
     width: 100%;

@@ -9,7 +9,7 @@ export const TipEvent = ()=>{
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-12 tip-event-inner">
                             <div className="tip-heading">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
+                            <i className="fa fa-heart" aria-hidden="true"></i>
                             <h4>Tips</h4>
                             </div>
                             <div className="tip-img">
@@ -19,7 +19,7 @@ export const TipEvent = ()=>{
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 tip-event-inner">
                         <div className="tip-heading">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
+                            <i className="fa fa-heart" aria-hidden="true"></i>
                             <h4>Events</h4>
                             </div>
                             {/* <img src="" alt=""/> */}
