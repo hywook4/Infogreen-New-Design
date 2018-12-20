@@ -1,173 +1,15 @@
 import React from 'react';
 import './ProdSpec.css';
+import {RatingRow} from './Ratings';
+import {SecondSection} from './SecondSection';
+import {ThirdSection} from './ThirdSection';
+import {Comments} from './CommentsSection';
 
 export class ProdSpec extends React.Component{
     
-renderRatings=(config)=>{
-    return(
-    <div className="prod_ratings row" style={{borderBottom:config.border?'2px solid #c1bfbf':'0px',marginBottom:(config.border?20:0)}}>
-        <p className="col-md-3" style={{textAlign:'center',lineHeight:'14px'}}>
-            <span style={{fontSize:14,fontWeight:(!config.hideSubHeading?'bold':'normal')}}>{config.text}</span><br/>
-            {!config.hideSubHeading && <span style={{fontSize:'10px',color:'rgb(156, 156, 156)'}}>(fusica)</span>}
-        </p>
-        <div className="col-md-9">
-        <i className={`fa fa-star${(config.selected>=1?'':'-o')}`} style={{color:(config.selected>=1?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=2?'':'-o')}`} style={{color:(config.selected>=2?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=3?'':'-o')}`} style={{color:(config.selected>=3?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=4?'':'-o')}`} style={{color:(config.selected>=4?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=5?'':'-o')}`} style={{color:(config.selected>=5?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-        </div>
-        <div style={{clear:'both'}}></div>
-    </div>
-    )
-}
+renderRatings=(config)=><RatingRow config={config} />
 
-
-renderRenderThirdSection=()=>{
-    return(
-        <div className="col-md-12" style={{paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
-            <div className="row" style={{marginLeft:'150px'}}>
-            <div className="row col-md-12">
-                <h3 style={{color:'#666666',marginBottom:30,fontSize:'18px'}}>
-                    <i style={{fontSize:'18px',color:'#b3b3b3',marginRight:10}} className="fa fa-heart"></i> 
-                    Section Title
-                </h3>
-            </div>
-            <div className="col-md-4 row">
-                <i className="fa fa-user-circle-o userInsignia"></i>
-                <span style={{textAlign:'center',display:'inline-block',lineHeight:'18px',paddingTop:'10px',borderRight:'2px solid grey',marginRight:15,paddingRight:15}}>
-                    <b style={{fontSize:'18px'}}>lorem</b><br/>
-                    <span style={{fontSize:'10px',color:'#666666'}}>sub / head</span>
-                </span> 
-                <span style={{display:'inline-block',lineHeight:'18px',paddingTop:'10px'}}>
-                    ipsum<br/>
-                    <span style={{fontSize:'10px',color:'#666666'}}>lipsum</span>
-                </span> 
-                <span style={{marginLeft:5,textAlign:'center',display:'inline-block',lineHeight:'18px',paddingTop:'10px'}}>
-                    Nulla<br/>
-                    <span style={{fontSize:'10px',color:'#666666'}}>dolore</span>
-                </span>    
-                    
-            </div>
-            <div className="col-md-12" style={{marginBottom:'10px'}}>&nbsp;</div>
-                <div className="col-md-5 row">
-                            {this.renderRatings({selected:3,text:'dolore',hideSubHeading:true})}
-                            {this.renderRatings({selected:4,text:'nulla',hideSubHeading:true})}
-                            {this.renderRatings({selected:5,text:'fusica',hideSubHeading:true})}
-                            {this.renderRatings({selected:2,text:'lorem',hideSubHeading:true})}
-                </div>
-
-                <div className="col-md-7 imageCollection-second">
-                    <div style={{position:'relative'}}>
-                        <div className="imageContent-100">
-                                <img className="img-responsive" src="http://lorempixel.com/200/201/sports/" alt="sample"/>
-                            </div>
-                            <div className="imageContent-100">
-                                <img className="img-responsive" src="http://lorempixel.com/200/202/sports/" alt="sample"/>
-                            </div>
-                            <div className="imageContent-100">
-                                <img className="img-responsive" src="http://lorempixel.com/200/203/sports/" alt="sample"/>
-                            </div>
-                            <div className="imageContent-100">
-                                <img className="img-responsive" src="http://lorempixel.com/200/204/sports/" alt="sample"/>
-                            </div>
-                            <div className="imageContent-100">
-                                <img className="img-responsive" src="http://lorempixel.com/200/205/sports/" alt="sample"/>
-                                <div className="overlayBox">
-                                    <h3>3</h3>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>)
-}
-
-
-renderRenderSecondSection=()=>{
-    return(
-        <React.Fragment>
-            <div className="col-md-12" style={{paddingLeft:'150px'}}>
-                        <div className="prod_heading" style={{width:'auto',margin:'auto',marginBottom:30}}>
-                            <span className="dot" style={{background:'#60b3a2'}}></span>
-                            <h2>Lorem Ipsum</h2>
-                        </div>
-                    </div>
-                    <div className="col-md-12" style={{backgroundColor:'#ddf3f0',paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
-                        <div className="row" style={{marginLeft:'150px'}}>
-                            <div className="col-md-4 row">
-                                        {this.renderRatings({selected:4,border:true,text:'4.0'})}
-                                        {this.renderRatings({selected:5,text:'dolore',hideSubHeading:true})}
-                                        {this.renderRatings({selected:2,text:'nulla',hideSubHeading:true})}
-                                        {this.renderRatings({selected:3,text:'fusica',hideSubHeading:true})}
-                                        {this.renderRatings({selected:4,text:'lorem',hideSubHeading:true})}
-                            </div>
-
-                            <div className="col-md-8 imageCollection">
-                            <div style={{textAlign:'right',marginBottom:20}}>
-                                <a href="#" style={{color:'#60b3a2'}}>More <i className="fa fa-chevron-right"></i></a> <br/>
-                            </div>
-                            <div style={{position:'relative'}}>
-                                <div className="imageContent-150">
-                                        <img className="img-responsive" src="http://lorempixel.com/200/200/sports/" alt="sample"/>
-                                    </div>
-                                    <div className="imageContent-150">
-                                        <img className="img-responsive" src="http://lorempixel.com/200/207/sports/" alt="sample"/>
-                                    </div>
-                                    <div className="imageContent-150">
-                                        <img className="img-responsive" src="http://lorempixel.com/200/208/sports/" alt="sample"/>
-                                    </div>
-                                    <div className="imageContent-150">
-                                        <img className="img-responsive" src="http://lorempixel.com/200/209/sports/" alt="sample"/>
-                                    </div>
-                                    <div className="imageContent-150">
-                                        <img className="img-responsive" src="http://lorempixel.com/200/210/sports/" alt="sample"/>
-                                        <div className="overlayBox">
-                                            <h3>32</h3>
-                                        </div>
-                                    </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-        </React.Fragment>
-        )
-}
-
-
-renderRenderCommentsSection=()=>{
-    return(
-        <div className="col-md-11" style={{paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
-                <div className="row" style={{marginLeft:'150px'}}>
-                <div className="row col-md-12" style={{marginBottom:'20px'}}>
-                    <h4>Comments <span style={{color:'rgb(175, 173, 173)',fontSize:'0.9rem',marginLeft:20,display:'inline-block'}}>2018 / 00 / 00</span></h4>
-                </div>
-                    <div className="col-md-12" style={{height:200,background:'#f2f2f2',padding:'30px'}} contentEditable="true">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                    <div className="col-md-12" style={{padding:'10px'}}>
-                        <ul className="right">
-                            <li style={{display:'inline',marginRight:'10px'}}>
-                                <i className="fa fa-heart-o" style={{marginRight:14,fontWeight:'bold',fontSize:20,color:'grey'}}></i>
-                                0
-                            </li>
-                            <li style={{display:'inline',marginRight:'10px'}}>
-                                <i className="fa fa-comment" style={{marginRight:14,fontWeight:'bold',fontSize:20,color:'grey'}}></i>
-                                2
-                            </li>
-                            <li style={{display:'inline',marginRight:'10px'}}>
-                                <button className="btn btn-primary" style={{background:'#60b3a2',borderColor:'#60b3a2',top:'0px',paddingLeft:'20px',paddingRight:'20px'}}>
-                                    submit
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        )
-}
-
-render(){
+render=()=>{
         return(
             <React.Fragment>
             <div className="prod_spec" style={{marginTop:'100px'}}>
@@ -539,9 +381,9 @@ render(){
                 </div>
             </div>
             <div className="row">
-                		{this.renderRenderSecondSection()}
-                		{this.renderRenderThirdSection()}
-                		{this.renderRenderCommentsSection()}
+                <SecondSection/>
+                <ThirdSection/>
+                <Comments/>
             </div>
             </React.Fragment>
         );
