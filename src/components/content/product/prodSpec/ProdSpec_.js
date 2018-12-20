@@ -2,27 +2,7 @@ import React from 'react';
 import './ProdSpec.css';
 
 export class ProdSpec extends React.Component{
-    
-renderRatings(config){
-    return(
-    <div className="prod_ratings row" style={{borderBottom:config.border?'2px solid #c1bfbf':'0px',marginBottom:(config.border?20:0)}}>
-        <p className="col-md-3" style={{textAlign:'center',lineHeight:'14px'}}>
-            <span style={{fontSize:14,fontWeight:(!config.hideSubHeading?'bold':'normal')}}>{config.text}</span><br/>
-            {!config.hideSubHeading && <span style={{fontSize:'10px',color:'rgb(156, 156, 156)'}}>(fusica)</span>}
-        </p>
-        <div className="col-md-9">
-        <i className={`fa fa-star${(config.selected>=1?'':'-o')}`} style={{color:(config.selected>=1?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=2?'':'-o')}`} style={{color:(config.selected>=2?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=3?'':'-o')}`} style={{color:(config.selected>=3?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=4?'':'-o')}`} style={{color:(config.selected>=4?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=5?'':'-o')}`} style={{color:(config.selected>=5?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-        </div>
-        <div style={{clear:'both'}}></div>
-    </div>
-    )
-}
-
-render(){
+    render(){
         return(
             <React.Fragment>
             <div className="prod_spec" style={{marginTop:'100px'}}>
@@ -278,52 +258,59 @@ render(){
                                                             </td>
                                                             <td></td>
                                                         </tr>
+                                                    {/* </link> */}
+
+                                                    {/* <div className="popup-route"> */}
+                                                        {/* <Route exact path="/popup_ingredients" Component={Popup} /> */}
+                                                        {/* Modal */}
+                                                            <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                                <div className="modal-custom modal-dialog modal-dialog-centered" role="document">
+                                                                    <div className="modal-content">
+                                                                    <div className="modal-custom-header modal-header">
+                                                                        <img src={require('../../../../assets/images/icons/sales.png')} alt=""/>
+                                                                        <h5 className="modal-title" id="exampleModalLongTitle">Ingredients</h5>
+                                                                        <p>-4-isothiazolin-3-one</p>
+                                                                        <button type="button" className="close btn" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div className="modal-custom-body modal-body">
+                                                                        <p className="modal-para">EWG</p>
+                                                                        <div className="popup-icon-detail">
+                                                                            <img src={require('../../../../assets/images/icons/iconD.png')} alt=""/>
+                                                                            <p>Name</p>
+                                                                            <p className="popup-ingr-para">Ingredient Detail</p>
+                                                                        </div>
+                                                                        <p className="modal-para">EWG</p>
+                                                                        <div className="popup-icon-level">
+                                                                            <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
+                                                                            <p>Ingredient Transparency Level EPA</p>
+                                                                        </div>
+                                                                        <div className="popup-category">
+                                                                            <p className="modal-para">Product</p>
+                                                                        </div>
+                                                                        <div className="popup-icon-level">
+                                                                            <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
+                                                                            <p>Harmful by the Korean Government</p>
+                                                                        </div>
+                                                                        <div className="popup-category">
+                                                                            <p className="modal-para">Product</p>
+                                                                        </div>
+                                                                        <div className="popup-result">
+                                                                            <p>Result</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    {/* <div className="modal-footer">
+                                                                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                        <button type="button" className="btn btn-primary">Save changes</button>
+                                                                    </div> */}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    {/* </div>     */}
+                                                {/* </Router> */}
                                             </thead>
                                             </table>
-                                            <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                <div className="modal-custom modal-dialog modal-dialog-centered" role="document">
-                                                    <div className="modal-content">
-                                                    <div className="modal-custom-header modal-header">
-                                                        <img src={require('../../../../assets/images/icons/sales.png')} alt=""/>
-                                                        <h5 className="modal-title" id="exampleModalLongTitle">Ingredients</h5>
-                                                        <p>-4-isothiazolin-3-one</p>
-                                                        <button type="button" className="close btn" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div className="modal-custom-body modal-body">
-                                                        <p className="modal-para">EWG</p>
-                                                        <div className="popup-icon-detail">
-                                                            <img src={require('../../../../assets/images/icons/iconD.png')} alt=""/>
-                                                            <p>Name</p>
-                                                            <p className="popup-ingr-para">Ingredient Detail</p>
-                                                        </div>
-                                                        <p className="modal-para">EWG</p>
-                                                        <div className="popup-icon-level">
-                                                            <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
-                                                            <p>Ingredient Transparency Level EPA</p>
-                                                        </div>
-                                                        <div className="popup-category">
-                                                            <p className="modal-para">Product</p>
-                                                        </div>
-                                                        <div className="popup-icon-level">
-                                                            <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
-                                                            <p>Harmful by the Korean Government</p>
-                                                        </div>
-                                                        <div className="popup-category">
-                                                            <p className="modal-para">Product</p>
-                                                        </div>
-                                                        <div className="popup-result">
-                                                            <p>Result</p>
-                                                        </div>
-                                                    </div>
-                                                    {/* <div className="modal-footer">
-                                                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="button" className="btn btn-primary">Save changes</button>
-                                                    </div> */}
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -394,73 +381,8 @@ render(){
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-12" style={{paddingLeft:'150px'}}>
-                    <div className="prod_heading" style={{width:'auto',margin:'auto',marginBottom:30}}>
-                        <span className="dot"></span>
-                        <h2>Lorem Ipsum</h2>
-                    </div>
-                </div>
-                <div className="col-md-12" style={{backgroundColor:'#ddf3f0',paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
-                    <div className="row" style={{marginLeft:'150px'}}>
-                        <div className="col-md-4 row">
-                                    {this.renderRatings({selected:4,border:true,text:'4.0'})}
-                                    {this.renderRatings({selected:5,text:'dolore',hideSubHeading:true})}
-                                    {this.renderRatings({selected:2,text:'nulla',hideSubHeading:true})}
-                                    {this.renderRatings({selected:3,text:'fusica',hideSubHeading:true})}
-                                    {this.renderRatings({selected:4,text:'lorem',hideSubHeading:true})}
-                        </div>
-
-                        <div className="col-md-8 imageCollection">
-                        <div style={{textAlign:'right',marginBottom:20}}>
-                            <a href="#" style={{color:'teal'}}>More <i className="fa fa-chevron-right"></i></a> <br/>
-                        </div>
-                         <img className="img-responsive" src="http://lorempixel.com/200/200/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/201/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/202/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/203/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/204/sports/" alt="sample"/>
-                         <div style={{position:'absolute',right:0,background:'rgb(1,1,1,0.5)',color:'white',width:130,height:130,top:40,textAlign:'center',paddingTop:50,right:20}}>
-                             <h3>32</h3>
-                         </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-md-12" style={{paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
-                    <div className="row" style={{marginLeft:'150px'}}>
-                    <div className="row col-md-12">
-                        'Header of this section'
-                    </div>
-                        <div className="col-md-5 row">
-                                    {this.renderRatings({selected:3,text:'dolore',hideSubHeading:true})}
-                                    {this.renderRatings({selected:4,text:'nulla',hideSubHeading:true})}
-                                    {this.renderRatings({selected:5,text:'fusica',hideSubHeading:true})}
-                                    {this.renderRatings({selected:2,text:'lorem',hideSubHeading:true})}
-                        </div>
-
-                        <div className="col-md-7 imageCollection-second">
-                         <img className="img-responsive" src="http://lorempixel.com/200/200/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/201/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/202/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/203/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/204/sports/" alt="sample"/>
-                         <div style={{position:'absolute',background:'rgb(1,1,1,0.5)',color:'white',width:100,height:100,top:0,textAlign:'center',paddingTop:34,right:83}}>
-                             <h3>32</h3>
-                         </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-md-12" style={{paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
-                    <div className="row" style={{marginLeft:'150px'}}>
-                    <div className="row col-md-12" style={{marginBottom:'20px'}}>
-                        <h4>Comments <span style={{color:'rgb(175, 173, 173)',fontSize:'0.9rem',marginLeft:20,display:'inline-block'}}>2018 / 00 / 00</span></h4>
-                    </div>
-                        <div className="col-md-12" style={{height:400,background:'#f2f2f2',padding:'30px'}} contentEditable="true">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                    </div>
-                </div>
+                <div className="col-md-12">Nulla Fusica</div>                                                                    
+                <div className="col-md-12" style={{backgroundColor:'#ddf3f0',padding:40}}>Test this</div>
             </div>
             </React.Fragment>
         );
