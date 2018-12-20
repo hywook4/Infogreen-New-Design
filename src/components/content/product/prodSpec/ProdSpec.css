@@ -95,15 +95,47 @@
     width: 100%;
     margin: 0 auto;
 } */
-.imageCollection .img-responsive{
+.imageCollection .imageContent-150{
     max-width: 130px;
     max-height: 130px;
     margin-left: 2px;
+    overflow: hidden;
+    float: left;
+    position: relative;
 }
-.imageCollection-second .img-responsive{
+.imageContent-150 img{
+    max-width: 130px;
+}
+.imageContent-100 img{
+    max-width: 100px;
+}
+.overlayBox{
+    position:absolute;
+    background:rgb(1,1,1,0.5);
+    color:white;
+    width:100%;
+    height:100%;
+    top:0px;
+    text-align:center;
+    padding-top:39%;
+    right:0px;
+}
+.userInsignia{
+    font-size: 35px !important;
+    background: #e1f1ef;
+    padding: 10px;
+    border-radius: 50px;
+    color: #60b3a2;
+    display: inline-block !important;
+    margin-right: 10px;
+}
+.imageCollection-second .imageContent-100{
     max-width: 100px;
     max-height: 100px;
     margin-left: 2px;
+    overflow: hidden;
+    float: left;
+    position: relative;
 }
 
 .prod_ratings i{

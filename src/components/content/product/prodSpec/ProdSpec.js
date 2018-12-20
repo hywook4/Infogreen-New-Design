@@ -3,7 +3,7 @@ import './ProdSpec.css';
 
 export class ProdSpec extends React.Component{
     
-renderRatings(config){
+renderRatings=(config)=>{
     return(
     <div className="prod_ratings row" style={{borderBottom:config.border?'2px solid #c1bfbf':'0px',marginBottom:(config.border?20:0)}}>
         <p className="col-md-3" style={{textAlign:'center',lineHeight:'14px'}}>
@@ -11,15 +11,127 @@ renderRatings(config){
             {!config.hideSubHeading && <span style={{fontSize:'10px',color:'rgb(156, 156, 156)'}}>(fusica)</span>}
         </p>
         <div className="col-md-9">
-        <i className={`fa fa-star${(config.selected>=1?'':'-o')}`} style={{color:(config.selected>=1?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=2?'':'-o')}`} style={{color:(config.selected>=2?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=3?'':'-o')}`} style={{color:(config.selected>=3?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=4?'':'-o')}`} style={{color:(config.selected>=4?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
-            <i className={`fa fa-star${(config.selected>=5?'':'-o')}`} style={{color:(config.selected>=5?'teal':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
+        <i className={`fa fa-star${(config.selected>=1?'':'-o')}`} style={{color:(config.selected>=1?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
+            <i className={`fa fa-star${(config.selected>=2?'':'-o')}`} style={{color:(config.selected>=2?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
+            <i className={`fa fa-star${(config.selected>=3?'':'-o')}`} style={{color:(config.selected>=3?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
+            <i className={`fa fa-star${(config.selected>=4?'':'-o')}`} style={{color:(config.selected>=4?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
+            <i className={`fa fa-star${(config.selected>=5?'':'-o')}`} style={{color:(config.selected>=5?'#60b3a2':'grey'),fontSize:'20px'}} aria-hidden="true"></i>
         </div>
         <div style={{clear:'both'}}></div>
     </div>
     )
+}
+
+
+renderRenderThirdSection=()=>{
+    return(
+        <div className="col-md-12" style={{paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
+            <div className="row" style={{marginLeft:'150px'}}>
+            <div className="row col-md-12">
+                <h3 style={{color:'#666666',marginBottom:30,fontSize:'18px'}}>
+                    <i style={{fontSize:'18px',color:'#b3b3b3',marginRight:10}} className="fa fa-heart"></i> 
+                    Section Title
+                </h3>
+            </div>
+            <div className="col-md-4 row">
+                <i className="fa fa-user-circle-o userInsignia"></i>
+                <span style={{textAlign:'center',display:'inline-block',lineHeight:'18px',paddingTop:'10px',borderRight:'2px solid grey',marginRight:15,paddingRight:15}}>
+                    <b style={{fontSize:'18px'}}>lorem</b><br/>
+                    <span style={{fontSize:'10px',color:'#666666'}}>sub / head</span>
+                </span> 
+                <span style={{display:'inline-block',lineHeight:'18px',paddingTop:'10px'}}>
+                    ipsum<br/>
+                    <span style={{fontSize:'10px',color:'#666666'}}>lipsum</span>
+                </span> 
+                <span style={{marginLeft:5,textAlign:'center',display:'inline-block',lineHeight:'18px',paddingTop:'10px'}}>
+                    Nulla<br/>
+                    <span style={{fontSize:'10px',color:'#666666'}}>dolore</span>
+                </span>    
+                    
+            </div>
+            <div className="col-md-12" style={{marginBottom:'10px'}}>&nbsp;</div>
+                <div className="col-md-5 row">
+                            {this.renderRatings({selected:3,text:'dolore',hideSubHeading:true})}
+                            {this.renderRatings({selected:4,text:'nulla',hideSubHeading:true})}
+                            {this.renderRatings({selected:5,text:'fusica',hideSubHeading:true})}
+                            {this.renderRatings({selected:2,text:'lorem',hideSubHeading:true})}
+                </div>
+
+                <div className="col-md-7 imageCollection-second">
+                    <div style={{position:'relative'}}>
+                        <div className="imageContent-100">
+                                <img className="img-responsive" src="http://lorempixel.com/200/201/sports/" alt="sample"/>
+                            </div>
+                            <div className="imageContent-100">
+                                <img className="img-responsive" src="http://lorempixel.com/200/202/sports/" alt="sample"/>
+                            </div>
+                            <div className="imageContent-100">
+                                <img className="img-responsive" src="http://lorempixel.com/200/203/sports/" alt="sample"/>
+                            </div>
+                            <div className="imageContent-100">
+                                <img className="img-responsive" src="http://lorempixel.com/200/204/sports/" alt="sample"/>
+                            </div>
+                            <div className="imageContent-100">
+                                <img className="img-responsive" src="http://lorempixel.com/200/205/sports/" alt="sample"/>
+                                <div className="overlayBox">
+                                    <h3>3</h3>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>)
+}
+
+
+renderRenderSecondSection=()=>{
+    return(
+        <React.Fragment>
+            <div className="col-md-12" style={{paddingLeft:'150px'}}>
+                        <div className="prod_heading" style={{width:'auto',margin:'auto',marginBottom:30}}>
+                            <span className="dot"></span>
+                            <h2>Lorem Ipsum</h2>
+                        </div>
+                    </div>
+                    <div className="col-md-12" style={{backgroundColor:'#ddf3f0',paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
+                        <div className="row" style={{marginLeft:'150px'}}>
+                            <div className="col-md-4 row">
+                                        {this.renderRatings({selected:4,border:true,text:'4.0'})}
+                                        {this.renderRatings({selected:5,text:'dolore',hideSubHeading:true})}
+                                        {this.renderRatings({selected:2,text:'nulla',hideSubHeading:true})}
+                                        {this.renderRatings({selected:3,text:'fusica',hideSubHeading:true})}
+                                        {this.renderRatings({selected:4,text:'lorem',hideSubHeading:true})}
+                            </div>
+
+                            <div className="col-md-8 imageCollection">
+                            <div style={{textAlign:'right',marginBottom:20}}>
+                                <a href="#" style={{color:'#60b3a2'}}>More <i className="fa fa-chevron-right"></i></a> <br/>
+                            </div>
+                            <div style={{position:'relative'}}>
+                                <div className="imageContent-150">
+                                        <img className="img-responsive" src="http://lorempixel.com/200/200/sports/" alt="sample"/>
+                                    </div>
+                                    <div className="imageContent-150">
+                                        <img className="img-responsive" src="http://lorempixel.com/200/207/sports/" alt="sample"/>
+                                    </div>
+                                    <div className="imageContent-150">
+                                        <img className="img-responsive" src="http://lorempixel.com/200/208/sports/" alt="sample"/>
+                                    </div>
+                                    <div className="imageContent-150">
+                                        <img className="img-responsive" src="http://lorempixel.com/200/209/sports/" alt="sample"/>
+                                    </div>
+                                    <div className="imageContent-150">
+                                        <img className="img-responsive" src="http://lorempixel.com/200/210/sports/" alt="sample"/>
+                                        <div className="overlayBox">
+                                            <h3>32</h3>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+        </React.Fragment>
+        )
 }
 
 render(){
@@ -394,62 +506,9 @@ render(){
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-12" style={{paddingLeft:'150px'}}>
-                    <div className="prod_heading" style={{width:'auto',margin:'auto',marginBottom:30}}>
-                        <span className="dot"></span>
-                        <h2>Lorem Ipsum</h2>
-                    </div>
-                </div>
-                <div className="col-md-12" style={{backgroundColor:'#ddf3f0',paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
-                    <div className="row" style={{marginLeft:'150px'}}>
-                        <div className="col-md-4 row">
-                                    {this.renderRatings({selected:4,border:true,text:'4.0'})}
-                                    {this.renderRatings({selected:5,text:'dolore',hideSubHeading:true})}
-                                    {this.renderRatings({selected:2,text:'nulla',hideSubHeading:true})}
-                                    {this.renderRatings({selected:3,text:'fusica',hideSubHeading:true})}
-                                    {this.renderRatings({selected:4,text:'lorem',hideSubHeading:true})}
-                        </div>
+                		{this.renderRenderSecondSection()}
 
-                        <div className="col-md-8 imageCollection">
-                        <div style={{textAlign:'right',marginBottom:20}}>
-                            <a href="#" style={{color:'teal'}}>More <i className="fa fa-chevron-right"></i></a> <br/>
-                        </div>
-                         <img className="img-responsive" src="http://lorempixel.com/200/200/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/201/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/202/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/203/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/204/sports/" alt="sample"/>
-                         <div style={{position:'absolute',right:0,background:'rgb(1,1,1,0.5)',color:'white',width:130,height:130,top:40,textAlign:'center',paddingTop:50,right:20}}>
-                             <h3>32</h3>
-                         </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-md-12" style={{paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
-                    <div className="row" style={{marginLeft:'150px'}}>
-                    <div className="row col-md-12">
-                        'Header of this section'
-                    </div>
-                        <div className="col-md-5 row">
-                                    {this.renderRatings({selected:3,text:'dolore',hideSubHeading:true})}
-                                    {this.renderRatings({selected:4,text:'nulla',hideSubHeading:true})}
-                                    {this.renderRatings({selected:5,text:'fusica',hideSubHeading:true})}
-                                    {this.renderRatings({selected:2,text:'lorem',hideSubHeading:true})}
-                        </div>
-
-                        <div className="col-md-7 imageCollection-second">
-                         <img className="img-responsive" src="http://lorempixel.com/200/200/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/201/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/202/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/203/sports/" alt="sample"/>
-                         <img className="img-responsive" src="http://lorempixel.com/200/204/sports/" alt="sample"/>
-                         <div style={{position:'absolute',background:'rgb(1,1,1,0.5)',color:'white',width:100,height:100,top:0,textAlign:'center',paddingTop:34,right:83}}>
-                             <h3>32</h3>
-                         </div>
-                        </div>
-                    </div>
-                </div>
+                		{this.renderRenderThirdSection()}
 
                 <div className="col-md-12" style={{paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
                     <div className="row" style={{marginLeft:'150px'}}>
