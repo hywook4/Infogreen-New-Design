@@ -4,10 +4,6 @@ import {Search} from '../../../content/search/Search';
 import {ProductCategory} from '../../navigation/category/ProductCategory';
 
 export class Category extends React.Component{
-    constructor(){
-        super();
-    }
-
     render(){
         return(
             <div className="container">

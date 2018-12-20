@@ -3,11 +3,6 @@ import './Category.css';
 import {HighestProduct} from '../category/HighestProduct';
 
 export class ProductCategory extends React.Component{
-    constructor(){
-        super();
-
-    }
-
     render(){
         return(
             <div className="prod-ctgy-inr-div">

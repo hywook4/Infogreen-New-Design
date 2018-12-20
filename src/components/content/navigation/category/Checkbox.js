@@ -3,9 +3,6 @@ import './Category.css'
 
 
 export class Checkbox extends React.Component{
-    constructor(){
-        super();
-    }
     render(){
         return(
             <div className="checkbox-div">

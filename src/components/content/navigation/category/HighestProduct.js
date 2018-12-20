@@ -1,13 +1,10 @@
 import React from 'react';
 import './Category.css';
-import {Checkbox} from '../category/Checkbox';
-import {CategoryImg} from '../category/CategoryImg';
+import {Checkbox} from './Checkbox';
+import {CategoryImg} from './categoryImg';
 
 
 export class HighestProduct extends React.Component{
-    constructor(){
-        super();
-    }
 
     render(){
         return(
