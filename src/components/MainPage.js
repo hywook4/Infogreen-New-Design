@@ -4,6 +4,7 @@ import {Header} from './content/header/Header';
 import {Slider} from './content/slider/Slider';
 import {Footer} from './content/footer/Footer';
 import {Search} from './content/search/Search';
+import {Category} from './content/navigation/category/Category';
 import {TipEvent} from './content/tipEvent/TipEvent';
 import {Product} from './content/product/Product';
 import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
@@ -44,10 +45,11 @@ export const MainPage = ()=>{
                         <Router>
                             <React.Fragment>
                                 <Header/>
+                                
                                 <div>
                                         <Route exact path="/" component={renderHome} />
                                         <Route path="/about" component={placeHolder} />
-                                        <Route path="/category" component={placeHolder} />
+                                        <Route path="/category" component={Category} />
                                         <Route exact path="/request" component={placeHolder} />
                                         <Route path="/signup" component={placeHolder} />
                                         <Route exact path="/login" component={placeHolder} />

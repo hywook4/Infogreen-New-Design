@@ -75,6 +75,9 @@
    text-decoration: none;
     color: gray;
 }
+.navbar_router .nav-item ul li a:hover, .navbar_router .nav-item ul li a:active, .navbar_router .nav-item ul li a:active{
+    color: #32b8a4;
+}
 .navbar_search{
     display: inline-block;
     width: 37%;
@@ -98,4 +101,10 @@
     font-size: 20px;
     color: skyblue;
     padding-left: 10px;
+}
+
+.header{
+    border: 0px solid;
+    padding: 10px;
+    box-shadow: 1px 21px 18px lightgrey;
 }
