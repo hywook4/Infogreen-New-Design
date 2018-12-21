@@ -5,7 +5,7 @@ import './StaticCard.css'
 
 const StaticCard = () => (
   <Card>
-    <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' />
+    <Image src='http://www.skillings.com/wp-content/uploads/2017/02/placeholder-square.jpg' />
     {/* <Card.Content>
       <Card.Header>Matthew</Card.Header>
       <Card.Meta>

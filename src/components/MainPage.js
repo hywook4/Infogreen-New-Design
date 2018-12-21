@@ -9,7 +9,7 @@ import {TipEvent} from './content/tipEvent/TipEvent';
 import {Product} from './content/product/Product';
 import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
 import { Tips } from './content/navigation/tips/Tips';
-
+import { Events } from './content/navigation/events/Events';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
@@ -56,7 +56,9 @@ export const MainPage = ()=>{
                                         <Route exact path="/login" component={placeHolder} />
                                         <Route exact path="/events" component={placeHolder} />
                                         <Route path="/product-details/:id" component={ProductSpecification} />
+                                        <Route path="/events" component={Events} />
                                         <Route path="/tips" component={Tips} />
+                                        
                                 </div>
                             </React.Fragment>
                         </Router>
