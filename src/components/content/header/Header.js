@@ -27,6 +27,9 @@ export const Header = ()=>{
                                 <Link to="/request" className="nav-link">Q&amp;A</Link>
                             </li>
                             <li className="nav-item active">
+                                <Link to="/events" className="nav-link">Events</Link>
+                            </li>
+                            <li className="nav-item active">
                                 <Link to="/about" className="nav-link">소개</Link>
                             </li>
                         </ul>

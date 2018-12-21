@@ -30,72 +30,76 @@ export class ProductCategory extends React.Component{
                     </div>
                     <div id="fabric" class="tab-pane fade">
                     <div className="sub-ctgy-div">
+                    <h1>Sub category</h1>
                             <ul className="nav nav-tabs ">
                                 <li className="active">
                                     <a href="#tab_default_1" data-toggle="tab">
-                                    Tab 1 </a>
+                                    Highest Rating </a>
                                 </li>
                                 <li>
                                     <a href="#tab_default_2" data-toggle="tab">
-                                    Tab 2 </a>
+                                    Highest Viewed</a>
                                 </li>
                                 <li>
                                     <a href="#tab_default_3" data-toggle="tab">
-                                    Tab 3 </a>
+                                    Highest Newest</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div id="dishwashing" class="tab-pane fade">
                     <div className="sub-ctgy-div">
+                    <h1>Sub category</h1>
                             <ul className="nav nav-tabs ">
                                 <li className="active">
                                     <a href="#tab_default_1" data-toggle="tab">
-                                    Tab 1 </a>
+                                    Highest Rating </a>
                                 </li>
                                 <li>
                                     <a href="#tab_default_2" data-toggle="tab">
-                                    Tab 2 </a>
+                                    Highest Viewed</a>
                                 </li>
                                 <li>
                                     <a href="#tab_default_3" data-toggle="tab">
-                                    Tab 3 </a>
+                                    Highest Newest</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div id="odor" class="tab-pane fade">
                         <div className="sub-ctgy-div">
+                        <h1>Sub category</h1>
                                 <ul className="nav nav-tabs ">
                                     <li className="active">
                                         <a href="#tab_default_1" data-toggle="tab">
-                                        Tab 1 </a>
+                                        Highest Rating </a>
                                     </li>
                                     <li>
                                         <a href="#tab_default_2" data-toggle="tab">
-                                        Tab 2 </a>
+                                        Highest Viewed </a>
                                     </li>
                                     <li>
                                         <a href="#tab_default_3" data-toggle="tab">
-                                        Tab 3 </a>
+                                        Highest Newest</a>
                                     </li>
                                 </ul>
                         </div>
                     </div>
                     <div id="other" class="tab-pane fade">
                         <div className="sub-ctgy-div">
+                        <h1>Sub category</h1>
                                 <ul className="nav nav-tabs ">
                                     <li className="active">
                                         <a href="#tab_default_1" data-toggle="tab">
-                                        Tab 1 </a>
+                                        Highest Rating  </a>
                                     </li>
                                     <li>
                                         <a href="#tab_default_2" data-toggle="tab">
-                                        Tab 2 </a>
+                                        Highest Viewed</a>
                                     </li>
                                     <li>
                                         <a href="#tab_default_3" data-toggle="tab">
-                                        Tab 3 </a>
+                                        Highest Newest </a>
                                     </li>
                                 </ul>
                         </div>
