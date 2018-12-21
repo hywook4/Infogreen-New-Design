@@ -26,10 +26,10 @@ export class Request extends React.Component{
                         <div className="user-req-page">
                         <ul>
                             <li>
-                                <p>User</p>
+                                <p>lorem</p>
                             </li>
-                            <li><p>User</p></li>
-                            <li><p>User</p></li>
+                            <li><p>ipsum</p></li>
+                            <li><p>nulla</p></li>
                         </ul>
                     </div>
                     <div className="user-update">

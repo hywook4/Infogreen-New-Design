@@ -38,10 +38,10 @@
 
 .user-req-page ul li{
     display: inline-block;
-    border: 1px solid #32b8a4;
-    background-color: #32b8a4;
-    padding: 10px 30px;
-    font-size: 14px;
+    border: 1px solid #cee9e5;
+    background-color: #cee9e5;
+    padding: 8px 30px;
+    font-size: 12px;
     font-weight: 600;
     color: #808080;
     letter-spacing: 1px;
@@ -59,9 +59,23 @@
 }
 
 .user-update i{
-    font-size: 30px;
+    font-size: 20px;
     padding-right: 10px;
     color: #32b8a4;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.nav-user-tabs{
+    min-width: 180px;
+    background:#f9f7f7;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #32b8a4;
+    color:darkgrey;
+    font-size:18px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.nav-user-tabs.active{
+    background:white;
+    color:darkgrey;
 }
 
 .user-update p{
@@ -102,8 +116,13 @@
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.nav-inner-request-tab.active{
     border-color: transparent;
-    color: gray;
-    border-right: 1px solid gray;
+    color: #656565;
+    color:#32b8a4;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.nav-inner-request-tab{
+    font-weight: 500;
+    color: #656565;
 }
 
 .nav-tabs .nav-linknav-inner-request-tab{
