@@ -22,9 +22,12 @@ export const CategoryImg = (props) =>{
                             <h1>Sub Category</h1>
                         </div>
                         <div className="sub-ctgy-rating">
-                            <img src={require('../../../../assets/images/icons/icon-ef.png')} alt=""/>
-                            <p>Lorem</p>
-                            <Ratings config={{selected:3,hideSubHeading:true,text:'',removePadding:true,color:'grey'}}/>
+                        <div style={{display:'inline-block',textAlign:'center',lineHeight:'12px',marginBottom:'20px'}}>
+                            <img style={props.imgStyle||{maxWidth:'40px'}} src={require('../../../../assets/images/icons/icon-ef.png')} alt=""/>
+                            <br/>
+                            <span style={{color:'grey',fontWeight:'bold',fontSize:10}}>ipsum</span>
+                        </div>
+                            <Ratings config={{trailingText:'0(dolore)',selected:3,hideSubHeading:true,text:'',removePadding:true,color:'#ababab'}}/>
                             {/* <Rating icon='stars' defaultRating={props.rating} maxRating={5} disabled/> */}
                         </div>
                     </div>
