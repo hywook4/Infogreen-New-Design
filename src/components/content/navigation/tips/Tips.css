@@ -1,0 +1,31 @@
+.tipsBannnerOne{
+    background-color: #b3ecff;
+    height: 600px;
+    margin-right: 5px;
+    position: 'absolute';
+    bottom: 0
+}
+
+.tipsBannnerTwo{
+    background-color: #ffffcc;
+    height: 600px;
+    margin-right: 5px;
+}
+
+.tipsBannnerThree{
+    background-color: #ffb3b3;
+    height: 600px;
+    margin-right: 5px;
+}
+
+.tipsBannnerFour{
+    background-color: #b3b3ff;
+    height: 600px;
+    margin-right: 5px;
+}
+
+.tipsBannnerFive{
+    background-color: #ecc6ec;
+    height: 600px;
+   
+}
