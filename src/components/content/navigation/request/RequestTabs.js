@@ -27,10 +27,10 @@ export class RequestTabs extends React.Component{
 
                 <div className="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                             <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                               <CategoryImg/>
+                               <CategoryImg imgStyle={{maxWidth:'40px',marginTop:'40px'}}/>
                             </div>
                             <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                <CategoryImg/>
+                                <CategoryImg imgStyle={{maxWidth:'40px',marginTop:'40px'}}/>
                             </div>
                            
                 </div>
