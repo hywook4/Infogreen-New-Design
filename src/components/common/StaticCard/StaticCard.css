@@ -1,0 +1,11 @@
+.ui.card {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    min-height: 0;
+    background: #fff;
+    padding: 0;
+    box-shadow: 0px 0 18px 0px rgba(0,0,0,0.2);
+}

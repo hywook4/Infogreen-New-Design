@@ -56,3 +56,13 @@
 a {
     background-color: none;
 }
+
+.ui.input > input {
+    margin: 0;
+    max-width: 100%;
+    flex: 1 0 auto;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    text-align: left;
+    width: 600px;
+}

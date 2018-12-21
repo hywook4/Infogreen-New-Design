@@ -1,31 +1,46 @@
 .tipsBannnerOne{
-    background-color: #b3ecff;
+    background-color: #d6eaf8 ;
     height: 600px;
     margin-right: 5px;
-    position: 'absolute';
-    bottom: 0
+    
 }
 
 .tipsBannnerTwo{
-    background-color: #ffffcc;
+    background-color:  #fef9e7 ;
     height: 600px;
     margin-right: 5px;
 }
 
 .tipsBannnerThree{
-    background-color: #ffb3b3;
+    background-color:  #fdedec ;
     height: 600px;
     margin-right: 5px;
 }
 
 .tipsBannnerFour{
-    background-color: #b3b3ff;
+    background-color:  #eaf2f8 ;
     height: 600px;
     margin-right: 5px;
 }
 
 .tipsBannnerFive{
-    background-color: #ecc6ec;
+    background-color: #f4ecf7;
     height: 600px;
    
 }
+
+.card-center{
+    margin-left: 15% !important;
+    margin-bottom: 10%;
+}
+
+.center-block {
+    width: 940px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+

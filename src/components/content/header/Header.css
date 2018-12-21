@@ -107,4 +107,5 @@
     border: 0px solid;
     padding: 10px;
     box-shadow: 1px 21px 18px lightgrey;
+    z-index: 1;
 }
