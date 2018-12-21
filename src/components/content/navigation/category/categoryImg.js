@@ -4,6 +4,7 @@ import { Card, Image, Rating } from 'semantic-ui-react';
 
 
 export const CategoryImg = (props) =>{
+   
         return(
             <div className="ctgy-inrimg-div">
                 <div className="ctgy-img-desp-div">
@@ -30,4 +31,3 @@ export const CategoryImg = (props) =>{
             </div>
         )
     };
-    // export default CategoryImg;

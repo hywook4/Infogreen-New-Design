@@ -10,6 +10,7 @@ import {Login} from './content/navigation/login/Login';
 import {Signup} from './content/navigation/signup/Signup';
 import {Request} from './content/navigation/request/Request';
 import {TipEvent} from './content/tipEvent/TipEvent';
+import {Tips} from './content/navigation/tips/Tips';
 import {Product} from './content/product/Product';
 import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
 
@@ -58,6 +59,7 @@ export const MainPage = ()=>{
                                         <Route path="/signup" component={Signup} />
                                         <Route exact path="/login" component={Login} />
                                         <Route exact path="/events" component={Events} />
+                                        <Route exact path="/tips" component={Tips} />
                                         <Route path="/product-details/:id" component={ProductSpecification} />
                                 </div>
                             </React.Fragment>
@@ -69,4 +71,3 @@ export const MainPage = ()=>{
         </div>
     )
 };
-
