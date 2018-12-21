@@ -8,13 +8,13 @@ import './ProdSpec.css';
  * @param border Boolean default false meaning 0px
  * @param text String must have hideSubHeading `false`
  * @param color Boolean default #60b3a2
- * @param Inline Boolean makes the css property display inline true.
+ * @param trailingText String : Text that appears after the stars - default blank
  */
 
 export const RatingRow = (props)=>{
     const config = props.config;
     return(
-        <div className="prod_ratings row" style={{borderBottom:config.border?'2px solid #c1bfbf':'0px',display:(config.Inline?'inline':'flex'),marginBottom:(config.border?20:0)}}>
+        <div className="prod_ratings row" style={{borderBottom:config.border?'2px solid #c1bfbf':'0px',marginBottom:(config.border?20:0)}}>
         { !config.removePadding && 
             <p className="col-md-3" style={{textAlign:'center',lineHeight:'14px'}}>
                 <span style={{fontSize:14,fontWeight:(!config.hideSubHeading?'bold':'normal')}}>{config.text}</span><br/>
@@ -27,6 +27,7 @@ export const RatingRow = (props)=>{
             <i className={`fa fa-star${(config.selected>=3?'':'-o')}`} style={{color:(config.selected>=3?(config.color||'#60b3a2'):'grey'),fontSize:'20px'}} aria-hidden="true"></i>
             <i className={`fa fa-star${(config.selected>=4?'':'-o')}`} style={{color:(config.selected>=4?(config.color||'#60b3a2'):'grey'),fontSize:'20px'}} aria-hidden="true"></i>
             <i className={`fa fa-star${(config.selected>=5?'':'-o')}`} style={{color:(config.selected>=5?(config.color||'#60b3a2'):'grey'),fontSize:'20px'}} aria-hidden="true"></i>
+            <span style={{color:'#ababab',fontWeight:'bold'}}>{config.trailingText}</span>
         </div>
         <div style={{clear:'both'}}></div>
     </div>    
