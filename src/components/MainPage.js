@@ -13,6 +13,7 @@ import { Events } from './content/navigation/events/Events';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
+
 const placeHolder = ()=>{
     return (
         // this is simple placeholder for different pages, 
@@ -54,10 +55,10 @@ export const MainPage = ()=>{
                                         <Route exact path="/request" component={placeHolder} />
                                         <Route path="/signup" component={placeHolder} />
                                         <Route exact path="/login" component={placeHolder} />
-                                        <Route exact path="/events" component={placeHolder} />
+                                        
                                         <Route path="/product-details/:id" component={ProductSpecification} />
-                                        <Route path="/events" component={Events} />
                                         <Route path="/tips" component={Tips} />
+                                        <Route path="/events" component={Events} />
                                         
                                 </div>
                             </React.Fragment>

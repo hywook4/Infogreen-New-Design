@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './events.css';
+import '../tips/Tips.css';
 
 import StaticCard from '../../../common/StaticCard/StaticCard';
 import { Search } from '../../search/Search';
