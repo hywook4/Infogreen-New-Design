@@ -1,6 +1,7 @@
 import React from 'react';
 import './Category.css';
 import { Card, Image, Rating } from 'semantic-ui-react';
+import {RatingRow as Ratings} from '../../product/prodSpec/Ratings';
 
 
 export const CategoryImg = (props) =>{
@@ -23,7 +24,8 @@ export const CategoryImg = (props) =>{
                         <div className="sub-ctgy-rating">
                             <img src={require('../../../../assets/images/icons/icon-ef.png')} alt=""/>
                             <p>Lorem</p>
-                            <Rating icon='heart' defaultRating={props.rating} maxRating={5} disabled/>
+                            <Ratings config={{selected:3,hideSubHeading:true,text:'',removePadding:true,color:'grey'}}/>
+                            {/* <Rating icon='stars' defaultRating={props.rating} maxRating={5} disabled/> */}
                         </div>
                     </div>
                     </div>
