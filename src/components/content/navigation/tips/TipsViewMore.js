@@ -4,7 +4,9 @@ import './Tips.css';
 // import DescriptionSlider from '../../slider/DescriptionSlider';
 import {Comments} from '../../product/prodSpec/CommentsSection';
 import Paginate from '../pagination/pagination';
-
+import DescriptionSlider from '../../slider/DescriptionSlider';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"
 
 export default class TipsViewMore extends Component {
   render() {
@@ -29,10 +31,18 @@ export default class TipsViewMore extends Component {
 
 
             <div className="row">
-                <div className="col-md-12" style={{backgroundColor: '#c2f0f0', height: 200, marginTop: 80}}>
+                <div className="col-md-12" style={{backgroundColor: '#c2f0f0', height: 200, marginTop: 150, position: 'absolute'}}>
 
                 </div>
             </div>
+
+
+            <div className="row">
+                <div className="col-md-12">
+                    <DescriptionSlider />    
+                </div>
+            </div>
+
 
             <div className="row">
                 <div className="col-md-12" style={{marginLeft: '22%', marginBottom: '5%', marginTop: '10%'}}>

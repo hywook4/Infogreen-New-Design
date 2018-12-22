@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, Icon, Image, Button } from 'semantic-ui-react'
 import './StaticCardSlider.css'
 
-
 const StaticCardSlider = () => (
   <Card>
     <Image src='http://www.skillings.com/wp-content/uploads/2017/02/placeholder-square.jpg' />
