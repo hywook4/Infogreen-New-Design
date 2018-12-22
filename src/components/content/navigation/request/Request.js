@@ -14,7 +14,7 @@ export class Request extends React.Component{
                  
                     <LoginSignupProfile/>
                     <div className="request-setting">
-                        <i class="fa fa-gear"></i>
+                        <i className="fa fa-gear"></i>
                         <p>Setting</p>
                     </div>
                  
@@ -26,14 +26,14 @@ export class Request extends React.Component{
                         <div className="user-req-page">
                         <ul>
                             <li>
-                                <p>User</p>
+                                <p>lorem</p>
                             </li>
-                            <li><p>User</p></li>
-                            <li><p>User</p></li>
+                            <li><p>ipsum</p></li>
+                            <li><p>nulla</p></li>
                         </ul>
                     </div>
                     <div className="user-update">
-                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i className="fa fa-user" aria-hidden="true"></i>
                         {/* <img className="img-fluid" src={require('../../../../assets/images/icons/male-user-shadow.jpg')} alt=""/> */}
                         <p>User</p>
                         <p>0</p>
