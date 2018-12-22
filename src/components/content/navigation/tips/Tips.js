@@ -9,8 +9,8 @@ import Paginate from '../pagination/pagination';
 
 export const Tips = () => {
     return (
-        <div className="container-fluid" style={{marginTop: 100}}>
-            <div className="row">
+        <div className="container-fluid">
+            <div className="row" style={{marginTop: 200}}>
                 <div className="col-sm-1">
                 </div>
 

@@ -12,6 +12,7 @@ import { Tips } from './content/navigation/tips/Tips';
 import { Events } from './content/navigation/events/Events';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route} from "react-router-dom"
+import TipsViewMore from './content/navigation/tips/TipsViewMore';
 
 
 const placeHolder = ()=>{
@@ -59,6 +60,7 @@ export const MainPage = ()=>{
                                         <Route path="/product-details/:id" component={ProductSpecification} />
                                         <Route path="/tips" component={Tips} />
                                         <Route path="/events" component={Events} />
+                                        <Route path="/tipsviewmore" component={TipsViewMore} />
                                         
                                 </div>
                             </React.Fragment>
