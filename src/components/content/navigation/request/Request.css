@@ -11,7 +11,7 @@
 }
 
 .request-setting i{
-    font-size: 20px;
+    font-size: 16px;
     color: gray;
     padding-right: 5px;
 }
@@ -38,10 +38,17 @@
 
 .user-req-page ul li{
     display: inline-block;
+
+    border: 1px solid #ddf3f0;
+    background-color: #ddf3f0;
+    padding: 10px 30px;
+    font-size: 14px;
+
     border: 1px solid #cee9e5;
     background-color: #cee9e5;
     padding: 8px 30px;
     font-size: 12px;
+
     font-weight: 600;
     color: #808080;
     letter-spacing: 1px;
