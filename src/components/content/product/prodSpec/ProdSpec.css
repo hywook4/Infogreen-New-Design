@@ -660,3 +660,9 @@ p.modal-para{
     letter-spacing: 1px;
     font-weight: 600;
 }
+
+
+h4.comment-h4{
+    color: gray;
+    letter-spacing: 1px;
+}

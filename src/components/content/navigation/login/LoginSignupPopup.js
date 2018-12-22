@@ -31,7 +31,7 @@ export class LoginSignupPopup extends React.Component{
                             </div>
                             </div>
                             
-                            <button type="submit" className="btn btn-primary popup-btn">Submit</button>
+                            <button type="submit" className="btn btn-primary popup-btn">LogIn</button>
                             <div className="forget-pwd">
                                 <p>Forget Password</p>
                                 <p className="right">Remember Me</p>
@@ -71,15 +71,24 @@ export class LoginSignupPopup extends React.Component{
                                     <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
                                 </div>
                                 <div className="icon-name">
-                                    <p>Facebook</p>
+                                    <p>Naver</p>
                                 </div>
                             </a>
                        </div>
+                       <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username" />
+                            </div>
+                        </div>
                        <div className="popup-social-icons">
                        
                                 
                                 <div className="icon-email">
-                                    <p>Facebook</p>
+                                    <p>Signup</p>
                                 </div>
                            
                        </div>
