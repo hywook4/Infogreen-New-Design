@@ -1,8 +1,5 @@
 import React from 'react';
 import './Category.css';
-
-import { Rating } from 'semantic-ui-react';
-
 // import { Card, Image, Rating } from 'semantic-ui-react';
 import {RatingRow as Ratings} from '../../product/prodSpec/Ratings';
 

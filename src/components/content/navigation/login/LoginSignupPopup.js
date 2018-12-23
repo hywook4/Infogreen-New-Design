@@ -75,7 +75,7 @@ export class LoginSignupPopup extends React.Component{
                                 </div>
                             </a>
                        </div>
-                       <div class="col-auto">
+                       {/* <div class="col-auto">
                             <label class="sr-only" for="inlineFormInputGroup">Username</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
@@ -83,7 +83,7 @@ export class LoginSignupPopup extends React.Component{
                                 </div>
                                 <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username" />
                             </div>
-                        </div>
+                        </div> */}
                        <div className="popup-social-icons">
                        
                                 

@@ -15,18 +15,26 @@ export class LoggedIn extends React.Component{
                                 <div className="row">
                                     <div className="col-lg-6 col-md-6 col-sm-6">
                                         <div className="ingr-anly">
-                                            <div className="inr-ingr">
-                                                <h2>Ingredient Analysis</h2>
-                                                <p>Analyze all ingredients</p>
-                                            </div>
+                                      
+                                                <div className="inr-ingr">
+                                                <a href="#" className="ingr-anchor">
+                                                    <h2>Ingredient Analysis</h2>
+                                                    <p>Analyze all ingredients</p>
+                                                </a>
+                                                </div>
+                                            
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-6 col-sm-6">
                                     <div className="ingr-anly">
-                                        <div className="inr-ingr">
-                                            <h2>Ask the Admin</h2>
-                                            <p>Take Permission</p>
-                                        </div>
+                                        
+                                            <div className="inr-ingr">
+                                            <a href="#" className="ingr-anchor">
+                                                <h2>Ask the Admin</h2>
+                                                <p>Take Permission</p>
+                                            </a>    
+                                            </div>
+                                        
                                         </div>
                                     </div>
                                 </div>

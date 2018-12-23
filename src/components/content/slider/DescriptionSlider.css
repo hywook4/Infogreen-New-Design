@@ -1,0 +1,29 @@
+
+
+
+
+
+/* .slidecard{
+    width: 100% !important;
+} */
+
+.borderboxcentermode{
+    border: 2px solid #fff;
+    margin: 25px !important;
+    box-shadow: 1px 1px 7px -3px black;
+   
+}
+
+.cardcolor{
+    border: 2px solid #fff;
+    margin: 0px !important;
+    background-color: #eee;
+}
+
+.slick-prev::before, .slick-next::before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #c2f0f0 !important;
+}
