@@ -1,7 +1,8 @@
 import React from 'react';
 import './Category.css';
-import { Card, Image, Rating } from 'semantic-ui-react';
+// import { Card, Image, Rating } from 'semantic-ui-react';
 import {RatingRow as Ratings} from '../../product/prodSpec/Ratings';
+
 
 
 export const CategoryImg = (props) =>{

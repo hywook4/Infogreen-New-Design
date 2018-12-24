@@ -1,0 +1,142 @@
+.ui.card {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    min-height: 0;
+    background: #fff;
+    padding: 0;
+    box-shadow: 0px 0 18px 0px rgba(0,0,0,0.2);
+    
+}
+
+
+/* card css */
+
+
+.cards-div .col-lg-6.col-md-6.col-sm-6.card-col{
+    width: 40%;
+    max-width: 40%;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+.cards-div, .card-inr-div{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.card-title{
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.card-title i{
+    color: #fcd206;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.card-title h5{
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: gray;
+}
+
+.card-img-div{
+    width: 100%;
+    margin: 30px auto 50px;
+    position: relative;
+    box-shadow: 0px 0 18px 0px rgba(0,0,0,0.2);
+}
+
+.card-img-inr-div{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card-img-inr-div img{
+    width: 100%;
+}
+
+.card-tip-info{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #f2f2f2;
+    padding: 20px 20px;
+}
+
+.card-tip-heading{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+}
+
+.card-tip-heading h4{
+    display: inline-block;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.card-tip-heading p{
+    display: inline-block;
+    color: gray;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.card-tip-btn{
+    width: 50%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: right;
+    position: relative;
+    top: -12px;
+}
+button.card-btn{
+    background-color: #58c4b4;
+    border-radius: 15px;
+    outline: 0;
+}
+i.card-hrt-2{
+    color: #58c4b4;
+}
+i.card-hrt-3{
+    color: #1a94d1;
+}
+i.card-hrt-4{
+    color: #934d9d;
+}
+button.card-btn a{
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: right;
+    text-decoration: none;
+} 
+
+button.card-btn a i{
+    font-size: 18px;
+    padding-left: 10px;
+    position: relative;
+    top: 2px;
+
+}
