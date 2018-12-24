@@ -14,7 +14,7 @@ import {Tips} from './content/navigation/tips/Tips';
 import {Product} from './content/product/Product';
 import {LoggedIn} from './content/navigation/request/loggedIn/LoggedIn';
 import {RequestComment} from './content/navigation/request/requestComment/RequestComment';
-import TipsViewMore from './content/navigation/tips/TipsViewMore';
+import {TipsViewMore} from './content/navigation/tips/TipsViewMore';
 import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -66,7 +66,7 @@ export const MainPage = ()=>{
                                         <Route path="/product-details/:id" component={ProductSpecification} />
                                         <Route path="/request/request-comment" component={RequestComment} />
                                         <Route path="/request/loggedin" component={LoggedIn} />
-                                        <Route path="/tipsviewmore" component={TipsViewMore} />
+                                        <Route path="/tips/tipsviewmore" component={TipsViewMore} />
                                 </div>
                             </React.Fragment>
                         </Router>

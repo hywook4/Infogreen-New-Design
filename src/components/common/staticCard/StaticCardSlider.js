@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
-import './StaticCardSlider.css'
+import { Card, Icon, Image, Button } from 'semantic-ui-react';
+import './StaticCardSlider.css';
 
 export const StaticCardSlider = () => (
   <Card>
@@ -14,4 +14,4 @@ export const StaticCardSlider = () => (
   </Card>
 )
 
-export default StaticCardSlider;
+// export default StaticCardSlider;
