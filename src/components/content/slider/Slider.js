@@ -15,14 +15,14 @@ export const Slider = ()=>{
                     </ol>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img src={require('../../../assets/images/la.jpg')} className="d-block w-100" alt="First Slide" />
+                            <img src={require('../../../assets/images/slider.svg')} className="d-block w-100" alt="First Slide" />
                         </div> 
                         
                         <div className="carousel-item">
-                            <img src={require('../../../assets/images/la.jpg')} className="d-block w-100" alt="Second Slide"/>
+                            <img src={require('../../../assets/images/slider.svg')} className="d-block w-100" alt="Second Slide"/>
                         </div> 
                         <div className="carousel-item">
-                            <img src={require('../../../assets/images/la.jpg')} className="d-block w-100" alt="Third Slide"/>
+                            <img src={require('../../../assets/images/slider.svg')} className="d-block w-100" alt="Third Slide"/>
                         </div> 
                     </div>    
                 
