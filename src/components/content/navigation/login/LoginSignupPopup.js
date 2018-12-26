@@ -42,56 +42,59 @@ export class LoginSignupPopup extends React.Component{
                     <div class="modal-footer popup-footer">
                         {/* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button> */}
-                       <div className="popup-social-icons">
-                            <a href="facebook.com">
-                                <div className="icon-img">
-                                
-                                    <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
-                                </div>
-                                <div className="icon-name">
-                                    <p>Facebook</p>
-                                </div>
-                            </a>
-                       </div>
-                       <div className="popup-social-icons">
-                            <a href="facebook.com">
-                                <div className="icon-img">
-                                
-                                    <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
-                                </div>
-                                <div className="icon-name">
-                                    <p>Facebook</p>
-                                </div>
-                            </a>
-                       </div>
-                       <div className="popup-social-icons">
-                            <a href="facebook.com">
-                                <div className="icon-img">
-                                
-                                    <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
-                                </div>
-                                <div className="icon-name">
-                                    <p>Naver</p>
-                                </div>
-                            </a>
-                       </div>
-                       {/* <div class="col-auto">
-                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">@</div>
-                                </div>
-                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username" />
+                        <form action="">
+                            <div className="popup-social-icons">
+                                    <a href="facebook.com">
+                                        <div className="icon-img">
+                                        
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
+                                        </div>
+                                        <div className="icon-name">
+                                            <p>Facebook</p>
+                                        </div>
+                                    </a>
                             </div>
-                        </div> */}
-                       <div className="popup-social-icons">
+                            <div className="popup-social-icons">
+                                    <a href="facebook.com">
+                                        <div className="icon-img">
+                                        
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
+                                        </div>
+                                        <div className="icon-name">
+                                            <p>Facebook</p>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div className="popup-social-icons">
+                                    <a href="facebook.com">
+                                        <div className="icon-img">
+                                        
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
+                                        </div>
+                                        <div className="icon-name">
+                                            <p>Naver</p>
+                                        </div>
+                                    </a>
+                            </div>
+                            {/* <div class="col-auto">
+                                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">@</div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username" />
+                                    </div>
+                                </div> */}
+                            <div className="popup-social-icons">
                        
                                 
-                                <div className="icon-email">
-                                    <p>Signup</p>
-                                </div>
+                                {/* <div className="icon-email"> */}
+                                <button type="submit" className="btn btn-primary popup-btn">Signup</button>
+                                    {/* <p>Signup</p> */}
+                                {/* </div> */}
                            
                        </div>
+                        </form>
                     </div>
                     </div>
                 </div>

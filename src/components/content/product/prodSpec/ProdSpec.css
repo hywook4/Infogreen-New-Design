@@ -40,7 +40,7 @@
 }
 
 .prod_detail .prod_img{
-    width: 315px;
+    width: 295px;
     position: relative;
     right: 0;
     bottom: 75px;
@@ -139,7 +139,7 @@
 }
 
 .prod_ratings i{
-    font-size: 26px;
+    font-size: 22px;
     padding-right: 10px;
     color: gray;
 }
@@ -148,7 +148,7 @@
     width: 100%;
     margin: 20px auto 0;
     position: relative;
-    display: table;
+    /* display: table; */
     vertical-align: middle;
 }
 
@@ -173,10 +173,21 @@
     letter-spacing: 1px;
 }
 
+.prod_icon_info.prod-check-3rd-div{
+    width: 35%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+.prod_icon_info.prod-check-3rd-div i{
+    padding-left: 20px;
+}
+/* p.check-para{
+    text-align: center;
+} */
 .prod_right_div{
     width: 100%;
     margin: 0 auto;
-    margin-top: 125px;
+    margin-top: 113px;
     padding: 15px 15px;
     background-color: #ddf3f0;
     float: left;
@@ -188,7 +199,7 @@
     float: left;
     position: relative;
     clear: both;
-    padding: 5px;
+    padding: 13px;
 }
 
 .prod-rt_div_inr i, .prod-rt_div_inr-1 i{
@@ -418,7 +429,7 @@ td img.icon_img{
 .alpha-icon-info{
     display: inline-block;
     width: 30%;
-    margin: 0 auto;
+    margin: 3px auto;
     text-align: center;
 }
 
@@ -475,7 +486,7 @@ td img.icon_img{
 
 .modal-custom-header.modal-header{
     display: block;
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
 }
 .modal-custom-header.modal-header img{
     width: 40px;
@@ -513,9 +524,10 @@ p.modal-para{
     font-size: 14px;
     color: gray;
     background-color: #f7f7f7;
-    padding: 5px 20px;
+    padding: 10px 20px;
     letter-spacing: 1px;
     color: #7d7d7d;
+    margin-bottom: 0;
 
 }
 .popup-icon-detail{
@@ -530,14 +542,16 @@ p.modal-para{
 
 .popup-icon-detail p{
     color: #7d7d7d;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 0;
     letter-spacing: 1px;
     font-size: 14px;
+    font-weight: 600;
 }
 
-.popup-ingr-para{
+p.popup-ingr-para{
     color: #bbbbbb;
+    font-weight: 500;
 }
 
 .modal-custom-body.modal-body{
@@ -546,7 +560,7 @@ p.modal-para{
 
 .popup-icon-level{
     width: 100%;
-    padding: 0 15px;
+    padding: 10px 15px;
 }
 
 .popup-icon-level img{
@@ -565,7 +579,7 @@ p.modal-para{
 
 .popup-result{
     width: 100%;
-    padding: 0 15px;
+    padding: 10px 15px;
     text-align: center;
     color: #7d7d7d;
 }
@@ -603,9 +617,9 @@ p.modal-para{
 
 .desp-green{
     width: 100%;
-    margin: 0 auto;
+    margin: 70px auto;
     background-color: #ddf3f0;
-    padding: 25px 15px;
+    padding: 40px 20px;
 }
 .desp-greenery{
     width: 100%;
@@ -666,3 +680,41 @@ h4.comment-h4{
     color: gray;
     letter-spacing: 1px;
 }
+
+/* popup */
+
+button.close.btn{
+    top: 10px;
+    position: absolute;
+    right: 14px;
+    font-size: 22px;
+}
+
+
+
+/* tooltip popup */
+.dngr-icon-inr-div.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .dngr-icon-inr-div.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+  }
+  
+  .dngr-icon-inr-div.tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
