@@ -14,6 +14,11 @@
     box-shadow: 5px 5px 10px 0px grey;
 }
 
+.ui.card>.content>.header, .ui.cards>.card>.content>.header {
+    box-shadow: none;
+    padding: 0;
+}
+
 img.ui.image {
     width: 350px;
     height: 250px;
