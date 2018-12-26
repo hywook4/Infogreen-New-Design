@@ -44,7 +44,7 @@ export class ProductList extends React.Component {
             <div className={styles.productHeading}>
                 <div className="tip-heading">
                     <i style={{color: "red"}} className="fa fa-heart" aria-hidden="true"></i>
-                    <h4>카테고리별 인기제품</h4>
+                    <h4>{this.props.category} 인기제품</h4>
                 </div>
                 <div className={styles.rightDiv}>
                     <div className="row">
@@ -68,7 +68,7 @@ export class ProductList extends React.Component {
                 <br />
                 <div className="tip-heading">
                     <i style={{color: "red"}} className="fa fa-heart" aria-hidden="true"></i>
-                    <h4>카테고리별 성분 좋은 제품</h4>
+                    <h4>{this.props.category} 성분 좋은 제품</h4>
                 </div>
                 <div className={styles.rightDiv}>
                     <div className="row">
