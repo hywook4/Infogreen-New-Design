@@ -4,6 +4,7 @@ import {RatingRow} from './Ratings';
 import {SecondSection} from './SecondSection';
 import {ThirdSection} from './ThirdSection';
 import {Comments} from './CommentsSection';
+import ReactTooltip from 'react-tooltip';
 
 export class ProdSpec extends React.Component{
     
@@ -57,10 +58,10 @@ render=()=>{
                                                 {/* <img src={ require('../../../../assets/images/heart.svg') } alt=""/> */}
                                                 <p>Like</p>
                                             </div>
-                                            <div className="prod_icon_info">
+                                            <div className="prod_icon_info prod-check-3rd-div">
                                                 <i className="fa fa-share-alt"></i>
                                                 {/* <img src={ require('../../../../assets/images/checkPrice.svg') } alt=""/> */}
-                                                <p>Check Price</p>
+                                                <p className="check-para">Check Price</p>
                                             </div>
                                             <div className="prod_icon_info">
                                                 <i className="fa fa-share-alt"></i>
@@ -130,11 +131,23 @@ render=()=>{
                                     <div className="danger-icon-head">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
                                         <h1>Lorem Ipsum</h1>
+                                        {/* <p data-tip="dfghj" data-html={true}>Tooltip</p>
+                                        <ReactTooltip html={true} /> */}
                                     </div>
                                     <div className="icons-all">
                                         <div className="dngr-icon-inr-div">
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon1.png')} alt=""/>
                                             <p>Danger</p>
+                                            {/* <span className="tooltiptext">
+                                                <div>
+                                                    <img src={require('../../../../assets/images/icons/iconB.png')} alt=""/>
+                                                </div>
+                                                <div>
+                                                    <h2><b>Ingredient(C8-16)</b></h2>
+                                                    <p>Alkyl polyglucoside(C8-16)</p>
+                                                </div>
+                                               
+                                            </span> */}
                                         </div>
                                         <div className="dngr-icon-inr-div">
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon2.png')} alt=""/>
@@ -349,7 +362,7 @@ render=()=>{
                                         <p>X-ray</p>
                                     </div>
                                 </div>
-                                <div className="pie-chart-info">
+                                {/* <div className="pie-chart-info">
                                     <div className="pie-icon">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
                                     </div>
@@ -357,7 +370,7 @@ render=()=>{
                                         <h3>Lorem Ipsum</h3>
                                         <p>Pie Chart design according to calculations.</p>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 {/* desp in green */}
                                 <div className="desp-green">
