@@ -33,7 +33,7 @@ export const StaticCard = () => (
               </div>
               <div className="card-tip-btn">
               <button type="button" class="btn btn-primary card-btn">
-                <a href="">View More
+                <a href="/tips/tipsviewmore">View More
                 <i class="fa fa-angle-right"></i>
                 </a></button>
               </div>
@@ -59,7 +59,7 @@ export const StaticCard = () => (
               </div>
               <div className="card-tip-btn">
               <button type="button" class="btn btn-primary card-btn">
-                <a href="">View More
+                <a href="/tips/tipsviewmore">View More
                 <i class="fa fa-angle-right"></i>
                 </a></button>
               </div>
@@ -85,7 +85,7 @@ export const StaticCard = () => (
               </div>
               <div className="card-tip-btn">
               <button type="button" class="btn btn-primary card-btn">
-                <a href="">View More
+                <a href="/tips/tipsviewmore">View More
                 <i class="fa fa-angle-right"></i>
                 </a></button>
               </div>
@@ -111,7 +111,7 @@ export const StaticCard = () => (
               </div>
               <div className="card-tip-btn">
               <button type="button" class="btn btn-primary card-btn">
-                <a href="">View More
+                <a href="/tips/tipsviewmore">View More
                 <i class="fa fa-angle-right"></i>
                 </a></button>
               </div>
