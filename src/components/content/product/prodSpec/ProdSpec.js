@@ -4,14 +4,16 @@ import {RatingRow} from './Ratings';
 import {SecondSection} from './SecondSection';
 import {ThirdSection} from './ThirdSection';
 import {Comments} from './CommentsSection';
-import ReactTooltip from 'react-tooltip';
+import DoughnutGraph from './DoughnutGraph';
 
 export class ProdSpec extends React.Component{
     
 renderRatings=(config)=><RatingRow config={config} />
 
 render=()=>{
+   
         return(
+         
             <React.Fragment>
             <div className="prod_spec" style={{marginTop:'100px'}}>
                 <div className="prodspec_container">
@@ -363,15 +365,9 @@ render=()=>{
                                         <p>X-ray</p>
                                     </div>
                                 </div>
-                                {/* <div className="pie-chart-info">
-                                    <div className="pie-icon">
-                                        <i className="fa fa-heart" aria-hidden="true"></i>
-                                    </div>
-                                    <div className="pie-info">
-                                        <h3>Lorem Ipsum</h3>
-                                        <p>Pie Chart design according to calculations.</p>
-                                    </div>
-                                </div> */}
+                                <div className="pie-chart-info">
+                                  <DoughnutGraph/>
+                                </div>
 
                                 {/* desp in green */}
                                 <div className="desp-green">
