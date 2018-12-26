@@ -24,13 +24,13 @@ export const Header = ()=>{
                                 <Link to="/tips" className="nav-link">꿀팁</Link>
                             </li>
                             <li className="nav-item active">
-                                <Link to="/request" className="nav-link">Q&amp;A</Link>
+                                <Link to="/events" className="nav-link">이벤트</Link>
                             </li>
                             <li className="nav-item active">
-                                <Link to="/events" className="nav-link">Events</Link>
+                                <Link to="/request" className="nav-link">문의하기</Link>
                             </li>
                             <li className="nav-item active">
-                                <Link to="/about" className="nav-link">소개</Link>
+                                <Link to="/about" className="nav-link">서비스소개</Link>
                             </li>
                         </ul>
                          <div className="navbar_search">
@@ -40,7 +40,7 @@ export const Header = ()=>{
                         
                         <ul >
                             <li className="nav-item active">
-                                <Link to="/signup" className="nav-link">회원가입</Link>
+                                <Link to="/signup" className="nav-link">가입하기</Link>
                             </li>
                             <li className="nav-item active">
                                 <Link to="/login" className="nav-link">로그인</Link>
