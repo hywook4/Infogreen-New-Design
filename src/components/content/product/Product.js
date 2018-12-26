@@ -7,70 +7,80 @@ export const Product=()=>{
     const houseHold = [
         {
             path:'/',
-            name:'Laundary Detergent',
-            category:'일반 세제'
+            name:'세탁세제',
+            category:'세탁세제'
         },
         {
             path:'/fabric',
-            name:'Fabric Softener',
-            category:'Fabric'
+            name:'섬유유연제',
+            category:'섬유유연제'
         },
         {
             path:'/dishwashing',
-            name:'Dishwashing Liquid',
-            category:'Dish Washing'
+            name:'주방세제',
+            category:'주방세제'
         },
         {
             path:'/odor',
-            name:'Odor Eliminator',
-            category:'Odor'
+            name:'탈취제',
+            category:'탈취제'
+        },
+        {
+            path:'/other',
+            name:'기타세정제',
+            category:'기타세정제'
         }
     ];
     const cosmetics = [
         {
             path:'/soap',
-            name:'Soap',
-            category:'Soap'
+            name:'워시',
+            category:'워시'
         },
         {
             path:'/lotion',
-            name:'Lotion',
-            category:'Lotion'
+            name:'로션',
+            category:'로션'
         },
         {
             path:'/cream',
-            name:'Cream',
-            category:'Cream'
+            name:'크림',
+            category:'크림'
         },
         {
             path:'/oil',
-            name:'Oil',
-            category:'Oil'
+            name:'오일',
+            category:'오일'
         },
         {
             path:'/powder',
-            name:'Powder',
-            category:'Powder'
+            name:'파우더',
+            category:'파우더'
         },
         {
             path:'/hair',
-            name:'Hair',
-            category:'Hair'
+            name:'헤어케어',
+            category:'헤어케어'
         },
         {
             path:'/suncare',
-            name:'Suncare',
-            category:'Sun Care'
+            name:'선케어',
+            category:'선케어'
         },
         {
             path:'/babywipes',
-            name:'Babywipes',
-            category:'Baby Wipes'
+            name:'물티슈',
+            category:'물티슈'
+        },
+        {
+            path:'/handsanitizer',
+            name:'손세정제',
+            category:'손세정제'
         },
         {
             path:'/othercosmetics',
-            name:'Other cosmetics',
-            category:'Other Costmetics'
+            name:'기타화장품',
+            category:'기타화장품'
         },
     ]
 
@@ -83,17 +93,17 @@ export const Product=()=>{
                         <div className="product-menu">
                             <div className="product-menu-div">
                                 <i className="fa fa-bars"></i>
-                                <h4>Menu</h4>
+                                <h4>카테고리</h4>
                             </div>
                             <ul className="product_category">
                                 <li>
-                                    <p>Household Product</p>
+                                    <p>가정용 생활화학제품</p>
                                     <ul className="prod_ctgy_inner">
                                         {houseHold.map((d,i)=><li key={i}><Link to={d.path}>{d.name}</Link></li>)}
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>Cosmetics</p>
+                                    <p>유아용 화장품</p>
                                     <ul className="prod_ctgy_inner">
                                         {cosmetics.map((d,i)=><li key={i}><Link to={d.path}>{d.name}</Link></li>)}
                                     </ul>
