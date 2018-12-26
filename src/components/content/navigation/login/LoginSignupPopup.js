@@ -47,32 +47,32 @@ export class LoginSignupPopup extends React.Component{
                                     <a href="facebook.com">
                                         <div className="icon-img">
                                         
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
-                                        </div>
-                                        <div className="icon-name">
-                                            <p>Facebook</p>
-                                        </div>
-                                    </a>
-                            </div>
-                            <div className="popup-social-icons">
-                                    <a href="facebook.com">
-                                        <div className="icon-img">
-                                        
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
-                                        </div>
-                                        <div className="icon-name">
-                                            <p>Facebook</p>
-                                        </div>
-                                    </a>
-                            </div>
-                            <div className="popup-social-icons">
-                                    <a href="facebook.com">
-                                        <div className="icon-img">
-                                        
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/naver.jpg')} alt=""/>
                                         </div>
                                         <div className="icon-name">
                                             <p>Naver</p>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div className="popup-social-icons">
+                                    <a href="facebook.com">
+                                        <div className="icon-img">
+                                        
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
+                                        </div>
+                                        <div className="icon-name">
+                                            <p>Facebook</p>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div className="popup-social-icons">
+                                    <a href="facebook.com">
+                                        <div className="icon-img">
+                                            {/* <i className="fa fa-facebook-messenger" aria-hidden="true"></i> */}
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/messenger.png')} alt=""/>
+                                        </div>
+                                        <div className="icon-name">
+                                            <p>Messenger</p>
                                         </div>
                                     </a>
                             </div>

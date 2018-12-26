@@ -59,7 +59,8 @@ render=()=>{
                                                 <p>Like</p>
                                             </div>
                                             <div className="prod_icon_info prod-check-3rd-div">
-                                                <i className="fa fa-share-alt"></i>
+                                                {/* <i className="fa fa-share-alt"></i> */}
+                                                <i className="fa fa-krw" aria-hidden="true"></i>
                                                 {/* <img src={ require('../../../../assets/images/checkPrice.svg') } alt=""/> */}
                                                 <p className="check-para">Check Price</p>
                                             </div>
