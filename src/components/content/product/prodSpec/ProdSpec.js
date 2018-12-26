@@ -4,7 +4,6 @@ import {RatingRow} from './Ratings';
 import {SecondSection} from './SecondSection';
 import {ThirdSection} from './ThirdSection';
 import {Comments} from './CommentsSection';
-import ReactTooltip from 'react-tooltip';
 
 export class ProdSpec extends React.Component{
     
@@ -120,8 +119,7 @@ render=()=>{
                             <div className="col-lg-9 col-md-9 col-sm-12">
                             <div className="prod_addn">
                                     <div className="prod_addn_info">
-                                   
-                                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                     </div>
                             </div>
 
@@ -136,7 +134,7 @@ render=()=>{
                                     </div>
                                     <div className="icons-all">
                                         <div className="dngr-icon-inr-div">
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon1.png')} alt=""/>
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/skin-irritation.svg')} alt=""/>
                                             <p>Danger</p>
                                             {/* <span className="tooltiptext">
                                                 <div>
@@ -150,19 +148,19 @@ render=()=>{
                                             </span> */}
                                         </div>
                                         <div className="dngr-icon-inr-div">
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon2.png')} alt=""/>
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/respiration-toxic.svg')} alt=""/>
                                             <p>Danger</p>
                                         </div>
                                         <div className="dngr-icon-inr-div">
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon3.png')} alt=""/>
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/development-toxic.svg')} alt=""/>
                                             <p>Danger</p>
                                         </div>
                                         <div className="dngr-icon-inr-div">
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon4.png')} alt=""/>
+                                            <img className="img-fluid" src={require('../../../../assets/images/icons/cancer.svg')} alt=""/>
                                             <p>Danger</p>
                                         </div>
                                         <div className="dngr-icon-inr-div">
-                                        <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon5.png')} alt=""/>
+                                        <img className="img-fluid" src={require('../../../../assets/images/icons/eye-irritation.svg')} alt=""/>
                                         <p>Danger</p>
                                     </div>
                                     </div>
