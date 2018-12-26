@@ -64,7 +64,7 @@ export const MainPage = ()=>{
                                         <Route exact path="/login" component={Login} />
                                         <Route exact path="/events" component={Events} />
                                         <Route exact path="/tips" component={Tips} />
-                                        <Route path="/product-details/:id" component={ProductSpecification} />
+                                        <Route path="/product-details/:name" component={ProductSpecification} />
                                         <Route path="/request/request-comment" component={RequestComment} />
                                         <Route path="/request/loggedin" component={LoggedIn} />
                                         <Route path="/tips/tipsviewmore" component={TipsViewMore} />

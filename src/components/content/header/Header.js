@@ -27,7 +27,7 @@ export const Header = ()=>{
                                 <Link to="/events" className="nav-link">이벤트</Link>
                             </li>
                             <li className="nav-item active">
-                                <Link to="/request" className="nav-link">문의하기</Link>
+                                <Link to="/request/loggedin" className="nav-link">문의하기</Link>
                             </li>
                             <li className="nav-item active">
                                 <Link to="/about" className="nav-link">서비스소개</Link>

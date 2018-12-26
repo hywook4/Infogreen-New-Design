@@ -6,12 +6,56 @@ import {ThirdSection} from './ThirdSection';
 import {Comments} from './CommentsSection';
 import DoughnutGraph from './DoughnutGraph';
 
-export class ProdSpec extends React.Component{
-    
-renderRatings=(config)=><RatingRow config={config} />
+import axios from 'axios';
 
-render=()=>{
-   
+export class ProdSpec extends React.Component{
+
+    // Code from idsLogic - Rakesh
+    constructor() {
+        super();
+        this.state = {
+            name : '',
+            image : '',
+            brand : '',
+            category : '',
+            star : '',
+            star1 : '',
+            star2 : '',
+            star3 : '',
+            star4 : '',
+        }
+    }
+
+    componentDidMount() {
+        const name = this.props.match.params.name;
+
+        const params = new URLSearchParams();
+        params.append('name', `${name}`);
+
+        axios.post('http://13.125.89.0/chemical/item_info.php', params)
+            .then(itemInfo => {
+                console.log(itemInfo)
+                this.setState({
+                    name : itemInfo.data.name,
+                    image : itemInfo.data.image,
+                    brand : itemInfo.data.brand,
+                    category : itemInfo.data.category,
+                    star : itemInfo.data.star,
+                    star1 : itemInfo.data.star1,
+                    star2 : itemInfo.data.star2,
+                    star3 : itemInfo.data.star3,
+                    star4 : itemInfo.data.star4,
+                })
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+    
+    renderRatings=(config)=><RatingRow config={config} />
+
+    render=()=>{
+
         return(
          
             <React.Fragment>
@@ -23,13 +67,13 @@ render=()=>{
                             <div className="col-lg-9 col-md-9 col-sm-12">
                                 <div className="prod_heading">
                                     <span className="dot"></span>
-                                    <h2>Lorem Ipsum</h2>
+                                    <h4>제품 상세 정보 페이지</h4>
                                 </div>
                                 {/* product detail */}
                                 <div className="prod_detail">
                                     <div className="prod_upr_img">
                                         <div className="prod_img">
-                                            <img className="img-responsive" src={ require('../../../../assets/images/product1.png') } alt=""/>
+                                            <img className="img-responsive" src={`http://13.125.89.0/chemical/item_img/${this.state.image}`} alt=""/>
                                         </div>
                                     </div> 
                                     <div className="prod-name-detl">
@@ -38,8 +82,8 @@ render=()=>{
 
                                     <div className="prod_desp">
                                         <div className="prod_name">
-                                            <p>Product 1</p>
-                                            <h1>Product 1 Specification</h1>
+                                            <p>{this.state.brand}</p>
+                                            <h1>{this.state.name}</h1>
 
                                         </div>
                                         <div className="prod_ratings">

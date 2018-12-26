@@ -5,7 +5,7 @@ import { Card, Image, Rating } from 'semantic-ui-react';
 const ProductCard = (props) => {
   return(
   <Card>
-      <a href="product-details/12">
+      <a href={`product-details/${props.name}`}>
         <Image src={props.src} alt={props.name}/>
       </a>
       <Card.Content>
