@@ -50,7 +50,7 @@ export class LoginSignupPopup extends React.Component{
                                             <img className="img-fluid" src={require('../../../../assets/images/naver.svg')} alt="네이버 아이디로 로그인 아이콘"/>
                                         </div>
                                         <div className="icon-name">
-                                            <p>네이버</p>
+                                            <p>네이버 아이디로 로그인</p>
                                         </div>
                                     </a>
                             </div>
@@ -61,7 +61,7 @@ export class LoginSignupPopup extends React.Component{
                                             <img className="img-fluid" src={require('../../../../assets/images/facebook.svg')} alt="페이스북 아이디로 로그인 아이콘"/>
                                         </div>
                                         <div className="icon-name">
-                                            <p>페이스북</p>
+                                            <p>페이스북 아이디로 로그인</p>
                                         </div>
                                     </a>
                             </div>
@@ -72,7 +72,7 @@ export class LoginSignupPopup extends React.Component{
                                             <img className="img-fluid" src={require('../../../../assets/images/kakao.svg')} alt="카카오톡 아이디로 로그인 아이콘"/>
                                         </div>
                                         <div className="icon-name">
-                                            <p>카카오톡</p>
+                                            <p>카카오톡 아이디로 로그인</p>
                                         </div>
                                     </a>
                             </div>
