@@ -14,7 +14,7 @@
     box-shadow: 5px 5px 10px 0px grey;
 }
 
-.ui.cards>.card>.image {
+img.ui.image {
     width: 350px;
     height: 250px;
 }
