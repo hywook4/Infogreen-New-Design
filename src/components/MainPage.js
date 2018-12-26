@@ -24,10 +24,11 @@ const placeHolder = ()=>{
     return (
         // this is simple placeholder for different pages, 
         // replace this component reference as you make the newer components available.
-        <div style={{padding:200}}>
-            <h4 style={{textAlign:'center'}}>This is just a placeHolder</h4>
-            <p style={{textAlign:'center'}}>Please look at code for further instructions</p>
-            <a style={{textAlign:'center',display:'block'}} href="/">Go Back</a>
+        <div style={{padding:180}}>
+            <h4 style={{textAlign:'center'}}>죄송합니다! 아직 준비중입니다!</h4>
+            <img style={{display:'block', margin: '0 auto', width: '30%'}} src={require('../assets/images/construction.gif')}/>
+            <br />
+            <a style={{textAlign:'center',display:'block'}} href="/">뒤로가기</a>
         </div>
     )
 }
