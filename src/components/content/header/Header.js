@@ -34,7 +34,7 @@ export const Header = ()=>{
                             </li>
                         </ul>
                          <div className="navbar_search">
-                            <input type="text" placeholder="검색"/>
+                            <input type="text" placeholder="검색하기"/>
                             <i className="fa fa-search" aria-hidden="true"></i>
                         </div>
                         
