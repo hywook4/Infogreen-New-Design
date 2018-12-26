@@ -47,10 +47,10 @@ export class LoginSignupPopup extends React.Component{
                                     <a href="facebook.com">
                                         <div className="icon-img">
                                         
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
+                                            <img className="img-fluid" src={require('../../../../assets/images/naver.svg')} alt="네이버 아이디로 로그인 아이콘"/>
                                         </div>
                                         <div className="icon-name">
-                                            <p>Facebook</p>
+                                            <p>네이버</p>
                                         </div>
                                     </a>
                             </div>
@@ -58,10 +58,10 @@ export class LoginSignupPopup extends React.Component{
                                     <a href="facebook.com">
                                         <div className="icon-img">
                                         
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
+                                            <img className="img-fluid" src={require('../../../../assets/images/facebook.svg')} alt="페이스북 아이디로 로그인 아이콘"/>
                                         </div>
                                         <div className="icon-name">
-                                            <p>Facebook</p>
+                                            <p>페이스북</p>
                                         </div>
                                     </a>
                             </div>
@@ -69,10 +69,10 @@ export class LoginSignupPopup extends React.Component{
                                     <a href="facebook.com">
                                         <div className="icon-img">
                                         
-                                            <img className="img-fluid" src={require('../../../../assets/images/icons/fb.png')} alt=""/>
+                                            <img className="img-fluid" src={require('../../../../assets/images/kakao.svg')} alt="카카오톡 아이디로 로그인 아이콘"/>
                                         </div>
                                         <div className="icon-name">
-                                            <p>Naver</p>
+                                            <p>카카오톡</p>
                                         </div>
                                     </a>
                             </div>
