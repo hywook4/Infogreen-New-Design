@@ -51,7 +51,6 @@
     position: relative;
     /* float: right; */
     display: inline-block;
-    top: 20px;
 }
 .navbar_router ul{
     width: 40%;
