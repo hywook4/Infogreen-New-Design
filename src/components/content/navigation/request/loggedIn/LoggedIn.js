@@ -17,7 +17,7 @@ export class LoggedIn extends React.Component{
                                         <div className="ingr-anly">
                                       
                                                 <div className="inr-ingr">
-                                                <a href="#" className="ingr-anchor">
+                                                <a href="/request/request-comment" className="ingr-anchor">
                                                     <h2>Ingredient Analysis</h2>
                                                     <p>Analyze all ingredients</p>
                                                 </a>
@@ -29,7 +29,7 @@ export class LoggedIn extends React.Component{
                                     <div className="ingr-anly">
                                         
                                             <div className="inr-ingr">
-                                            <a href="#" className="ingr-anchor">
+                                            <a href="/request/request-comment" className="ingr-anchor">
                                                 <h2>Ask the Admin</h2>
                                                 <p>Take Permission</p>
                                             </a>    
