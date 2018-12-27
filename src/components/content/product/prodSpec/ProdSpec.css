@@ -396,6 +396,7 @@ td img.icon_img{
 .danger-icons-inr .dngr-icon-inr-div{
     display: inline-block;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 .dngr-icon-inr-div img{
@@ -717,4 +718,61 @@ button.close.btn{
   
   .dngr-icon-inr-div.tooltip:hover .tooltiptext {
     visibility: visible;
+  }
+
+
+
+
+  /* tooltip css */
+  .tooptip-div{
+    width: 270px;
+    margin: 0 auto;
+    position: absolute;
+    top: 78px;
+    bottom: 0;
+    opacity: 9999;
+    left: -40px;
+    right: 0;
+  }
+
+  .inner-tooltip-div{
+    width: 100%;
+    margin: 0 auto;
+    /* border: 1px solid; */
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0 18px 0px rgba(0,0,0,0.2);
+  }
+  .tooltip-img{
+    display: inline-block;
+    position: relative;
+    top: -17px;
+    right: 0px;
+    left: padding-ri;
+    padding-right: 10px;
+  }
+
+  .tooltip-img img{
+      width: 32px;
+  }
+
+  .tooltip-content{
+    display: inline-block;
+    width: 74%;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .tooltip-content h2{
+    display: inline-block;
+    
+    text-align: left;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .tooltip-content p{
+      margin: 0;
+      font-weight: 600;
   }

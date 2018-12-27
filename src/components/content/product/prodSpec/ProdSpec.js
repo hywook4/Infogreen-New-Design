@@ -5,9 +5,28 @@ import {SecondSection} from './SecondSection';
 import {ThirdSection} from './ThirdSection';
 import {Comments} from './CommentsSection';
 import DoughnutGraph from './DoughnutGraph';
+import {Tooltip} from './Tooltip';
+import {TooltipLeft} from './TooltipLeft';
+// import ReactHover from '..';
+// import HoverComponent from './HoverComponent';
+// import TriggerComponent from './TriggerComponent';
+
 
 export class ProdSpec extends React.Component{
-    
+    constructor(props){
+        super(props);
+        this.state = {show : false};
+
+        this.toggleDiv = this.toggleDiv.bind(this)
+    }
+    toggleDiv=() => {
+        const {show} = this.state;
+        this.setState( { show : !show}) 
+    }
+    toggleDivLeft=() => {
+        const {show} = this.state;
+        this.setState( { show : !show}) 
+    }
 renderRatings=(config)=><RatingRow config={config} />
 
 render=()=>{
@@ -134,39 +153,34 @@ render=()=>{
                                     <div className="danger-icon-head">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
                                         <h1>Lorem Ipsum</h1>
-                                        {/* <p data-tip="dfghj" data-html={true}>Tooltip</p>
-                                        <ReactTooltip html={true} /> */}
+                                      
                                     </div>
                                     <div className="icons-all">
-                                        <div className="dngr-icon-inr-div">
+                                    
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDivLeft}>
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon1.png')} alt=""/>
                                             <p>Danger</p>
-                                            {/* <span className="tooltiptext">
-                                                <div>
-                                                    <img src={require('../../../../assets/images/icons/iconB.png')} alt=""/>
-                                                </div>
-                                                <div>
-                                                    <h2><b>Ingredient(C8-16)</b></h2>
-                                                    <p>Alkyl polyglucoside(C8-16)</p>
-                                                </div>
-                                               
-                                            </span> */}
+                                            {this.state.show && <TooltipLeft />}
                                         </div>
-                                        <div className="dngr-icon-inr-div">
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDivLeft}>
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon2.png')} alt=""/>
                                             <p>Danger</p>
+                                            {this.state.show && <TooltipLeft />}
                                         </div>
-                                        <div className="dngr-icon-inr-div">
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDivLeft}>
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon3.png')} alt=""/>
                                             <p>Danger</p>
+                                            {this.state.show && <TooltipLeft />}
                                         </div>
-                                        <div className="dngr-icon-inr-div">
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDivLeft}>
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon4.png')} alt=""/>
                                             <p>Danger</p>
+                                            {this.state.show && <TooltipLeft />}
                                         </div>
-                                        <div className="dngr-icon-inr-div">
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDivLeft}>
                                         <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon5.png')} alt=""/>
                                         <p>Danger</p>
+                                        {this.state.show && <TooltipLeft />}
                                     </div>
                                     </div>
                                 </div>
@@ -176,25 +190,30 @@ render=()=>{
                                         <h1>Lorem Ipsum</h1>
                                     </div>   
                                     <div className="icons-all">
-                                        <div className="dngr-icon-inr-div">
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDiv}>
                                                 <img className="img-fluid" src={require('../../../../assets/images/icons/sales.png')} alt=""/>
                                                 <p>Danger</p>
-                                            </div>
-                                        <div className="dngr-icon-inr-div">
+                                                {this.state.show && <Tooltip />}
+                                        </div>
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDiv}>
                                                 <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon7.png')} alt=""/>
                                                 <p>Danger</p>
+                                                {this.state.show && <Tooltip />}
                                             </div>
-                                        <div className="dngr-icon-inr-div">
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDiv}>
                                                 <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon8.png')} alt=""/>
                                                 <p>Danger</p>
+                                                {this.state.show && <Tooltip />}
                                             </div>
-                                        <div className="dngr-icon-inr-div">
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDiv}>
                                                 <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon9.png')} alt=""/>
                                                 <p>Danger</p>
+                                                {this.state.show && <Tooltip />}
                                             </div>
-                                        <div className="dngr-icon-inr-div">
+                                        <div className="dngr-icon-inr-div" onClick={this.toggleDiv}>
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon10.png')} alt=""/>
                                             <p>Danger</p>
+                                            {this.state.show && <Tooltip />}
                                         </div>
                                     </div>
                                 </div>
