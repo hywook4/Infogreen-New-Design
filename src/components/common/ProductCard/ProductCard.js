@@ -1,13 +1,11 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Card, Image, Rating } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 
 const ProductCard = (props) => {
   return(
   <Card>
-      <a href={`product-details/${props.name}`}>
-        <Image src={props.src} alt={props.name}/>
-      </a>
+      <Image href={`product-details/${props.name}`} src={props.src} alt={props.name}/>
       <Card.Content>
         <Card.Header>{props.name}</Card.Header>
         <Card.Meta>{props.description}</Card.Meta>

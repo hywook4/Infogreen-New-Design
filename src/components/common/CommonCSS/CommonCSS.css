@@ -11,7 +11,7 @@
 }
 
 .ui.cards>.card {
-    box-shadow: 5px 5px 10px 0px grey;
+    box-shadow: 0px 0px 30px 2px grey;
 }
 
 .ui.card>.content>.header, .ui.cards>.card>.content>.header {
@@ -19,7 +19,7 @@
     padding: 0;
 }
 
-img.ui.image {
-    width: 350px;
-    height: 250px;
+.ui.image img {
+    width: 300px !important;
+    height: 300px !important;
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, Icon, Image, Button } from 'semantic-ui-react';
-import './StaticCardSlider.css';
 
 export const StaticCardSlider = () => (
   <Card>

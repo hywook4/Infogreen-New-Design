@@ -14,7 +14,7 @@ import {Tips} from './content/navigation/tips/Tips';
 import {Product} from './content/product/Product';
 import {LoggedIn} from './content/navigation/request/loggedIn/LoggedIn';
 import {RequestComment} from './content/navigation/request/requestComment/RequestComment';
-import {TipsViewMore} from './content/navigation/tips/TipsViewMore';
+import {ViewMore} from './common/ViewMore/ViewMore';
 import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -62,12 +62,15 @@ export const MainPage = ()=>{
                                         <Route exact path="/request" component={Request} />
                                         <Route path="/signup" component={Signup} />
                                         <Route exact path="/login" component={Login} />
+
                                         <Route exact path="/events" component={Events} />
+                                        <Route path="/events/:id" render={(props) => <ViewMore {...props} section={"events"} />} />
                                         <Route exact path="/tips" component={Tips} />
+                                        <Route path="/tips/:id" render={(props) => <ViewMore {...props} section={"tips"} />} />
+
                                         <Route path="/product-details/:name" component={ProductSpecification} />
                                         <Route path="/request/request-comment" component={RequestComment} />
                                         <Route path="/request/loggedin" component={LoggedIn} />
-                                        <Route path="/tips/tipsviewmore" component={TipsViewMore} />
                                 </div>
                             </React.Fragment>
                         </Router>
