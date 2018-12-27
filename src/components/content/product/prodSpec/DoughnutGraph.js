@@ -28,15 +28,15 @@ export default class DoughnutGraph extends React.Component{
                     '#ce8b15',
                     '#32b8a4'
                     ]
-                }],
-                labels: [
-                    'Pink',
-                    'Blue',
-                    'Yellow',
-                    '#9bc659',
-                    '#ce8b15',
-                    '#32b8a4'
-                ]
+                }]
+                // labels: [
+                //     'Pink',
+                //     'Blue',
+                //     'Yellow',
+                //     '#9bc659',
+                //     '#ce8b15',
+                //     '#32b8a4'
+                // ]
         }
     }
 }

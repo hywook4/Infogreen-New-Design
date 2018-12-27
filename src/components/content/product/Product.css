@@ -21,7 +21,7 @@
 
 .product-menu-div i{
     font-size: 20px;
-    color: skyblue;
+    color: #32b8a4;
     display: inline-block;
     padding-right: 15px;
 }
@@ -88,9 +88,14 @@ ul.prod_ctgy_inner li a{
     text-decoration: none;
     font-size: 14px;
 }
-
+.product_div{
+    width: 100%;
+    margin: 40px auto;
+    position: relative;
+    float: left;
+}
 ul.prod_ctgy_inner li a:hover, ul.prod_ctgy_inner li a:active, ul.prod_ctgy_inner li a:focus{
-    color: skyblue;
+    color: #32b8a4;
 }
 
 .ctgy-right-div{

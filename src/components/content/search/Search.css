@@ -1,19 +1,22 @@
 .search-div{
     width: 100%;
-    margin: 50px auto;
+    margin: 60px auto;
     position: relative;
     float: left;
     clear: both;
     text-align: center;
-
+    line-height: 30px;
 }
 
 .search_heading{
-    width: 65%;
+    width: 100%;
     margin: 15px auto;
     text-align: left;
     color: gray;
     font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-left: 25px;
   
 }
 .search_heading h3 {
@@ -29,19 +32,20 @@
     width: 100%;
     display: inline-block;
     position: relative;
-    border-radius: 15px;
-    border: 1px solid gray;
-    padding: 15px 10px;
+    border-radius: 23px;
+    border: 0;
+    padding: 20px 20px;
     outline: 0;
-    box-shadow: 4px 4px 10px 0px grey;
+    box-shadow: 0px 5px 27px 0 grey;
 }
 
 .search_box i {
     position: absolute;
-    top: 16px;
+    top: 57px;
     bottom: 0;
     right: 25px;
     font-size: 20px;
+    color: #32b8a4;
 }
 
 a {

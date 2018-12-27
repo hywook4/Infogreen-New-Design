@@ -354,8 +354,8 @@ render=()=>{
                             {/* finish ingredients icons */}
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-12">
-                                <div className="pie_chart">
-
+                                <div className="pie-chart-info">
+                                    <DoughnutGraph/>
                                 </div>
                                 <div className="alpha-icon">
                                     <div className="alpha-icon-info">
@@ -384,9 +384,7 @@ render=()=>{
                                         <p>X-ray</p>
                                     </div>
                                 </div>
-                                <div className="pie-chart-info">
-                                  <DoughnutGraph/>
-                                </div>
+                                
 
                                 {/* desp in green */}
                                 <div className="desp-green">
@@ -396,7 +394,7 @@ render=()=>{
                                         <p>greenery: F-A10B-C001001-A150</p>
                                     </div>
                                     <div className="desp-greenery-img">
-                                        <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
+                                        <img src={require('../../../../assets/images/icons/icon-ef.png')} alt=""/>
                                     </div>
                                     <div className="desp-greenery-rslt">
                                         <h1>Greenery Description Result</h1>

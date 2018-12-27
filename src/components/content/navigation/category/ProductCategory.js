@@ -7,7 +7,7 @@ export class ProductCategory extends React.Component{
         return(
             <div className="prod-ctgy-inr-div">
                 <div class="tab-content prod-ctgy-tabs">
-                    <div id="laundary" class="tab-pane fade in active">
+                    <div id="laundary" className="tab-pane show active">
                         <div className="sub-ctgy-div">
                             <h1>Sub category</h1>
                             <ul className="nav nav-tabs">
@@ -28,7 +28,28 @@ export class ProductCategory extends React.Component{
 
                         
                     </div>
-                    <div id="fabric" class="tab-pane fade">
+                    <div id="fabric" className="tab-pane fade">
+                    <div className="sub-ctgy-div">
+                    <h1>Sub category</h1>
+                            <ul className="nav nav-tabs">
+                                <li className="active">
+
+                                    <a href="#tab_default_1" data-toggle="tab">
+                                    
+                                    Highest Rating </a>
+                                </li>
+                                <li>
+                                    <a href="#tab_default_2" data-toggle="tab">
+                                    Highest Viewed</a>
+                                </li>
+                                <li>
+                                    <a href="#tab_default_3" data-toggle="tab">
+                                    Highest Newest</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="dishwashing" className="tab-pane fade">
                     <div className="sub-ctgy-div">
                     <h1>Sub category</h1>
                             <ul className="nav nav-tabs ">
@@ -47,26 +68,7 @@ export class ProductCategory extends React.Component{
                             </ul>
                         </div>
                     </div>
-                    <div id="dishwashing" class="tab-pane fade">
-                    <div className="sub-ctgy-div">
-                    <h1>Sub category</h1>
-                            <ul className="nav nav-tabs ">
-                                <li className="active">
-                                    <a href="#tab_default_1" data-toggle="tab">
-                                    Highest Rating </a>
-                                </li>
-                                <li>
-                                    <a href="#tab_default_2" data-toggle="tab">
-                                    Highest Viewed</a>
-                                </li>
-                                <li>
-                                    <a href="#tab_default_3" data-toggle="tab">
-                                    Highest Newest</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="odor" class="tab-pane fade">
+                    <div id="odor" className="tab-pane fade">
                         <div className="sub-ctgy-div">
                         <h1>Sub category</h1>
                                 <ul className="nav nav-tabs ">
@@ -85,10 +87,10 @@ export class ProductCategory extends React.Component{
                                 </ul>
                         </div>
                     </div>
-                    <div id="other" class="tab-pane fade">
+                    <div id="other" className="tab-pane fade">
                         <div className="sub-ctgy-div">
                         <h1>Sub category</h1>
-                                <ul className="nav nav-tabs ">
+                                <ul className="nav nav-tabs">
                                     <li className="active">
                                         <a href="#tab_default_1" data-toggle="tab">
                                         Highest Rating  </a>

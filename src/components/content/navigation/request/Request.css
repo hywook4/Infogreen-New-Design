@@ -125,11 +125,19 @@
     border-color: transparent;
     color: #656565;
     color:#32b8a4;
+    padding: 10px 30px;
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.nav-inner-request-tab{
     font-weight: 500;
     color: #656565;
+    padding: 10px 30px;
+    width: 13%;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+    max-width: 13%;
 }
 
 .nav-tabs .nav-linknav-inner-request-tab{
@@ -146,6 +154,6 @@
 
 .req-inr-tab-1{
     width: 100%;
-    margin: 20px auto;
+    margin: 15px auto;
     position: relative;
 }

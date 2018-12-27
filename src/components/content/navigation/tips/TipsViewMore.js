@@ -13,17 +13,7 @@ export class TipsViewMore extends React.Component {
     return (
 
         <div className="container-tipsmore">
-            {/* <div className="container-viewmore">
-                <div className="row">
-                    <div className="col-lg-12 col-md-12 col-sm-12">
-                        <div className="sub-head">
-                            <p>Some another text below the title</p>
-                            <p>2018/00/00</p>
-                        </div>
-                    </div>
-                </div> */}
-                {/* <div className="row" style={{marginTop: 83}}>
-                    <div className="col-md-12"> */}
+         
                         <div className="tips-viewmore">
                             <div className="container">
                                 <div className="container-viewmore">
@@ -46,6 +36,7 @@ export class TipsViewMore extends React.Component {
                                         {/* <Image src= 'http://www.skillings.com/wp-content/uploads/2017/02/placeholder-square.jpg' size='large' centered className="img-large" />   */}
                                     <img className="img-fluid" src={require('../../../../assets/images/tips.jpg')} alt=""/>
                                 </div> 
+                                <DescriptionSlider /> 
                                 <div className="row">
                                     <div className="col-md-10 tips-cmnt-inr-div">
                                         <h6><b>Some Text</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>2018/00/00</span></h6>
@@ -57,7 +48,7 @@ export class TipsViewMore extends React.Component {
                                     </div>
                                 </div>
                         </div> 
-                        <DescriptionSlider /> 
+                      
                         <Comments />  
                         <Paginate />
 

@@ -1,6 +1,6 @@
 .tipEvent_container{
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto 25px;
     position: relative;
     float: left;
 }
@@ -18,11 +18,11 @@
 }
 .tip-heading{
     width: 100%;
-    margin: 15px auto;
+    margin: 20px auto;
 }
 .tip-heading i{
     font-size: 20px;
-    color: skyblue;
+    color: #32b8a4 !important;
     display: inline-block;
 }
 .tip-heading h4{

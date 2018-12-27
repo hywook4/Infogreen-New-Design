@@ -29,22 +29,22 @@ export class Category extends React.Component{
                                         <div className="col-lg-6 col-md-6 col-sm-12">
                                             <div className="ctgy-chemical-div">
                                                 <h4>Household chemical product</h4>
-                                                <ul className="nav nav-pills">
+                                                <ul className="nav nav-pills" role="tablist">
                                                 <div className="row">
                                                     <div className="col-sm-4">
-                                                    <li className="active"><a data-toggle="pill" href="#laundary">Laundary</a></li>
+                                                    <li className="nav-item"><a className="nav-link active" data-toggle="pill" href="#laundary">Laundary</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#fabric">Fabric</a></li>
+                                                    <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#fabric">Fabric</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#dishwashing">Dishwashing</a></li>
+                                                    <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#dishwashing">Dishwashing</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#odor">Odor</a></li>
+                                                    <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#odor">Odor</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#other">Other</a></li>
+                                                    <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#other">Other</a></li>
                                                     </div>
                                                 </div>
                                                    
@@ -67,34 +67,34 @@ export class Category extends React.Component{
                                                     <ul className="nav nav-pills">
                                                         <div className="row">
                                                             <div className="col-sm-4">
-                                                                <li className="active"><a data-toggle="pill" href="#soap">Soap</a></li>
+                                                                <li className="nav-item"><a className="nav-link active" data-toggle="pill" href="#soap">Soap</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#lotion">Lotion</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#lotion">Lotion</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#cream">Cream</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#cream">Cream</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#oil">Oil</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#oil">Oil</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#powder">Powder</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#powder">Powder</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#hair">Hair</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#hair">Hair</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#suncare">Suncare</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#suncare">Suncare</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#babywipes">Babywipes</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#babywipes">Babywipes</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#other">Other</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#other">Other</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#other">Other</a></li>
+                                                                <li className="nav-item"><a className="nav-link" data-toggle="pill" href="#other">Other</a></li>
                                                             </div>
                                                 </div>
                                                     </ul>

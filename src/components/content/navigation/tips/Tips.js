@@ -10,7 +10,7 @@ import {Paginate} from '../../navigation/tips/pagination/Pagination';
 export const Tips = () => {
     return (
         <div className="container-fluid">
-            <div className="row" style={{marginTop: 83}}>
+            <div className="row" style={{marginTop: 78}}>
                 <div className="col-sm-1">
                 </div>
 

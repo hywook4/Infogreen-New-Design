@@ -71,41 +71,45 @@
     padding: 10px 0px;
 }
 
-ul.nav.nav-pills{
+.ctgy-chemical-div ul.nav.nav-pills, .ctgy-cosmetics-div ul.nav.nav-pills{
     width: 100%;
     margin: 0 auto;
     position: relative;
 
 }
 
-ul.nav.nav-pills li{
+.ctgy-chemical-div ul.nav.nav-pills li a, .ctgy-cosmetics-div ul.nav.nav-pills li a{
     border: 1px solid #a0a0a0;
     padding: 10px 5px;
     margin: 10px 0;
     text-align: center;
-    font-size: 12px;
+   
     display: table;
     color: gray;
     width: 100%;
     background-color: white;
-}
-
-ul.nav.nav-pills li a{
-    color: gray;
+    
     letter-spacing: 1px;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
 }
 
-ul.nav.nav-pills li:hover, ul.nav.nav-pills li:active,  ul.nav.nav-pills li:focus{
+/* .ctgy-chemical-div ul.nav.nav-pills li a,{
+    color: gray;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+} */
+
+.ctgy-chemical-div ul.nav.nav-pills li a:hover, .ctgy-chemical-div ul.nav.nav-pills .nav-link.active,
+ .ctgy-chemical-div ul.nav.nav-pills li a:focus,
+.ctgy-cosmetics-div ul.nav.nav-pills li a:hover, .ctgy-cosmetics-div ul.nav.nav-pills .nav-link.active,
+ .ctgy-cosmetics-div ul.nav.nav-pills li a:focus{
     background-color: #32b8a4;
     color: white;
-    border-color: #32b8a4;
-}
-ul.nav.nav-pills li a:hover, ul.nav.nav-pills li a:active,  ul.nav.nav-pills li a:focus{
-    /* background-color: #32b8a4; */
-    color: white;
+    border: 0;
 }
 /* prod ctgy tabs */
 .prod-ctgy-tabs{
@@ -188,7 +192,7 @@ ul.nav.nav-pills li a:hover, ul.nav.nav-pills li a:active,  ul.nav.nav-pills li 
 .ctgy-inrimg-div{
     width: 100%;
     border: 1px solid #999999;
-    margin: 50px auto;
+    margin: 40px auto;
     padding: 30px 30px;
 }
 

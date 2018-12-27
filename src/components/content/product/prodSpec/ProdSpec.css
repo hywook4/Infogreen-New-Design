@@ -6,7 +6,7 @@
 
 .prodspec_container, .prodspec_inner{
     width: 95%;
-    margin: 0 auto;
+    margin: 6px auto;
     position: relative;
     float: left;
 }
@@ -66,7 +66,7 @@
     margin: 0 auto;
     padding: 20px 0;
     display: inline-block;
-    padding-left: 50px;
+    padding-left: 20px;
     /* color: gray; */
 }
 
@@ -141,7 +141,7 @@
 .prod_ratings i{
     font-size: 22px;
     padding-right: 10px;
-    color: gray;
+    color: #b3bead;
 }
 
 .prod_icons{
@@ -217,7 +217,7 @@
 }
 
 .prod-rt_div_inr.prod-rt-people i{
-    padding-left: 15px;
+    padding-left: 3px;
 }
 
 .prod-rt_div_inr-1{
@@ -246,9 +246,11 @@
 
 .prod_addn .prod_addn_info{
     width: 100%;
-    margin: -59px auto 0;
+    margin: 0 auto;
     position: relative;
     float: left;
+    top: -60px;
+    bottom: 0;
 }
 .prod-rt_div_inr.prod-rt-people .people-icon{
 padding-left: 60px;
@@ -295,14 +297,17 @@ width: 105px;
     margin: 0 auto;
     clear: both;
     padding-left: 20px;
+    top: 45px;
+    position: relative;
 }
 
 .prod_addn_info.prod-ingt-info i{
     display: inline-block;
     font-size: 18px;
-    color: gray;
+    color: #b3bead;
     padding-right: 10px;
     margin-top: 15px;
+  
 }
 
 .ingr-table{
@@ -323,7 +328,7 @@ width: 105px;
     position: relative;
 }
 .prod-ingr-tbl-name i{
-    color: gray;
+    color: #b3bead;
     padding-right: 15px;
 }
 
@@ -346,7 +351,7 @@ table thead tr th{
 }
 
 table thead tr td{
-    color: gray;
+    color: #b3bead;
     font-size: 14px;
     letter-spacing: 1px;
 }
@@ -365,6 +370,7 @@ td img.icon_img{
     width: 70%;
     margin: 0 auto;
     position: relative;
+    top: -35px;
 }
 .danger-icons-inr{
     width: 50%;
@@ -376,11 +382,11 @@ td img.icon_img{
 .danger-icon-head{
     width: 100%;
     position: relative;
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
 }
 .danger-icon-head i{
-    font-size: 20px;
-    color: gray;
+    font-size: 18px;
+    color: #b3bead;
     display: inline-block;
 }
 
@@ -400,7 +406,7 @@ td img.icon_img{
 }
 
 .dngr-icon-inr-div img{
-    width: 50px;
+    width: 45px;
 }
 
 .dngr-icon-inr-div p{
@@ -448,7 +454,7 @@ td img.icon_img{
 
 .pie-chart-info{
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     position: relative;
 }
 
@@ -604,7 +610,7 @@ p.popup-ingr-para{
     float: right;
     position: absolute;
     top: -45px;
-    right: 20%;
+    right: 24%;
     color: gray;
     font-size: 14px;
 
@@ -619,7 +625,7 @@ p.popup-ingr-para{
 .desp-green{
     width: 100%;
     margin: 70px auto;
-    background-color: #ddf3f0;
+    background-color: #f7f7f7;
     padding: 40px 20px;
 }
 .desp-greenery{
@@ -630,7 +636,7 @@ p.popup-ingr-para{
 }
 
 .desp-greenery i{
-    color: gray;
+    color: #b3bead;
     display: inline-block;
 }
 
@@ -654,7 +660,7 @@ p.popup-ingr-para{
 
 .desp-greenery-img{
     width: 100%;
-    margin: 15px auto;
+    margin: 50px auto 15px;
     text-align: center;
 }
 
