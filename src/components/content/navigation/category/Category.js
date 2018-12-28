@@ -10,6 +10,7 @@ export class Category extends React.Component{
             search: "",
             sort: "",
             category: "",
+            check: "",
             result: null,
         }
 
@@ -18,7 +19,7 @@ export class Category extends React.Component{
 
     onChange = e => {
         const searchText = e.target.value.trimLeft();
-        this.search(searchText, this.state.category, this.state.sort);
+        this.search(searchText, this.state.category, this.state.sort, this.state.check);
 
         this.setState({
             search: searchText
@@ -27,7 +28,7 @@ export class Category extends React.Component{
 
     onClick = e => {
         const category = e.target.innerHTML;
-        this.search(this.state.search, category, this.state.sort);
+        this.search(this.state.search, category, this.state.sort, this.state.check);
 
         this.setState({
             category
@@ -36,14 +37,24 @@ export class Category extends React.Component{
 
     onSort = e => {
         const sort = e.target.name;
-        this.search(this.state.search, this.state.category, sort);
+        this.search(this.state.search, this.state.category, sort, this.state.check);
 
         this.setState({
             sort
         })
     }
 
-    search(searchText, category, sort) {
+    onCheck = e => {
+        const check = e.target.name;
+        console.log(check);
+        this.search(this.searchText, this.state.category, this.state.sort, check);
+
+        this.setState({
+            check
+        })
+    }
+
+    search(searchText, category, sort, check) {
         const params = new URLSearchParams();
         if (searchText) {
             params.append("name", searchText);    
@@ -56,6 +67,11 @@ export class Category extends React.Component{
         if (sort) {
             params.append("sort", sort);
         }
+
+        if (check) {
+            params.append("check", check);
+        }
+
 
         
         axios.post("http://13.125.89.0/chemical/items_limit.php", params)
@@ -227,25 +243,25 @@ export class Category extends React.Component{
                                                         <div class="tab-pane active" id="tab_default_1">
                                                             <div className="checkbox-div">
                                                                 <div className="custom-control custom-checkbox custom-control-inline">
-                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline1" />
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline1" name="1" onClick={this.onCheck}/>
                                                                     <label htmlFor="defaultInline1" className="custom-control-label">성분 공개 제품</label>
                                                                 </div>
                                                                 <div className="custom-control custom-checkbox custom-control-inline">
-                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline2"/>
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline2"name="3" onClick={this.onCheck}/>
                                                                     <label htmlFor="defaultInline2" className="custom-control-label">주의 성분 제외</label>
                                                                 </div>
                                                                 <div className="custom-control custom-checkbox custom-control-inline">
-                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline3"/>
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline3" name="2" onClick={this.onCheck}/>
                                                                     <label htmlFor="defaultInline3" className="custom-control-label">유해 성분 제외</label>
                                                                 </div>
                                                                 <div className="custom-control custom-checkbox custom-control-inline">
-                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline4"/>
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline4" name="4" onClick={this.onCheck}/>
                                                                     <label htmlFor="defaultInline4" className="custom-control-label">높은 위험도 성분 제외</label>
                                                                 </div>
-                                                                <div className="custom-control custom-checkbox custom-control-inline">
+                                                                {/* <div className="custom-control custom-checkbox custom-control-inline">
                                                                     <input type="checkbox" className="custom-control-input" id="defaultInline5"/>
                                                                     <label htmlFor="defaultInline5" className="custom-control-label">친환경 인증 제품</label>
-                                                                </div>
+                                                                </div> */}
                                                             </div>
                                                             {itemData}
                                                         </div>
