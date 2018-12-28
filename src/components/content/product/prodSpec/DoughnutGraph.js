@@ -10,32 +10,32 @@ export default class DoughnutGraph extends React.Component{
         this.state = {
             chartData: {
                 datasets: [{
-                    data: [50,50,50,50,50,50],
+                    data: this.props.chartData,
                     backgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#9bc659',
-                    '#ce8b15',
-                    '#32b8a4'
+                    '#999999',
+                    '#32B8A4',
+                    '#9BC659',
+                    '#F7B218',
+                    '#CE8B15',
+                    '#F0574C'
 
                     ],
                     hoverBackgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#9bc659',
-                    '#ce8b15',
-                    '#32b8a4'
+                    '#999999',
+                    '#32B8A4',
+                    '#9BC659',
+                    '#F7B218',
+                    '#CE8B15',
+                    '#F0574C'
                     ]
                 }],
                 labels: [
-                    'Pink',
-                    'Blue',
-                    'Yellow',
-                    '#9bc659',
-                    '#ce8b15',
-                    '#32b8a4'
+                    '정보없음 (중간위험)',
+                    '매우 낮은 위험',
+                    '낮은 위험',
+                    '#높은 위험',
+                    '#높은 위험',
+                    '#매우 높은 위험'
                 ]
         }
     }
@@ -46,7 +46,6 @@ export default class DoughnutGraph extends React.Component{
     return(
        
          <div className="pie-chart-info-1">
-            
             <Doughnut
 	            data={this.state.chartData}
 	            

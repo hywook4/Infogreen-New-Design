@@ -5,6 +5,8 @@ import {SecondSection} from './SecondSection';
 import {ThirdSection} from './ThirdSection';
 import {Comments} from './CommentsSection';
 import DoughnutGraph from './DoughnutGraph';
+import {IngredientModal} from './IngredientModal';
+import {IngredientRow} from './IngredientRow';
 
 import axios from 'axios';
 
@@ -23,6 +25,16 @@ export class ProdSpec extends React.Component{
             star2 : '',
             star3 : '',
             star4 : '',
+            code: '',
+            ewg : {
+                ewg_X: 0,
+                ewg_A: 0,
+                ewg_B: 0,
+                ewg_C: 0,
+                ewg_D: 0,
+                ewg_F: 0,
+            },
+            ingredient_list: null,
         }
     }
 
@@ -34,7 +46,6 @@ export class ProdSpec extends React.Component{
 
         axios.post('http://13.125.89.0/chemical/item_info.php', params)
             .then(itemInfo => {
-                console.log(itemInfo)
                 this.setState({
                     name : itemInfo.data.name,
                     image : itemInfo.data.image,
@@ -45,7 +56,26 @@ export class ProdSpec extends React.Component{
                     star2 : itemInfo.data.star2,
                     star3 : itemInfo.data.star3,
                     star4 : itemInfo.data.star4,
-                })
+                    code: itemInfo.data.code,
+                    ewg: {
+                        ewg_X: itemInfo.data.ewg_X,
+                        ewg_A: itemInfo.data.ewg_A,
+                        ewg_B: itemInfo.data.ewg_B,
+                        ewg_C: itemInfo.data.ewg_C,
+                        ewg_D: itemInfo.data.ewg_D,
+                        ewg_F: itemInfo.data.ewg_F,
+                    }
+                    
+                });
+
+                const params = new URLSearchParams();
+                params.append("name", itemInfo.data.name);
+                return axios.post("http://13.125.89.0/chemical/ingredient_list.php", params)
+
+                    .then(res => {
+                        this.setState({ingredient_list: res.data})
+                        console.log(this.state.ingredient_list.total);
+                    })
             })
             .catch(error => {
                 console.log(error);
@@ -55,10 +85,16 @@ export class ProdSpec extends React.Component{
     renderRatings=(config)=><RatingRow config={config} />
 
     render=()=>{
+        const chartData = [
+            Object.keys(this.state.ewg).map(key => Number(this.state.ewg[key]))
+        ];
 
-        return(
-         
+        
+
+        return this.state.ingredient_list ?
+        ( 
             <React.Fragment>
+            <br />
             <div className="prod_spec" style={{marginTop:'100px'}}>
                 <div className="prodspec_container">
                 {/* product detail */}
@@ -77,7 +113,7 @@ export class ProdSpec extends React.Component{
                                         </div>
                                     </div> 
                                     <div className="prod-name-detl">
-                                        <h2>카테고리 > 가정용 화학제품 > 주방세제</h2>
+                                        <h2>카테고리 > 가정용 화학제품 > {this.state.category}</h2>
                                     </div>
 
                                     <div className="prod_desp">
@@ -102,18 +138,21 @@ export class ProdSpec extends React.Component{
                                             <div className="prod_icon_info">
                                                 <i className="fa fa-heart" aria-hidden="true"></i>
                                                 {/* <img src={ require('../../../../assets/images/heart.svg') } alt=""/> */}
-                                                <p>Like</p>
+                                                <p>찜</p>
                                             </div>
                                             <div className="prod_icon_info prod-check-3rd-div">
                                                 {/* <i className="fa fa-share-alt"></i> */}
-                                                <i className="fa fa-krw" aria-hidden="true"></i>
+                                                <a href={`https://search.shopping.naver.com/search/all.nhn?query=${this.state.name}`}>
+                                                    <i className="fa fa-krw" aria-hidden="true"></i>
+                                                </a>
+                                                
                                                 {/* <img src={ require('../../../../assets/images/checkPrice.svg') } alt=""/> */}
-                                                <p className="check-para">Check Price</p>
+                                                <p className="check-para">가격정보</p>
                                             </div>
                                             <div className="prod_icon_info">
                                                 <i className="fa fa-share-alt"></i>
                                                 {/* <img src={ require('../../../../assets/images/share.svg') } alt=""/> */}
-                                                <p>Share</p>
+                                                <p>공유</p>
                                             </div>
                                         </div>
 
@@ -127,31 +166,27 @@ export class ProdSpec extends React.Component{
                                 <div className="prod_right_div">
                                     <div className="prod-rt_div_inr">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
-                                        <p>Like</p>
+                                        <p>성분공개여부</p>
                                     </div>
                                     <div className="prod-rt_div_inr-1">
                                     <img className="img-fluid" src={require('../../../../assets/images/icons/icon2.png')} alt=""/>
                                         {/* <i className="fa fa-heart" aria-hidden="true"></i> */}
-                                        <p>Like</p>
+                                        <p>성분 공개가 잘되어 있어요!</p>
                                     </div>
-                                    <div className="prod-rt_div_inr prod-rt-people">
+                                    <div className="prod-rt_div_inr">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
-                                        <p>Like</p>
-                                        <img className="img-fluid people-icon" src={require('../../../../assets/images/icons/people-icon.png')} alt=""/>
-                                        {/* <i className="fa fa-heart people-icon" aria-hidden="true"></i> */}
-                                        
+                                        <p>성분공개요청</p>
                                     </div>
-                                    <div className="prod-rt_div_inr-1 prod-icon-text">
-                                        
-                                        <p>Like</p>
-                                        {/* <h2>120</h2> */}
-                                        <i className="fa fa-heart" aria-hidden="true"></i>
+                                    <div className="prod-rt_div_inr-1">
+                                    <img className="img-fluid" src={require('../../../../assets/images/icons/people-icon.png')} alt=""/>
+                                        {/* <i className="fa fa-heart" aria-hidden="true"></i> */}
+                                        <p>성분 공개가 잘되어 있어요!</p>
                                     </div>
                                 </div>
                                 {/* <div className="prod_addn"> */}
                                     <div className="prod_addn_info prod-ingt-info">
                                     <i className="fa fa-heart" aria-hidden="true"></i>
-                                    <h1>Lorem Ipsum</h1>
+                                    <h1>성분구성</h1>
                                     {/* <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> */}
                                     </div>
                                 {/* </div> */}
@@ -167,7 +202,7 @@ export class ProdSpec extends React.Component{
                             <div className="col-lg-9 col-md-9 col-sm-12">
                             <div className="prod_addn">
                                     <div className="prod_addn_info">
-                                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        <p>*해당되는 성분의 포함 여부만 알려드려요. 제품 자체의 유해성과는 거리가 있습니다.</p>
                                     </div>
                             </div>
 
@@ -176,14 +211,14 @@ export class ProdSpec extends React.Component{
                                 <div className="danger-icons-inr">
                                     <div className="danger-icon-head">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
-                                        <h1>Lorem Ipsum</h1>
+                                        <h1>나쁜 성분</h1>
                                         {/* <p data-tip="dfghj" data-html={true}>Tooltip</p>
                                         <ReactTooltip html={true} /> */}
                                     </div>
                                     <div className="icons-all">
                                         <div className="dngr-icon-inr-div">
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/skin-irritation.svg')} alt=""/>
-                                            <p>Danger</p>
+                                            {/* <p>Danger</p> */}
                                             {/* <span className="tooltiptext">
                                                 <div>
                                                     <img src={require('../../../../assets/images/icons/iconB.png')} alt=""/>
@@ -197,47 +232,47 @@ export class ProdSpec extends React.Component{
                                         </div>
                                         <div className="dngr-icon-inr-div">
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/respiration-toxic.svg')} alt=""/>
-                                            <p>Danger</p>
+                                            {/* <p>Danger</p> */}
                                         </div>
                                         <div className="dngr-icon-inr-div">
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/development-toxic.svg')} alt=""/>
-                                            <p>Danger</p>
+                                            {/* <p>Danger</p> */}
                                         </div>
                                         <div className="dngr-icon-inr-div">
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/cancer.svg')} alt=""/>
-                                            <p>Danger</p>
+                                            {/* <p>Danger</p> */}
                                         </div>
                                         <div className="dngr-icon-inr-div">
                                         <img className="img-fluid" src={require('../../../../assets/images/icons/eye-irritation.svg')} alt=""/>
-                                        <p>Danger</p>
+                                        {/* <p>Danger</p> */}
                                     </div>
                                     </div>
                                 </div>
                                 <div className="danger-icons-inr">
                                     <div className="danger-icon-head">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
-                                        <h1>Lorem Ipsum</h1>
+                                        <h1>관심성분</h1>
                                     </div>   
                                     <div className="icons-all">
                                         <div className="dngr-icon-inr-div">
                                                 <img className="img-fluid" src={require('../../../../assets/images/icons/sales.png')} alt=""/>
-                                                <p>Danger</p>
+                                                {/* <p>Danger</p> */}
                                             </div>
                                         <div className="dngr-icon-inr-div">
                                                 <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon7.png')} alt=""/>
-                                                <p>Danger</p>
+                                                {/* <p>Danger</p> */}
                                             </div>
                                         <div className="dngr-icon-inr-div">
                                                 <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon8.png')} alt=""/>
-                                                <p>Danger</p>
+                                                {/* <p>Danger</p> */}
                                             </div>
                                         <div className="dngr-icon-inr-div">
                                                 <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon9.png')} alt=""/>
-                                                <p>Danger</p>
+                                                {/* <p>Danger</p> */}
                                             </div>
                                         <div className="dngr-icon-inr-div">
                                             <img className="img-fluid" src={require('../../../../assets/images/icons/danger-icon10.png')} alt=""/>
-                                            <p>Danger</p>
+                                            {/* <p>Danger</p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -251,125 +286,27 @@ export class ProdSpec extends React.Component{
                                     <div className="prod-ingr-upr-div">
                                         <div className="prod-ingr-tbl-name">
                                             <i className="fa fa-heart" aria-hidden="true"></i>
-                                            <h1>Lorem Ipsum</h1>
+                                            <h1>전체성분</h1>
                                         </div>
                                         <div className="prod-ingr-tbl">
                                             <table className="table">
                                             <thead>
                                                 <tr>
-                                                    <th>S.No</th>
-                                                    <th>Ingredients</th>
-                                                    <th>Icons</th>
-                                                    <th>Description</th>
+                                                    <th>성분등급</th>
+                                                    <th>성분명</th>
+                                                    <th>주의성분여부</th>
+                                                    <th>유해성분여부</th>
                                                 </tr>
-                                                {/* <Router> */}
-                                                    {/* <link to="/popup_ingredients"> */}
-                                                        <tr data-toggle="modal" data-target="#exampleModalCenter">
-                                                            <td>
-                                                                <img className="img-responsive icon_img" src={require('../../../../assets/images/icons/iconA.png')} alt=""/>
-                                                            </td>
-                                                            <td>
-                                                                <p className="prod_ingr_desp">Icon</p>
-                                                                <p>Water</p>
-                                                            </td>
-                                                            <td>
-                                                                <img className="img-responsive icon_img" src={ require('../../../../assets/images/icons/icon1.png') } alt=""/>
-
-                                                                {/* <i className="fa fa-heart" aria-hidden="true"></i> */}
-                                                            </td>
-                                                            <td></td>
-                                                        </tr>
-                                                    {/* </link>  */}
-                                                    {/* <link to="/popup_ingredients">   */}
-                                                        <tr data-toggle="modal" data-target="#exampleModalCenter">
-                                                        <td>
-                                                            <img className="img-responsive icon_img" src={require('../../../../assets/images/icons/iconB.png')} alt=""/>
-                                                        </td>
-                                                            <td>
-                                                                <p className="prod_ingr_desp">Icon</p>
-                                                                <p>Water</p>
-                                                            </td>
-                                                            <td>
-                                                                <i className="fa fa-heart" aria-hidden="true"></i>
-                                                            </td>
-                                                            <td></td>
-                                                        </tr>
-                                                    {/* </link> */}
-                                                    {/* <link to="/popup_ingredients">       */}
-                                                        <tr data-toggle="modal" data-target="#exampleModalCenter">
-                                                        <td>
-                                                            <img className="img-responsive icon_img" src={require('../../../../assets/images/icons/iconC.png')} alt=""/>
-                                                        </td>
-                                                            <td>
-                                                                <p className="prod_ingr_desp">Icon</p>
-                                                                <p>Water</p>
-                                                            </td>
-                                                            <td>
-                                                                <i className="fa fa-heart" aria-hidden="true"></i>
-                                                            </td>
-                                                            <td></td>
-                                                        </tr>
-                                                    {/* </link> */}
-                                                    {/* <link to="/popup_ingredients">       */}
-                                                        <tr data-toggle="modal" data-target="#exampleModalCenter">
-                                                        <td>
-                                                            <img className="img-responsive icon_img" src={require('../../../../assets/images/icons/iconD.png')} alt=""/>
-                                                        </td>
-                                                            <td>
-                                                                <p className="prod_ingr_desp">Icon</p>
-                                                                <p>Water</p>
-                                                            </td>
-                                                            <td>
-                                                                <i className="fa fa-heart" aria-hidden="true"></i>
-                                                            </td>
-                                                            <td></td>
-                                                        </tr>
+                                                    {Object.keys(this.state.ingredient_list.total).map(key => 
+                                                        <IngredientRow
+                                                            letter={this.state.ingredient_list.total[key].ewg_rank}
+                                                            korName={this.state.ingredient_list.total[key].name}
+                                                            engName={this.state.ingredient_list.total[key].name_eng}
+                                                        />
+                                                    )}
                                             </thead>
                                             </table>
-                                            <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                <div className="modal-custom modal-dialog modal-dialog-centered" role="document">
-                                                    <div className="modal-content">
-                                                    <div className="modal-custom-header modal-header">
-                                                        <img src={require('../../../../assets/images/icons/sales.png')} alt=""/>
-                                                        <h5 className="modal-title" id="exampleModalLongTitle">Ingredients</h5>
-                                                        <p>-4-isothiazolin-3-one</p>
-                                                        <button type="button" className="close btn" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div className="modal-custom-body modal-body">
-                                                        <p className="modal-para">EWG</p>
-                                                        <div className="popup-icon-detail">
-                                                            <img src={require('../../../../assets/images/icons/iconD.png')} alt=""/>
-                                                            <p>Name</p>
-                                                            <p className="popup-ingr-para">Ingredient Detail</p>
-                                                        </div>
-                                                        <p className="modal-para">EWG</p>
-                                                        <div className="popup-icon-level">
-                                                            <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
-                                                            <p>Ingredient Transparency Level EPA</p>
-                                                        </div>
-                                                        <div className="popup-category">
-                                                            <p className="modal-para">Product</p>
-                                                        </div>
-                                                        <div className="popup-icon-level">
-                                                            <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
-                                                            <p>Harmful by the Korean Government</p>
-                                                        </div>
-                                                        <div className="popup-category">
-                                                            <p className="modal-para">Product</p>
-                                                        </div>
-                                                        <div className="popup-result">
-                                                            <p>Result</p>
-                                                        </div>
-                                                    </div>
-                                                    {/* <div className="modal-footer">
-                                                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="button" className="btn btn-primary">Save changes</button>
-                                                    </div> */}
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <IngredientModal />
                                         </div>
                                     </div>
                                 </div>
@@ -384,40 +321,44 @@ export class ProdSpec extends React.Component{
                                 <div className="alpha-icon">
                                     <div className="alpha-icon-info">
                                         <img src={require('../../../../assets/images/icons/iconX.png')} alt=""/>
-                                        <p>X-ray</p>
+                                        <p>정보없음 (중간위험)</p>
 
                                     </div>
                                     <div className="alpha-icon-info">
                                         <img src={require('../../../../assets/images/icons/iconA.png')} alt=""/>
-                                        <p>X-ray</p>
+                                        <p>매우 낮은 위험</p>
                                     </div>
                                     <div className="alpha-icon-info">
                                         <img src={require('../../../../assets/images/icons/iconB.png')} alt=""/>
-                                        <p>X-ray</p>
+                                        <br/>
+                                        <p>낮은 위험</p>
                                     </div>
                                     <div className="alpha-icon-info">
                                         <img src={require('../../../../assets/images/icons/iconC.png')} alt=""/>
-                                        <p>X-ray</p>
+                                        <br/>
+                                        <p>높은 위험</p>
                                     </div>
                                     <div className="alpha-icon-info">
                                         <img src={require('../../../../assets/images/icons/iconD.png')} alt=""/>
-                                        <p>X-ray</p>
+                                        <br/>
+                                        <p>높은 위험</p>
                                     </div>
                                     <div className="alpha-icon-info">
                                         <img src={require('../../../../assets/images/icons/iconF.png')} alt=""/>
-                                        <p>X-ray</p>
+                                        <br/>
+                                        <p>매우 높은 위험</p>
                                     </div>
                                 </div>
                                 <div className="pie-chart-info">
-                                  <DoughnutGraph/>
+                                    <DoughnutGraph chartData={chartData[0]} />
                                 </div>
 
                                 {/* desp in green */}
                                 <div className="desp-green">
                                     <div className="desp-greenery">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
-                                        <h1>greenery</h1>
-                                        <p>greenery: F-A10B-C001001-A150</p>
+                                        <h1>인증번호</h1>
+                                        <p>자가검사번호: {this.state.code}</p>
                                     </div>
                                     <div className="desp-greenery-img">
                                         <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
@@ -439,6 +380,6 @@ export class ProdSpec extends React.Component{
                 <Comments/>
             </div>
             </React.Fragment>
-        );
+        ) : (<div><br/><br/></div>);
     };
 }
