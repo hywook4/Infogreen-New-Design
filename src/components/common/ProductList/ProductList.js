@@ -27,12 +27,12 @@ export class ProductList extends React.Component {
         axios.post("http://13.125.89.0/chemical/items_limit.php", voteParams)
             .then(res => {
                 const products = res;
-                this.setState({ productByVote: products.data[0].slice(0, 3) });
+                this.setState({ productByVote: products.data[0].slice(0, 4) });
                 return axios.post("http://13.125.89.0/chemical/items_limit.php", starParams)
             })
             .then(res => {
                 const products = res;
-                this.setState({ productByStar: products.data[0].slice(0, 3) });
+                this.setState({ productByStar: products.data[0].slice(0, 4) });
             })
     }
     
@@ -47,7 +47,7 @@ export class ProductList extends React.Component {
                 </div>
                 <div className={styles.rightDiv}>
                     <div className="row">
-                        <Card.Group itemsPerRow={3} stackable={true} doubling={true}>
+                        <Card.Group itemsPerRow={4} stackable={true} doubling={true}>
                             { 
                                 this.state.productByVote.map((product, index) =>
                                 <ProductCard 
@@ -71,7 +71,7 @@ export class ProductList extends React.Component {
                 </div>
                 <div className={styles.rightDiv}>
                     <div className="row">
-                        <Card.Group itemsPerRow={3} stackable={true} doubling={true}>
+                        <Card.Group itemsPerRow={4} stackable={true} doubling={true}>
                             { 
                                 this.state.productByStar.map((product, index) =>
                                 <ProductCard 

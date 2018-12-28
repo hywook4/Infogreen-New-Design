@@ -18,8 +18,8 @@ export class LoggedIn extends React.Component{
                                       
                                                 <div className="inr-ingr">
                                                 <a href="/request/request-comment" className="ingr-anchor">
-                                                    <h2>Ingredient Analysis</h2>
-                                                    <p>Analyze all ingredients</p>
+                                                    <h2>성분 분석 요청하기</h2>
+                                                    <p><small>검색해도 나오지 않는 제품이 있다면?</small></p>
                                                 </a>
                                                 </div>
                                             
@@ -30,8 +30,8 @@ export class LoggedIn extends React.Component{
                                         
                                             <div className="inr-ingr">
                                             <a href="/request/request-comment" className="ingr-anchor">
-                                                <h2>Ask the Admin</h2>
-                                                <p>Take Permission</p>
+                                                <h2>1:1 문의하기</h2>
+                                                <p><small>문의사항이나 MomGuide에게 바라는 점이 있다면?</small></p>
                                             </a>    
                                             </div>
                                         

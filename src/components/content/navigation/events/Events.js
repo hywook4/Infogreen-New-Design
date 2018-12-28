@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import {StaticCard} from '../../../common/staticCard/StaticCard';
-import { Search } from '../../search/Search';
+import Search from '../../search/Search';
 import {Paginate} from '../../navigation/tips/pagination/Pagination';
 import axios from 'axios';
 import { Card } from 'semantic-ui-react';
@@ -32,9 +32,9 @@ export class Events extends React.Component {
     
                     <div className="col-md-2 tipsBannnerOne">
                         <div className="tip-bnr-inr" style={{position: 'absolute', bottom: 15}}>
-                            <h5><b>Product Name</b></h5>
-                            <p>Some Related Text</p>
-                            <h6><Link to='#'>See more
+                            <h5><b>12월 출석체크</b></h5>
+                            <p>매일 출석하고 포인트 받자!</p>
+                            <h6><Link to='#'>자세히 보기
                             <i class="fa fa-angle-right"></i>
                             </Link></h6>
                         </div>

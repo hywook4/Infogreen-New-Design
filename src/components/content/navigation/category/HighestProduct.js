@@ -1,10 +1,11 @@
 import React from 'react';
 import './Category.css';
-import {Checkbox} from '../category/Chexkbox';
+import {Checkbox} from '../category/Checkbox';
 import {CategoryImg} from '../category/CategoryImg';
 
+import { connect } from "react-redux";
 
-export class HighestProduct extends React.Component{
+class HighestProduct extends React.Component{
     constructor(){
         super();
     }
@@ -14,34 +15,25 @@ export class HighestProduct extends React.Component{
             <div className="high-prod-div">
                 <div className="high-prod-inr-div">
                     <div className="high-prod-heading">
-
-                    <div class="tab-content">
-						<div class="tab-pane active" id="tab_default_1">
-                        <Checkbox/>
-                        <CategoryImg/>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab_default_1">
                             
-						</div>
-						<div class="tab-pane" id="tab_default_2">
-                            <Checkbox/>
-                            <CategoryImg/>
-						</div>
-						<div class="tab-pane" id="tab_default_3">
-                            <Checkbox/>
-                            <CategoryImg/>
-                            
-						</div>
-					</div>
-                     
-                        
-                       
-
+                                {this.props.items.map((item, index) => <div>{100}</div>)}
+                                <Checkbox/>
+                                <CategoryImg/>
+                            </div>
+                        </div>
                     </div>
-                    {/* <div className="high-prod-heading"></div>
-                    <div className="high-prod-heading"></div>
-                    <div className="high-prod-heading"></div>
-                    <div className="high-prod-heading"></div> */}
                 </div>
             </div>
         )
     }
 }
+
+const mapStateToProps = states => {
+    return {
+        items: states.items.items,
+    };
+}
+
+export default connect(mapStateToProps, null)(HighestProduct);

@@ -77,7 +77,7 @@ export class ProdSpec extends React.Component{
                                         </div>
                                     </div> 
                                     <div className="prod-name-detl">
-                                        <h2>Product Description Info</h2>
+                                        <h2>카테고리 > 가정용 화학제품 > 주방세제</h2>
                                     </div>
 
                                     <div className="prod_desp">
@@ -97,7 +97,7 @@ export class ProdSpec extends React.Component{
                                             <div className="prod_icon_info">
                                                 <i className="fa fa-home" aria-hidden="true"></i>
                                                 {/* <img src={ require('../../../../assets/images/home.svg') } alt=""/> */}
-                                                <p>Save</p>
+                                                <p>저장</p>
                                             </div>
                                             <div className="prod_icon_info">
                                                 <i className="fa fa-heart" aria-hidden="true"></i>

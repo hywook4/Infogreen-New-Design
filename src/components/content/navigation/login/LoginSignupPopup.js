@@ -8,7 +8,7 @@ export class LoginSignupPopup extends React.Component{
                 <div class="modal-dialog modal-dialog-centered popup-modal" role="document">
                     <div class="modal-content popup-content">
                     <div class="modal-header popup-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Login and Signup</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">로그인</h5>
                         {/* <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button> */}
@@ -16,25 +16,25 @@ export class LoginSignupPopup extends React.Component{
                     <div class="modal-body">
                         <form action="">
                             <div className="form-group">
-                                <input type="email" class="form-control form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                                <input type="password" class="form-control form-input" id="exampleInputPassword1" placeholder="Password"></input>
+                                <input type="email" class="form-control form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="아이디를 입력하세요" />
+                                <input type="password" class="form-control form-input" id="exampleInputPassword1" placeholder="비밀번호를 입력하세요"></input>
                             </div>
                             <div className="popup-chkbox">
                             <div className="form-check">
                                 <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                                <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                                <label className="form-check-label" for="exampleCheck1">로그인 상태 유지</label>
                                 
                             </div>
                             <div className="form-check">
                                 <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                                <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                                <label className="form-check-label" for="exampleCheck1">아이디 저장</label>
                             </div>
                             </div>
                             
-                            <button type="submit" className="btn btn-primary popup-btn">LogIn</button>
+                            <button type="submit" className="btn btn-primary popup-btn">로그인</button>
                             <div className="forget-pwd">
-                                <p>Forget Password</p>
-                                <p className="right">Remember Me</p>
+                                <p>아이디 찾기 | 비밀번호 찾기</p>
+                                <p className="right">회원가입</p>
                             </div>
                         </form>
                         <hr className="hr"/>
@@ -89,7 +89,7 @@ export class LoginSignupPopup extends React.Component{
                        
                                 
                                 {/* <div className="icon-email"> */}
-                                <button type="submit" className="btn btn-primary popup-btn">Signup</button>
+                                <button type="submit" className="btn btn-primary popup-btn">이메일로 회원가입</button>
                                     {/* <p>Signup</p> */}
                                 {/* </div> */}
                            

@@ -3,7 +3,8 @@ import './MainPage.css';
 import {Header} from './content/header/Header';
 import {Slider} from './content/slider/Slider';
 import {Footer} from './content/footer/Footer';
-import {Search} from './content/search/Search';
+import Search from './content/search/Search';
+import {Searcher} from './Searcher/Searcher';
 import {Category} from './content/navigation/category/Category';
 import {Events} from './content/navigation/events/Events';
 import {Login} from './content/navigation/login/Login';
@@ -18,7 +19,7 @@ import {ViewMore} from './common/ViewMore/ViewMore';
 import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router, Route} from "react-router-dom"
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 
 const placeHolder = ()=>{
     return (
@@ -37,7 +38,7 @@ const renderHome=()=>{
     return (
         <React.Fragment>
             <Slider/>
-            <Search/>
+            <Searcher />
             <Product/>
             <TipEvent/>
         </React.Fragment>
@@ -56,12 +57,20 @@ export const MainPage = ()=>{
                                 <Header/>
                                 
                                 <div>
+                                    <Switch>
                                         <Route exact path="/" component={renderHome} />
                                         <Route path="/about" component={placeHolder} />
-                                        <Route path="/category" component={Category} />
+                                        <Route path="/category" render={(props) => <Category {...props} />} /> />
+                                        <Route path="/category/:search" render={(props) => <Category {...props} />} /> />
                                         <Route exact path="/request" component={Request} />
                                         <Route path="/signup" component={Signup} />
                                         <Route exact path="/login" component={Login} />
+                                        <Route
+                                            path="/search/:searchText"
+                                            component={Searcher}
+                                            exact={true}
+                                        />
+                                        <Route path="/search/" component={Searcher} exact={true} />
 
                                         <Route exact path="/events" component={Events} />
                                         <Route path="/events/:id" render={(props) => <ViewMore {...props} section={"events"} />} />
@@ -71,6 +80,7 @@ export const MainPage = ()=>{
                                         <Route path="/product-details/:name" component={ProductSpecification} />
                                         <Route path="/request/request-comment" component={RequestComment} />
                                         <Route path="/request/loggedin" component={LoggedIn} />
+                                    </Switch>
                                 </div>
                             </React.Fragment>
                         </Router>

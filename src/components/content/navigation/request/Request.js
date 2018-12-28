@@ -15,28 +15,28 @@ export class Request extends React.Component{
                     <LoginSignupProfile/>
                     <div className="request-setting">
                         <i className="fa fa-gear"></i>
-                        <p>Setting</p>
+                        <p>수정하기</p>
                     </div>
                  
                     <div>
                         <div className="login-btn request-user">
-                            <h1>User</h1>
+                            <h1>홍길동</h1>
                             
                         </div>
                         <div className="user-req-page">
                         <ul>
                             <li>
-                                <p>lorem</p>
+                                <p>남자</p>
                             </li>
-                            <li><p>ipsum</p></li>
-                            <li><p>nulla</p></li>
+                            <li><p>30대</p></li>
+                            <li><p>자녀 3~5살</p></li>
                         </ul>
                     </div>
                     <div className="user-update">
                         <i className="fa fa-user" aria-hidden="true"></i>
                         {/* <img className="img-fluid" src={require('../../../../assets/images/icons/male-user-shadow.jpg')} alt=""/> */}
-                        <p>User</p>
-                        <p>0</p>
+                        <p>팔로워</p>
+                        <p>129</p>
                     </div>
 
                     {/* tabs */}
@@ -44,8 +44,8 @@ export class Request extends React.Component{
                         
                         <nav>
                             <div className="nav nav-tabs nav-fill nav-user-fill" id="nav-tab" role="tablist">
-                                <a className="nav-item nav-link nav-user-tabs active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                                <a className="nav-item nav-link nav-user-tabs" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                                <a className="nav-item nav-link nav-user-tabs active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">나의 관심</a>
+                                <a className="nav-item nav-link nav-user-tabs" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">나의 활동</a>
                                 
                             </div>
 				        </nav>

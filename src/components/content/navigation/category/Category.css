@@ -48,7 +48,7 @@
 }
 .ctgy-tabs .ctgy-chemical-div, .ctgy-tabs .ctgy-cosmetics-div{
     width: 100%;
-    margin: 20px auto;
+    margin: 0 auto;
     position: relative;
     padding: 10px 10px;
     
@@ -67,7 +67,7 @@
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #4d4d4d;
+    color: #4D4D4D;
     padding: 10px 0px;
 }
 
@@ -85,16 +85,16 @@ ul.nav.nav-pills li{
     text-align: center;
     font-size: 12px;
     display: table;
-    color: gray;
+    color: #999999;
     width: 100%;
     background-color: white;
 }
 
 ul.nav.nav-pills li a{
-    color: gray;
+    color: #999999;
     letter-spacing: 1px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 300;
     text-decoration: none;
 }
 
@@ -145,8 +145,8 @@ ul.nav.nav-pills li a:hover, ul.nav.nav-pills li a:active,  ul.nav.nav-pills li 
 
 .sub-ctgy-div ul li{
     display: inline-block;
-    width:30%;
-    text-align: center;
+    width:15%;
+    text-align: right;
     color: #4d4d4d;
     font-size: 14px;
     font-weight: 500;
@@ -179,10 +179,10 @@ ul.nav.nav-pills li a:hover, ul.nav.nav-pills li a:active,  ul.nav.nav-pills li 
 
 .high-prod-heading label{
     padding-left: 10px;
-    color: gray;
+    color: #999999;
     font-size: 14px;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .ctgy-inrimg-div{

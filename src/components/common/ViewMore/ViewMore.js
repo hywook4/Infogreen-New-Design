@@ -75,18 +75,20 @@ export class ViewMore extends React.Component {
                         </div> 
                         <div className="row">
                             <div className="col-md-10 tips-cmnt-inr-div">
-                                <h6><b>Some Text</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>2018/00/00</span></h6>
+                                <h6><b>댓글</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>2018/12/31</span></h6>
                                 
                                 <Form>
-                                    <TextArea className="tips-textarea" placeholder='Tell us more' rows="3"/>
-                                    <Button style={{float:'right', backgroundColor: 'rgb(96, 179, 162)', marginTop: 20}}>Submit</Button>
+                                    <TextArea className="tips-textarea" placeholder='댓글을 입력하세요' rows="3"/>
+                                    <Button style={{float:'right', backgroundColor: 'rgb(96, 179, 162)', marginTop: 20, color: 'white'}}>제출하기</Button>
                                 </Form>     
                             </div>
                         </div>
                 </div> 
-                <DescriptionSlider /> 
-                <Comments />  
-                <Paginate />
+                {/* <DescriptionSlider />  */}
+                {/* <Comments />   */}
+                {
+                    // <Paginate />
+                }
             </div>
 
         )

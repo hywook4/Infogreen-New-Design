@@ -1,6 +1,6 @@
 import React from 'react';
 import './Category.css';
-import {Search} from '../../../content/search/Search';
+import Search from '../../../content/search/Search';
 import {ProductCategory} from '../../navigation/category/ProductCategory';
 
 export class Category extends React.Component{
@@ -19,8 +19,8 @@ export class Category extends React.Component{
                             <div className="col-lg-12 col-md-12 col-sm-12">
                             {/* ctgy heading */}
                                 <div className="ctgy-heading">
-                                    <h4>Category</h4>
-                                    <i class="fa fa-chevron-down"></i>
+                                    <h4>카테고리</h4>
+                                    <i class="fa fa-chevron-up"></i>
                                 </div>
                                 {/* finish ctgy heading */}
                                 <div className="ctgy-tabs">
@@ -28,23 +28,23 @@ export class Category extends React.Component{
                                     {/* household chemical product */}
                                         <div className="col-lg-6 col-md-6 col-sm-12">
                                             <div className="ctgy-chemical-div">
-                                                <h4>Household chemical product</h4>
+                                                <h4>가정용 생활화학제품</h4>
                                                 <ul className="nav nav-pills">
                                                 <div className="row">
                                                     <div className="col-sm-4">
-                                                    <li className="active"><a data-toggle="pill" href="#laundary">Laundary</a></li>
+                                                    <li className="active"><a data-toggle="pill" href="#laundary">세탁세제</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#fabric">Fabric</a></li>
+                                                    <li><a data-toggle="pill" href="#fabric">섬유유연제</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#dishwashing">Dishwashing</a></li>
+                                                    <li><a data-toggle="pill" href="#dishwashing">주방세제</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#odor">Odor</a></li>
+                                                    <li><a data-toggle="pill" href="#odor">탈취제</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#other">Other</a></li>
+                                                    <li><a data-toggle="pill" href="#other">기타세정제</a></li>
                                                     </div>
                                                 </div>
                                                    
@@ -63,38 +63,38 @@ export class Category extends React.Component{
                                         <div className="col-lg-6 col-md-6 col-sm-12">
                                             <div className="ctgy-cosmetics-div">
                                                 {/* <div className="ctgy-chemical-div"> */}
-                                                    <h4>Cosmetics product</h4>
+                                                    <h4>유아용 화장품</h4>
                                                     <ul className="nav nav-pills">
                                                         <div className="row">
                                                             <div className="col-sm-4">
-                                                                <li className="active"><a data-toggle="pill" href="#soap">Soap</a></li>
+                                                                <li className="active"><a data-toggle="pill" href="#soap">워시</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#lotion">Lotion</a></li>
+                                                                <li><a data-toggle="pill" href="#lotion">로션</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#cream">Cream</a></li>
+                                                                <li><a data-toggle="pill" href="#cream">크림</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#oil">Oil</a></li>
+                                                                <li><a data-toggle="pill" href="#oil">오일</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#powder">Powder</a></li>
+                                                                <li><a data-toggle="pill" href="#powder">파우더</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#hair">Hair</a></li>
+                                                                <li><a data-toggle="pill" href="#hair">헤어</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#suncare">Suncare</a></li>
+                                                                <li><a data-toggle="pill" href="#suncare">선케어</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#babywipes">Babywipes</a></li>
+                                                                <li><a data-toggle="pill" href="#babywipes">물티슈</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#other">Other</a></li>
+                                                                <li><a data-toggle="pill" href="#handsanitizer">손세정제</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#other">Other</a></li>
+                                                                <li><a data-toggle="pill" href="#othercosmetics">기타화장품</a></li>
                                                             </div>
                                                 </div>
                                                     </ul>

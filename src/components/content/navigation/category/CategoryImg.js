@@ -18,17 +18,17 @@ export const CategoryImg = (props) =>{
                     </div>
                     <div className="col-lg-8 col-md-8 col-sm-12">
                         <div className="sub-ctgy-desp">
-                            <p>Product</p>
-                            <h4>Description(Sonett)</h4>
-                            <h1>Sub Category</h1>
+                            <p>세탁세제</p>
+                            <h4>소네트 (Sonett)</h4>
+                            <h1>소네트 주방세제 카렌듈라</h1>
                         </div>
                         <div className="sub-ctgy-rating">
                         <div style={{display:'inline-block',textAlign:'center',lineHeight:'12px',marginBottom:'20px'}}>
                             <img style={props.imgStyle||{maxWidth:'40px'}} src={require('../../../../assets/images/icons/icon-ef.png')} alt=""/>
                             <br/>
-                            <span style={{color:'grey',fontWeight:'bold',fontSize:10}}>ipsum</span>
+                            <span style={{color:'grey',fontWeight:'bold',fontSize:10}}>친환경 인증</span>
                         </div>
-                            <Ratings config={{trailingText:'0(dolore)',selected:3,hideSubHeading:true,text:'',removePadding:true,color:'#ababab'}}/>
+                            <Ratings config={{trailingText:'2 (3명)',selected:3,hideSubHeading:true,text:'',removePadding:true,color:'#ababab'}}/>
                             {/* <Rating icon='stars' defaultRating={props.rating} maxRating={5} disabled/> */}
                         </div>
                     </div>
