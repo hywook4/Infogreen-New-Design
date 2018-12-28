@@ -28,7 +28,7 @@ export const CategoryImg = (props) =>{
                         <div style={{display:'inline-block',textAlign:'center',lineHeight:'12px',marginBottom:'20px'}}>
                             <img style={props.imgStyle||{maxWidth:'40px'}} src={require('../../../../assets/images/icons/epa-usa.png')} alt=""/>
                             <br/>
-                            <span style={{color:'grey',fontWeight:'bold',fontSize:10}}>친환경 인증</span>
+                            <span style={{color:'grey',fontWeight:'bold',fontSize:10}}>우려 성분 포함</span>
                         </div>
                             <Ratings config={{trailingText:'2 (3명)',selected:3,hideSubHeading:true,text:'',removePadding:true,color:'#ababab'}}/>
                             {/* <Rating icon='stars' defaultRating={props.rating} maxRating={5} disabled/> */}
