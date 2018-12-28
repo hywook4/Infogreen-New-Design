@@ -18,7 +18,7 @@ export class Category extends React.Component{
 
     onChange = e => {
         const searchText = e.target.value.trimLeft();
-        this.search(searchText, this.state.category)
+        this.search(searchText, this.state.category, this.state.sort);
 
         this.setState({
             search: searchText
@@ -27,7 +27,7 @@ export class Category extends React.Component{
 
     onClick = e => {
         const category = e.target.innerHTML;
-        this.search(this.state.search, category);
+        this.search(this.state.search, category, this.state.sort);
 
         this.setState({
             category
@@ -36,16 +36,25 @@ export class Category extends React.Component{
 
     onSort = e => {
         const sort = e.target.name;
+        this.search(this.state.search, this.state.category, sort);
+
+        this.setState({
+            sort
+        })
     }
 
-    search(searchText, category) {
+    search(searchText, category, sort) {
         const params = new URLSearchParams();
         if (searchText) {
             params.append("name", searchText);    
         }
         
         if (category) {
-            params.append("category", category)
+            params.append("category", category);
+        }
+
+        if (sort) {
+            params.append("sort", sort);
         }
 
         
@@ -193,15 +202,15 @@ export class Category extends React.Component{
                                             <h1>{category}</h1>
                                                     <ul className="nav nav-tabs ">
                                                         <li className="active">
-                                                            <a href="#tab_default_1" data-toggle="tab">
+                                                            <a href="#tab_default_1" data-toggle="tab" name="star" onClick={this.onSort}>
                                                             별점순  </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#tab_default_2" data-toggle="tab" name="">
+                                                            <a href="#tab_default_2" data-toggle="tab" name="vote" onClick={this.onSort}>
                                                             조회순</a>
                                                         </li>
                                                         <li>
-                                                            <a href="#tab_default_3" data-toggle="tab" name="dateTime">
+                                                            <a href="#tab_default_3" data-toggle="tab" name="dateTime" onClick={this.onSort}>
                                                             최신순 </a>
                                                         </li>
                                                     </ul>
