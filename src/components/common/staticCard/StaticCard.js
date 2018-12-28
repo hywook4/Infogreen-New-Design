@@ -20,16 +20,16 @@ export const StaticCard = () => (
         <div className="card-inr-div">
           <div className="card-title">
             <i className="fa fa-heart" aria-hidden="true"></i>
-            <h5>Title</h5>
+            <h5 className="wow slideInDown">Title</h5>
           </div>
           <div className="card-img-div">
             <div className="card-img-inr-div">
-              <img className="img-fluid" src={require('../../../assets/images/tips.jpg')} alt=""/>
+              <img className="wow zoomIn img-fluid" src={require('../../../assets/images/tips.jpg')} alt=""/>
             </div>
             <div className="card-tip-info">
               <div className="card-tip-heading">
-              <h4>Tips card</h4>
-              <p>Tips card Information</p>
+              <h4 className="wow slideInDown">Tips card</h4>
+              <p className="wow slideInDown">Tips card Information</p>
               </div>
               <div className="card-tip-btn">
               <button type="button" class="btn btn-primary card-btn">
@@ -46,16 +46,16 @@ export const StaticCard = () => (
         <div className="card-inr-div">
           <div className="card-title">
             <i className="fa fa-heart card-hrt-2" aria-hidden="true"></i>
-            <h5>Title</h5>
+            <h5 className="wow slideInDown">Title</h5>
           </div>
           <div className="card-img-div">
             <div className="card-img-inr-div">
-              <img className="img-fluid" src={require('../../../assets/images/tips.jpg')} alt=""/>
+              <img className="wow zoomIn img-fluid" src={require('../../../assets/images/tips.jpg')} alt=""/>
             </div>
             <div className="card-tip-info">
               <div className="card-tip-heading">
-              <h4>Tips card</h4>
-              <p>Tips card Information</p>
+              <h4 className="wow slideInDown">Tips card</h4>
+              <p className="wow slideInDown">Tips card Information</p>
               </div>
               <div className="card-tip-btn">
               <button type="button" class="btn btn-primary card-btn">
@@ -72,16 +72,16 @@ export const StaticCard = () => (
       <div className="card-inr-div">
           <div className="card-title">
             <i className="fa fa-heart card-hrt-3" aria-hidden="true"></i>
-            <h5>Title</h5>
+            <h5 className="wow slideInDown">Title</h5>
           </div>
           <div className="card-img-div">
             <div className="card-img-inr-div">
-              <img className="img-fluid" src={require('../../../assets/images/tips.jpg')} alt=""/>
+              <img className="wow zoomIn img-fluid" src={require('../../../assets/images/tips.jpg')} alt=""/>
             </div>
             <div className="card-tip-info">
               <div className="card-tip-heading">
-              <h4>Tips card</h4>
-              <p>Tips card Information</p>
+              <h4 className="wow slideInDown">Tips card</h4>
+              <p className="wow slideInDown">Tips card Information</p>
               </div>
               <div className="card-tip-btn">
               <button type="button" class="btn btn-primary card-btn">
@@ -98,16 +98,16 @@ export const StaticCard = () => (
         <div className="card-inr-div">
           <div className="card-title">
             <i className="fa fa-heart card-hrt-4" aria-hidden="true"></i>
-            <h5>Title</h5>
+            <h5 className="wow slideInDown">Title</h5>
           </div>
           <div className="card-img-div">
             <div className="card-img-inr-div">
-              <img className="img-fluid" src={require('../../../assets/images/tips.jpg')} alt=""/>
+              <img className="wow zoomIn img-fluid" src={require('../../../assets/images/tips.jpg')} alt=""/>
             </div>
             <div className="card-tip-info">
               <div className="card-tip-heading">
-              <h4>Tips card</h4>
-              <p>Tips card Information</p>
+              <h4 className="wow slideInDown">Tips card</h4>
+              <p className="wow slideInDown">Tips card Information</p>
               </div>
               <div className="card-tip-btn">
               <button type="button" class="btn btn-primary card-btn">

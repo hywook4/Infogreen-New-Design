@@ -36,10 +36,7 @@ export class HighestProduct extends React.Component{
                        
 
                     </div>
-                    {/* <div className="high-prod-heading"></div>
-                    <div className="high-prod-heading"></div>
-                    <div className="high-prod-heading"></div>
-                    <div className="high-prod-heading"></div> */}
+                   
                 </div>
             </div>
         )

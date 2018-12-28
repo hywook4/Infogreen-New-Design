@@ -18,8 +18,8 @@ export class LoggedIn extends React.Component{
                                       
                                                 <div className="inr-ingr">
                                                 <a href="#" className="ingr-anchor">
-                                                    <h2>Ingredient Analysis</h2>
-                                                    <p>Analyze all ingredients</p>
+                                                    <h2 className="wow slideInDown">Ingredient Analysis</h2>
+                                                    <p className="wow slideInDown">Analyze all ingredients</p>
                                                 </a>
                                                 </div>
                                             
@@ -30,8 +30,8 @@ export class LoggedIn extends React.Component{
                                         
                                             <div className="inr-ingr">
                                             <a href="#" className="ingr-anchor">
-                                                <h2>Ask the Admin</h2>
-                                                <p>Take Permission</p>
+                                                <h2 className="wow slideInDown">Ask the Admin</h2>
+                                                <p className="wow slideInDown">Take Permission</p>
                                             </a>    
                                             </div>
                                         

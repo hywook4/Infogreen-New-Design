@@ -15,12 +15,12 @@ export class RequestComment extends React.Component{
                         <div className="container">
                             <div className="cmnt-desp-container">
                                 <div className="cmnt-desp-inr">
-                                    <h2>Comments of Product Request</h2>
-                                    <p>Lorem Ipsum</p>
-                                    <p>Lorem Ipsum</p>
-                                    <p>Lorem Ipsum</p>
-                                    <p>Lorem Ipsum</p>
-                                    <p>Lorem Ipsum</p>
+                                    <h2 className="wow slideInDown">Comments of Product Request</h2>
+                                    <p className="wow slideInDown">Lorem Ipsum</p>
+                                    <p className="wow slideInDown">Lorem Ipsum</p>
+                                    <p className="wow slideInDown">Lorem Ipsum</p>
+                                    <p className="wow slideInDown">Lorem Ipsum</p>
+                                    <p className="wow slideInDown">Lorem Ipsum</p>
                                 </div>
                                 <hr/>
                                 <div className="cmnt-drpdwn-div">

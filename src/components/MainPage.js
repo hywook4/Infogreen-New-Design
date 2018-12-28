@@ -16,9 +16,11 @@ import {LoggedIn} from './content/navigation/request/loggedIn/LoggedIn';
 import {RequestComment} from './content/navigation/request/requestComment/RequestComment';
 import {TipsViewMore} from './content/navigation/tips/TipsViewMore';
 import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
+// import {Animated} from 'animated.css';
+import WOW from '../../node_modules/wow.js/dist/wow';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router, Route} from "react-router-dom"
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 const placeHolder = ()=>{
     return (
@@ -43,7 +45,12 @@ const renderHome=()=>{
     )
 }
 
-export const MainPage = ()=>{
+export class MainPage extends React.Component{
+    componentDidMount(){
+        // new WOW.WOW().init();
+        new WOW().init();
+    }
+    render(){
     return(
         
         <div className="full_main_page">
@@ -76,4 +83,5 @@ export const MainPage = ()=>{
             </div>
         </div>
     )
+    }
 };

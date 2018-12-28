@@ -42,7 +42,7 @@ render=()=>{
                             <div className="col-lg-9 col-md-9 col-sm-12">
                                 <div className="prod_heading">
                                     <span className="dot"></span>
-                                    <h2>Lorem Ipsum</h2>
+                                    <h2 className="wow slideInDown">Lorem Ipsum</h2>
                                 </div>
                                 {/* product detail */}
                                 <div className="prod_detail">
@@ -52,13 +52,13 @@ render=()=>{
                                         </div>
                                     </div> 
                                     <div className="prod-name-detl">
-                                        <h2>Product Description Info</h2>
+                                        <h2 className="wow slideInDown">Product Description Info</h2>
                                     </div>
 
                                     <div className="prod_desp">
                                         <div className="prod_name">
-                                            <p>Product 1</p>
-                                            <h1>Product 1 Specification</h1>
+                                            <p className="wow slideInDown">Product 1</p>
+                                            <h1 className="wow slideInDown">Product 1 Specification</h1>
 
                                         </div>
                                         <div className="prod_ratings">
@@ -143,7 +143,7 @@ render=()=>{
                             <div className="prod_addn">
                                     <div className="prod_addn_info">
                                    
-                                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                    <p className="wow slideInDown">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                     </div>
                             </div>
 
@@ -152,7 +152,7 @@ render=()=>{
                                 <div className="danger-icons-inr">
                                     <div className="danger-icon-head">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
-                                        <h1>Lorem Ipsum</h1>
+                                        <h1 className="wow slideInDown">Lorem Ipsum</h1>
                                       
                                     </div>
                                     <div className="icons-all">
@@ -187,7 +187,7 @@ render=()=>{
                                 <div className="danger-icons-inr">
                                     <div className="danger-icon-head">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
-                                        <h1>Lorem Ipsum</h1>
+                                        <h1 className="wow zoomInDown">Lorem Ipsum</h1>
                                     </div>   
                                     <div className="icons-all">
                                         <div className="dngr-icon-inr-div" onClick={this.toggleDiv}>
@@ -227,7 +227,7 @@ render=()=>{
                                     <div className="prod-ingr-upr-div">
                                         <div className="prod-ingr-tbl-name">
                                             <i className="fa fa-heart" aria-hidden="true"></i>
-                                            <h1>Lorem Ipsum</h1>
+                                            <h1 className="wow slideInDown">Lorem Ipsum</h1>
                                         </div>
                                         <div className="prod-ingr-tbl">
                                             <table className="table">
@@ -390,14 +390,14 @@ render=()=>{
                                 <div className="desp-green">
                                     <div className="desp-greenery">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
-                                        <h1>greenery</h1>
-                                        <p>greenery: F-A10B-C001001-A150</p>
+                                        <h1 className="wow slideInDown">greenery</h1>
+                                        <p className="wow slideInDown">greenery: F-A10B-C001001-A150</p>
                                     </div>
                                     <div className="desp-greenery-img">
                                         <img src={require('../../../../assets/images/icons/icon-ef.png')} alt=""/>
                                     </div>
                                     <div className="desp-greenery-rslt">
-                                        <h1>Greenery Description Result</h1>
+                                        <h1 className="wow slideInDown">Greenery Description Result</h1>
                                     </div>
                                 </div>
                             </div>

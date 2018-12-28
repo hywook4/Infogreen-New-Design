@@ -18,9 +18,9 @@ export const CategoryImg = (props) =>{
                     </div>
                     <div className="col-lg-8 col-md-8 col-sm-12">
                         <div className="sub-ctgy-desp">
-                            <p>Product</p>
-                            <h4>Description(Sonett)</h4>
-                            <h1>Sub Category</h1>
+                            <p className="wow slideInDown">Product</p>
+                            <h4 className="wow slideInDown">Description(Sonett)</h4>
+                            <h1 className="wow slideInDown">Sub Category</h1>
                         </div>
                         <div className="sub-ctgy-rating">
                         <div style={{display:'inline-block',textAlign:'center',lineHeight:'12px',marginBottom:'20px'}}>

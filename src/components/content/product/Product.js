@@ -83,17 +83,17 @@ export const Product=()=>{
                         <div className="product-menu">
                             <div className="product-menu-div">
                                 <i className="fa fa-bars"></i>
-                                <h4>Menu</h4>
+                                <h4 className="wow slideInDown">Menu</h4>
                             </div>
                             <ul className="product_category">
                                 <li>
-                                    <p>Household Product</p>
+                                    <p className="wow slideInDown">Household Product</p>
                                     <ul className="prod_ctgy_inner">
                                         {houseHold.map((d,i)=><li key={i}><Link to={d.path}>{d.name}</Link></li>)}
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>Cosmetics</p>
+                                    <p className="wow slideInDown">Cosmetics</p>
                                     <ul className="prod_ctgy_inner">
                                         {cosmetics.map((d,i)=><li key={i}><Link to={d.path}>{d.name}</Link></li>)}
                                     </ul>

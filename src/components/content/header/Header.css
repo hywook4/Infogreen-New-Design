@@ -74,7 +74,7 @@
    text-decoration: none;
     color: gray;
 }
-.navbar_router .nav-item ul li a:hover, .navbar_router .nav-item ul li a:active, .navbar_router .nav-item ul li a:active{
+.navbar_router ul li a:hover, .navbar_router ul li a.active, .navbar_router  ul li a:focus{
     color: #32b8a4;
 }
 .navbar_search{
