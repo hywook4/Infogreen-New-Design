@@ -27,7 +27,7 @@ export class ProdSpec extends React.Component{
             star4 : '',
             code: '',
             ewg : {
-                ewg_X: 0,
+                ewg_: 0,
                 ewg_A: 0,
                 ewg_B: 0,
                 ewg_C: 0,
@@ -58,7 +58,7 @@ export class ProdSpec extends React.Component{
                     star4 : itemInfo.data.star4,
                     code: itemInfo.data.code,
                     ewg: {
-                        ewg_X: itemInfo.data.ewg_X,
+                        ewg_: itemInfo.data.ewg_,
                         ewg_A: itemInfo.data.ewg_A,
                         ewg_B: itemInfo.data.ewg_B,
                         ewg_C: itemInfo.data.ewg_C,
@@ -74,7 +74,6 @@ export class ProdSpec extends React.Component{
 
                     .then(res => {
                         this.setState({ingredient_list: res.data})
-                        console.log(this.state.ingredient_list.total);
                     })
             })
             .catch(error => {

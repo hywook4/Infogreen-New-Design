@@ -13,14 +13,16 @@ export const CategoryImg = (props) =>{
                     <div className="row">
                     <div className="col-lg-4 col-md-4 col-sm-12">
                         <div className="sub-ctgy-img">
-                            <img className="img-fluid" src={require('../../../../assets/images/product1.png')} alt=""/>
+                            <a href={`/product-details/${props.name}`}>
+                                <img className="img-fluid" src={`http://13.125.89.0/chemical/item_img/${props.image}`} alt=""/>
+                            </a>
                         </div>
                     </div>
                     <div className="col-lg-8 col-md-8 col-sm-12">
                         <div className="sub-ctgy-desp">
-                            <p>세탁세제</p>
-                            <h4>소네트 (Sonett)</h4>
-                            <h1>소네트 주방세제 카렌듈라</h1>
+                            <p>{props.category}</p>
+                            <h4>{props.brand}</h4>
+                            <h1>{props.name}</h1>
                         </div>
                         <div className="sub-ctgy-rating">
                         <div style={{display:'inline-block',textAlign:'center',lineHeight:'12px',marginBottom:'20px'}}>

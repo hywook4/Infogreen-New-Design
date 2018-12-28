@@ -1,18 +1,78 @@
 import React from 'react';
 import './Category.css';
-import Search from '../../../content/search/Search';
-import {ProductCategory} from '../../navigation/category/ProductCategory';
+import {CategoryImg} from '../category/CategoryImg';
+import axios from 'axios';
 
 export class Category extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
+        this.state = {
+            search: "",
+            result: null,
+        }
+
+        this.onChange = this.onChange.bind(this);
+    }
+
+    onChange = e => {
+        const searchText = e.target.value.trimLeft();
+        this.search(searchText)
+
+        this.setState({
+            search: searchText
+        });
+    };
+
+    search(searchText) {
+        const params = new URLSearchParams();
+        params.append("name", searchText);
+        if (searchText.trim() == '') {
+            this.setState({result: null})
+        } else {
+            axios.post("http://13.125.89.0/chemical/items_limit.php", params)
+                .then(res => {
+                    //console.log(res.data[0]);
+                    this.setState({result: res.data[0]})
+                })
+        }
     }
 
     render(){
-        return(
+        var itemData = null;
+
+        if (this.state.result) {
+            itemData = this.state.result.map(item => (
+                <CategoryImg
+                    image={item.image}
+                    name={item.name}
+                    brand={item.brand}
+                    Category={item.category}
+                />
+            ))
+        } else if (this.state.result == null || Object.isEmpty(this.state.result.length)) {
+            itemData = (<div style={{padding: '150px', textAlign: 'center'}}>검색된 상품이 없습니다</div>)
+        }
+
+        // console.log(itemData);
+        
+
+        return (
             <div className="container">
                 <div className="category_page">
-                    <Search/>
+                    <div className="search-div">
+                        <div className="container">
+                        <div className="search_heading">사용 중이신 브랜드명 혹은, 제품명을 검색하여 유해성분이 있는지 찾아보세요</div>
+                            <div className="search_box">
+                                <input 
+                                    type="text"
+                                    placeholder="총 400,000개의 제품..."
+                                    value={this.state.search}
+                                    onChange={this.onChange}
+                                />
+                                <i className="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
 
                     <div className="category-tabs-div">
                         <div className="row">
@@ -47,16 +107,8 @@ export class Category extends React.Component{
                                                     <li><a data-toggle="pill" href="#other">기타세정제</a></li>
                                                     </div>
                                                 </div>
-                                                   
-                                                   
-                                                    
-                                                    
-                                                    
                                                 </ul>
                                             </div>
-
-
-                                            
                                         </div>
                                         {/* finish household chemical product  */}
                                         {/* cosmetics product */}
@@ -109,7 +161,67 @@ export class Category extends React.Component{
                                 {/* tabs */}
 
                                 <div className="prod-ctgy-tabs">
-                                    <ProductCategory/>
+                                <div className="prod-ctgy-inr-div">
+                                    <div class="tab-content prod-ctgy-tabs">
+                                        
+                                        <div id="other" class="tab-pane active">
+                                            <div className="sub-ctgy-div">
+                                            <h1>Sub category</h1>
+                                                    <ul className="nav nav-tabs ">
+                                                        <li className="active">
+                                                            <a href="#tab_default_1" data-toggle="tab">
+                                                            별점순  </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#tab_default_2" data-toggle="tab">
+                                                            조회순</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#tab_default_3" data-toggle="tab">
+                                                            최신순 </a>
+                                                        </li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div className="prod-highest-category">                                       
+                                        <div className="high-prod-div">
+                                            <div className="high-prod-inr-div">
+                                                <div className="high-prod-heading">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="tab_default_1">
+                                                            <div className="checkbox-div">
+                                                                <div className="custom-control custom-checkbox custom-control-inline">
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline1" />
+                                                                    <label htmlFor="defaultInline1" className="custom-control-label">성분 공개 제품</label>
+                                                                </div>
+                                                                <div className="custom-control custom-checkbox custom-control-inline">
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline2"/>
+                                                                    <label htmlFor="defaultInline2" className="custom-control-label">주의 성분 제외</label>
+                                                                </div>
+                                                                <div className="custom-control custom-checkbox custom-control-inline">
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline3"/>
+                                                                    <label htmlFor="defaultInline3" className="custom-control-label">유해 성분 제외</label>
+                                                                </div>
+                                                                <div className="custom-control custom-checkbox custom-control-inline">
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline4"/>
+                                                                    <label htmlFor="defaultInline4" className="custom-control-label">높은 위험도 성분 제외</label>
+                                                                </div>
+                                                                <div className="custom-control custom-checkbox custom-control-inline">
+                                                                    <input type="checkbox" className="custom-control-input" id="defaultInline5"/>
+                                                                    <label htmlFor="defaultInline5" className="custom-control-label">친환경 인증 제품</label>
+                                                                </div>
+                                                            </div>
+                                                            {itemData}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 </div>
                                 {/* <div class="tab-content">
                                     <div id="laundary" class="tab-pane fade in active">
