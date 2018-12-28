@@ -8,6 +8,8 @@ export class Category extends React.Component{
         super(props);
         this.state = {
             search: "",
+            sort: "",
+            category: "",
             result: null,
         }
 
@@ -16,45 +18,63 @@ export class Category extends React.Component{
 
     onChange = e => {
         const searchText = e.target.value.trimLeft();
-        this.search(searchText)
+        this.search(searchText, null)
 
         this.setState({
             search: searchText
         });
     };
 
-    search(searchText) {
+    onClick = e => {
+        const category = e.target.innerHTML;
+        this.search(null, category);
+
+        this.setState({
+            category
+        })
+    }
+
+    search(searchText, category) {
         const params = new URLSearchParams();
-        params.append("name", searchText);
-        if (searchText.trim() == '') {
-            this.setState({result: null})
-        } else {
-            axios.post("http://13.125.89.0/chemical/items_limit.php", params)
-                .then(res => {
-                    //console.log(res.data[0]);
-                    this.setState({result: res.data[0]})
-                })
+        if (searchText) {
+            params.append("name", searchText);    
         }
+        
+        if (category) {
+            params.append("category", category)
+        }
+
+        
+        axios.post("http://13.125.89.0/chemical/items_limit.php", params)
+            .then(res => {
+                //console.log(res.data[0]);
+                this.setState({result: res.data[0]})
+            })
     }
 
     render(){
         var itemData = null;
-
+        var category = "";
+        var count = 0;
         if (this.state.result) {
+            count = this.state.result.length;
+            console.log(count);
+            
             itemData = this.state.result.map(item => (
                 <CategoryImg
                     image={item.image}
                     name={item.name}
                     brand={item.brand}
-                    Category={item.category}
+                    category={item.category}
                 />
             ))
         } else if (this.state.result == null || Object.isEmpty(this.state.result.length)) {
             itemData = (<div style={{padding: '150px', textAlign: 'center'}}>검색된 상품이 없습니다</div>)
         }
 
-        // console.log(itemData);
-        
+        if (this.state.category != "") {
+            category = this.state.category;
+        }
 
         return (
             <div className="container">
@@ -92,19 +112,19 @@ export class Category extends React.Component{
                                                 <ul className="nav nav-pills">
                                                 <div className="row">
                                                     <div className="col-sm-4">
-                                                    <li className="active"><a data-toggle="pill" href="#laundary">세탁세제</a></li>
+                                                    <li className="active"><a data-toggle="pill" href="#laundary" onClick={this.onClick}>세탁세제</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#fabric">섬유유연제</a></li>
+                                                    <li><a data-toggle="pill" href="#fabric" onClick={this.onClick}>섬유유연제</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#dishwashing">주방세제</a></li>
+                                                    <li><a data-toggle="pill" href="#dishwashing" onClick={this.onClick}>주방세제</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#odor">탈취제</a></li>
+                                                    <li><a data-toggle="pill" href="#odor" onClick={this.onClick}>탈취제</a></li>
                                                     </div>
                                                     <div className="col-sm-4">
-                                                    <li><a data-toggle="pill" href="#other">기타세정제</a></li>
+                                                    <li><a data-toggle="pill" href="#other" onClick={this.onClick}>기타세정제</a></li>
                                                     </div>
                                                 </div>
                                                 </ul>
@@ -119,34 +139,34 @@ export class Category extends React.Component{
                                                     <ul className="nav nav-pills">
                                                         <div className="row">
                                                             <div className="col-sm-4">
-                                                                <li className="active"><a data-toggle="pill" href="#soap">워시</a></li>
+                                                                <li className="active"><a data-toggle="pill" href="#soap" onClick={this.onClick}>워시</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#lotion">로션</a></li>
+                                                                <li><a data-toggle="pill" href="#lotion" onClick={this.onClick}>로션</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#cream">크림</a></li>
+                                                                <li><a data-toggle="pill" href="#cream" onClick={this.onClick}>크림</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#oil">오일</a></li>
+                                                                <li><a data-toggle="pill" href="#oil" onClick={this.onClick}>오일</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#powder">파우더</a></li>
+                                                                <li><a data-toggle="pill" href="#powder" onClick={this.onClick}>파우더</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#hair">헤어</a></li>
+                                                                <li><a data-toggle="pill" href="#hair" onClick={this.onClick}>헤어</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#suncare">선케어</a></li>
+                                                                <li><a data-toggle="pill" href="#suncare" onClick={this.onClick}>선케어</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#babywipes">물티슈</a></li>
+                                                                <li><a data-toggle="pill" href="#babywipes" onClick={this.onClick}>물티슈</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#handsanitizer">손세정제</a></li>
+                                                                <li><a data-toggle="pill" href="#handsanitizer" onClick={this.onClick}>손세정제</a></li>
                                                             </div>
                                                             <div className="col-sm-4">
-                                                                <li><a data-toggle="pill" href="#othercosmetics">기타화장품</a></li>
+                                                                <li><a data-toggle="pill" href="#othercosmetics" onClick={this.onClick}>기타화장품</a></li>
                                                             </div>
                                                 </div>
                                                     </ul>
@@ -166,7 +186,7 @@ export class Category extends React.Component{
                                         
                                         <div id="other" class="tab-pane active">
                                             <div className="sub-ctgy-div">
-                                            <h1>Sub category</h1>
+                                            <h1>{category}</h1>
                                                     <ul className="nav nav-tabs ">
                                                         <li className="active">
                                                             <a href="#tab_default_1" data-toggle="tab">
