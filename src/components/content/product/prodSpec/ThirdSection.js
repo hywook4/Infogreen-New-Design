@@ -9,31 +9,31 @@ export const ThirdSection = (props)=>{
             <div className="row col-md-12">
                 <h3 style={{color:'#666666',marginBottom:30,fontSize:'18px'}}>
                     <i style={{fontSize:'18px',color:'#b3b3b3',marginRight:10}} className="fa fa-heart"></i> 
-                    Section Title
+                    베스트 리뷰
                 </h3>
             </div>
             <div className="col-md-4 row">
                 <i className="fa fa-user-circle-o userInsignia"></i>
                 <span style={{textAlign:'center',display:'inline-block',lineHeight:'18px',paddingTop:'10px',borderRight:'2px solid grey',marginRight:15,paddingRight:15}}>
-                    <b style={{fontSize:'18px'}}>lorem</b><br/>
-                    <span style={{fontSize:'10px',color:'#666666'}}>sub / head</span>
+                    <b style={{fontSize:'18px'}}>홍길동</b><br/>
+                    <span style={{fontSize:'10px',color:'#666666'}}>남자 / 30대</span>
                 </span> 
                 <span style={{display:'inline-block',lineHeight:'18px',paddingTop:'10px'}}>
-                    ipsum<br/>
-                    <span style={{fontSize:'10px',color:'#666666'}}>lipsum</span>
+                    자녀<br/>
+                    <span style={{fontSize:'10px',color:'#666666'}}>사용기간</span>
                 </span> 
                 <span style={{marginLeft:5,textAlign:'center',display:'inline-block',lineHeight:'18px',paddingTop:'10px'}}>
-                    Nulla<br/>
-                    <span style={{fontSize:'10px',color:'#666666'}}>dolore</span>
+                    3~5살<br/>
+                    <span style={{fontSize:'10px',color:'#666666'}}>1년이상</span>
                 </span>    
                     
             </div>
             <div className="col-md-12" style={{marginBottom:'10px'}}>&nbsp;</div>
                 <div className="col-md-5 row">
-                    <RatingRow config={{selected:3,text:'dolore',hideSubHeading:true}} />
-                    <RatingRow config={{selected:4,text:'nulla',hideSubHeading:true}} />
-                    <RatingRow config={{selected:5,text:'fusica',hideSubHeading:true}} />
-                    <RatingRow config={{selected:2,text:'lorem',hideSubHeading:true}} />
+                    <RatingRow config={{selected:3,text:'기능력',hideSubHeading:true}} />
+                    <RatingRow config={{selected:4,text:'자극성',hideSubHeading:true}} />
+                    <RatingRow config={{selected:5,text:'제품향',hideSubHeading:true}} />
+                    <RatingRow config={{selected:2,text:'가성비',hideSubHeading:true}} />
                 </div>
 
                 <div className="col-md-7 imageCollection-second">

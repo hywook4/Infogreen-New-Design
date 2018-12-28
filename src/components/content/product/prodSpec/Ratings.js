@@ -16,9 +16,9 @@ export const RatingRow = (props)=>{
     return(
         <div className="prod_ratings row" style={{borderBottom:config.border?'2px solid #c1bfbf':'0px',marginBottom:(config.border?20:0)}}>
         { !config.removePadding && 
-            <p className="col-md-3" style={{textAlign:'center',lineHeight:'14px'}}>
+            <p className="col-md-3" style={{textAlign:'right',lineHeight:'14px'}}>
                 <span style={{fontSize:14,fontWeight:(!config.hideSubHeading?'bold':'normal')}}>{config.text}</span><br/>
-                {!config.hideSubHeading && <span style={{fontSize:'10px',color:'rgb(156, 156, 156)'}}>(fusica)</span>}
+                {!config.hideSubHeading && <span style={{fontSize:'14px',color:'rgb(156, 156, 156)'}}>(5명)</span>}
             </p>
         }
         <div className="col-md-9">

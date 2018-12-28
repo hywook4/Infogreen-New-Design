@@ -171,7 +171,7 @@ export class ProdSpec extends React.Component{
                                     <div className="prod-rt_div_inr-1">
                                     <img className="img-fluid" src={require('../../../../assets/images/icons/icon2.png')} alt=""/>
                                         {/* <i className="fa fa-heart" aria-hidden="true"></i> */}
-                                        <p>성분 공개가 잘되어 있어요!</p>
+                                        <p>성분 공개가 <br/> 잘되어 있어요!</p>
                                     </div>
                                     <div className="prod-rt_div_inr">
                                         <i className="fa fa-heart" aria-hidden="true"></i>
@@ -180,7 +180,7 @@ export class ProdSpec extends React.Component{
                                     <div className="prod-rt_div_inr-1">
                                     <img className="img-fluid" src={require('../../../../assets/images/icons/people-icon.png')} alt=""/>
                                         {/* <i className="fa fa-heart" aria-hidden="true"></i> */}
-                                        <p>성분 공개가 잘되어 있어요!</p>
+                                        <p>120명</p>
                                     </div>
                                 </div>
                                 {/* <div className="prod_addn"> */}

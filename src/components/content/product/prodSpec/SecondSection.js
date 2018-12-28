@@ -8,22 +8,22 @@ export const SecondSection = (props)=>{
             <div className="col-md-12" style={{paddingLeft:'150px'}}>
                         <div className="prod_heading" style={{width:'auto',margin:'auto',marginBottom:30}}>
                             <span className="dot" style={{background:'#60b3a2'}}></span>
-                            <h2>Lorem Ipsum</h2>
+                            <h2>제품리뷰</h2>
                         </div>
                     </div>
                     <div className="col-md-12" style={{backgroundColor:'#ddf3f0',paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>
                         <div className="row" style={{marginLeft:'150px'}}>
                             <div className="col-md-4 row">
                                 <RatingRow config={{selected:4,border:true,text:'4.0'}} />
-                                <RatingRow config={{selected:5,text:'dolore',hideSubHeading:true}} />
-                                <RatingRow config={{selected:2,text:'nulla',hideSubHeading:true}} />
-                                <RatingRow config={{selected:3,text:'fusica',hideSubHeading:true}} />
-                                <RatingRow config={{selected:4,text:'lorem',hideSubHeading:true}} />
+                                <RatingRow config={{selected:5,text:'기능력',hideSubHeading:true}} />
+                                <RatingRow config={{selected:2,text:'자극성',hideSubHeading:true}} />
+                                <RatingRow config={{selected:3,text:'제품향  ',hideSubHeading:true}} />
+                                <RatingRow config={{selected:4,text:'가성비',hideSubHeading:true}} />
                             </div>
 
                             <div className="col-md-8 imageCollection">
                             <div style={{textAlign:'right',marginBottom:20}}>
-                                <a href="#" style={{color:'#60b3a2'}}>More <i className="fa fa-chevron-right"></i></a> <br/>
+                                <a href="#" style={{color:'#60b3a2'}}>더보기 <i className="fa fa-chevron-right"></i></a> <br/>
                             </div>
                             <div style={{position:'relative'}}>
                                 <div className="imageContent-150">

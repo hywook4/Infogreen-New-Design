@@ -33,9 +33,9 @@ export default class DoughnutGraph extends React.Component{
                     '정보없음 (중간위험)',
                     '매우 낮은 위험',
                     '낮은 위험',
-                    '#높은 위험',
-                    '#높은 위험',
-                    '#매우 높은 위험'
+                    '높은 위험',
+                    '높은 위험',
+                    '매우 높은 위험'
                 ]
         }
     }
