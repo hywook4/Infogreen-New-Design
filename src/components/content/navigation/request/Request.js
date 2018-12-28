@@ -20,7 +20,7 @@ export class Request extends React.Component{
                  
                     <div>
                         <div className="login-btn request-user">
-                            <h1 className="wow slideInDown">User</h1>
+                            <h1>User</h1>
                             
                         </div>
                         <div className="user-req-page">

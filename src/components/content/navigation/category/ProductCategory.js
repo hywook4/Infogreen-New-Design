@@ -9,7 +9,7 @@ export class ProductCategory extends React.Component{
                 <div class="tab-content prod-ctgy-inr-tabs">
                     <div id="laundary" className="tab-pane show active">
                         <div className="sub-ctgy-div">
-                            <h1 className="wow slideInDown">Sub category</h1>
+                            <h1>Sub category</h1>
                             <ul className="nav nav-tabs">
                                 <li className="active">
                                     <a href="#tab_default_1" data-toggle="tab">
@@ -30,7 +30,7 @@ export class ProductCategory extends React.Component{
                     </div>
                     <div id="fabric" className="tab-pane fade">
                     <div className="sub-ctgy-div">
-                    <h1 className="wow slideInDown">Sub category</h1>
+                    <h1>Sub category</h1>
                             <ul className="nav nav-tabs">
                                 <li className="active">
 
@@ -51,7 +51,7 @@ export class ProductCategory extends React.Component{
                     </div>
                     <div id="dishwashing" className="tab-pane fade">
                     <div className="sub-ctgy-div">
-                    <h1 className="wow zoomInDown">Sub category</h1>
+                    <h1>Sub category</h1>
                             <ul className="nav nav-tabs ">
                                 <li className="active">
                                     <a href="#tab_default_1" data-toggle="tab">
@@ -70,7 +70,7 @@ export class ProductCategory extends React.Component{
                     </div>
                     <div id="odor" className="tab-pane fade">
                         <div className="sub-ctgy-div">
-                        <h1 className="wow zoomInDown">Sub category</h1>
+                        <h1>Sub category</h1>
                                 <ul className="nav nav-tabs ">
                                     <li className="active">
                                         <a href="#tab_default_1" data-toggle="tab">
@@ -89,7 +89,7 @@ export class ProductCategory extends React.Component{
                     </div>
                     <div id="other" className="tab-pane fade">
                         <div className="sub-ctgy-div">
-                        <h1 className="wow zoomInDown">Sub category</h1>
+                        <h1>Sub category</h1>
                                 <ul className="nav nav-tabs">
                                     <li className="active">
                                         <a href="#tab_default_1" data-toggle="tab">

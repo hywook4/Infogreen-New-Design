@@ -10,21 +10,21 @@ export const TipEvent = ()=>{
                         <div className="col-lg-6 col-md-6 col-sm-12 tip-event-inner">
                             <div className="tip-heading">
                             <i className="fa fa-heart" aria-hidden="true"></i>
-                            <h4 className="wow slideInDown">Tips</h4>
+                            <h4>Tips</h4>
                             </div>
                             <div className="tip-img">
-                                <img src={require('../../../assets/images/tips-img-home.jpg')} className="wow zoomIn img-responsive adjust" alt=""/>
+                                <img src={require('../../../assets/images/tips-img-home.jpg')} className="img-responsive adjust" alt=""/>
                             </div>
                             {/* <img src="" alt=""/> */}
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 tip-event-inner">
                         <div className="tip-heading">
                             <i className="fa fa-heart" aria-hidden="true"></i>
-                            <h4 className="wow slideInDown">Events</h4>
+                            <h4>Events</h4>
                             </div>
                             {/* <img src="" alt=""/> */}
                             <div className="tip-img">
-                                <img  src={require('../../../assets/images/events-img-home.jpg')} className="wow zoomIn img-responsive adjust" alt=""/>
+                                <img  src={require('../../../assets/images/events-img-home.jpg')} className="img-responsive adjust" alt=""/>
                             </div>
                         </div>
                     </div>

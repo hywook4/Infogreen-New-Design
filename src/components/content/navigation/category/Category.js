@@ -19,7 +19,7 @@ export class Category extends React.Component{
                             <div className="col-lg-12 col-md-12 col-sm-12">
                             {/* ctgy heading */}
                                 <div className="ctgy-heading">
-                                    <h4 className="wow slideInDown">Category</h4>
+                                    <h4>Category</h4>
                                     <i class="fa fa-chevron-down"></i>
                                 </div>
                                 {/* finish ctgy heading */}
@@ -28,7 +28,7 @@ export class Category extends React.Component{
                                     {/* household chemical product */}
                                         <div className="col-lg-6 col-md-6 col-sm-12">
                                             <div className="ctgy-chemical-div">
-                                                <h4 className="wow slideInDown">Household chemical product</h4>
+                                                <h4>Household chemical product</h4>
                                                 <ul className="nav nav-pills" role="tablist">
                                                 
                                                     <li className="chmical-tab-ctgy nav-item"><a className="nav-link active" data-toggle="pill" href="#laundary">Laundary</a></li>
@@ -50,7 +50,7 @@ export class Category extends React.Component{
                                         <div className="col-lg-6 col-md-6 col-sm-12">
                                             <div className="ctgy-cosmetics-div">
                                               
-                                                    <h4 className="wow slideInDown">Cosmetics product</h4>
+                                                    <h4>Cosmetics product</h4>
                                                     <ul className="nav nav-pills" role="tablist">
                                                      
                                                                 <li className="chmical-tab-ctgy nav-item"><a className="nav-link active" data-toggle="pill" href="#soap">Soap</a></li>

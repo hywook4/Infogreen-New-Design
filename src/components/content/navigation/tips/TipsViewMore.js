@@ -19,10 +19,10 @@ export class TipsViewMore extends React.Component {
                                 <div className="container-viewmore">
                                     <div className="tipsmore-heading">
                                         <span className="dot"></span>
-                                        <h4 className="wow slideInDown">Some Title</h4>
+                                        <h4>Some Title</h4>
                                     </div>    
                                         <div className="sub-head">
-                                            <p className="wow slideInDown">Some another text below the title</p>
+                                            <p>Some another text below the title</p>
                                             <p className="tips-sub-para">2018/00/00</p>
                                         </div>
                                 </div>
@@ -39,7 +39,7 @@ export class TipsViewMore extends React.Component {
                                 <DescriptionSlider /> 
                                 <div className="row">
                                     <div className="col-md-10 tips-cmnt-inr-div">
-                                        <h6 className="wow zoomInDown"><b>Some Text</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>2018/00/00</span></h6>
+                                        <h6><b>Some Text</b>&nbsp;&nbsp;&nbsp;&nbsp;<span>2018/00/00</span></h6>
                                         
                                         <Form>
                                             <TextArea className="tips-textarea" placeholder='Tell us more' rows="3"/>
@@ -60,10 +60,3 @@ export class TipsViewMore extends React.Component {
 }
 
 
- {/* description slider */}
-                             {/* <div className="row">
-                                    <div className="col-md-12">
-                                        <DescriptionSlider />    
-                                    </div>
-                                </div> */}
-                                {/* finish description slider */}

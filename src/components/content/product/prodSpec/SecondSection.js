@@ -8,7 +8,7 @@ export const SecondSection = (props)=>{
             <div className="col-md-12" style={{paddingLeft:'150px'}}>
                         <div className="prod_heading" style={{width:'auto',margin:'auto',marginBottom:30}}>
                             <span className="dot" style={{background:'#60b3a2'}}></span>
-                            <h2 className="wow slideInDown">Lorem Ipsum</h2>
+                            <h2>Lorem Ipsum</h2>
                         </div>
                     </div>
                     <div className="col-md-12" style={{backgroundColor:'#ddf3f0',paddingTop:'40px',paddingBottom:'40px',paddingRight:'150px',paddingLeft:'150px'}}>

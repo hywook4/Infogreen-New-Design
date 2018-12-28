@@ -16,8 +16,8 @@ export const Tips = () => {
 
                 <div className="col-md-2 tipsBannnerOne">
                     <div className="tip-bnr-inr" style={{position: 'absolute', bottom: 15}}>
-                        <h5 className="wow slideInDown"><b>Product Name</b></h5>
-                        <p className="wow slideInDown">Some Related Text</p>
+                        <h5><b>Product Name</b></h5>
+                        <p>Some Related Text</p>
                         <h6><Link to='#'>See more
                         <i class="fa fa-angle-right"></i>
                         </Link></h6>

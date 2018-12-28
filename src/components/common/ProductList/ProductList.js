@@ -26,7 +26,7 @@ export class ProductList extends React.Component {
             <div className={styles.productHeading}>
                 <div className="tip-heading">
                     <i className="fa fa-heart" aria-hidden="true"></i>
-                    <h4 className="wow slideInDown">{this.props.category}</h4>
+                    <h4>{this.props.category}</h4>
                 </div>
                 <div className={styles.rightDiv}>
                     <div className="row">

@@ -14,7 +14,7 @@ export class Login extends React.Component{
                     <LoginSignupProfile/>
                     <div>
                         <div className="login-btn">
-                            <p className="wow slideInDown">Please Login</p>
+                            <p>Please Login</p>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
                         </div>
                     </div>

@@ -17,7 +17,7 @@ import {RequestComment} from './content/navigation/request/requestComment/Reques
 import {TipsViewMore} from './content/navigation/tips/TipsViewMore';
 import {ProdSpec as ProductSpecification} from './content/product/prodSpec/ProdSpec';
 // import {Animated} from 'animated.css';
-import WOW from '../../node_modules/wow.js/dist/wow';
+// import WOW from '../../node_modules/wow.js/dist/wow';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route} from "react-router-dom";
@@ -46,10 +46,10 @@ const renderHome=()=>{
 }
 
 export class MainPage extends React.Component{
-    componentDidMount(){
-        // new WOW.WOW().init();
-        new WOW().init();
-    }
+    // componentDidMount(){
+    //     // new WOW.WOW().init();
+    //     new WOW().init();
+    // }
     render(){
     return(
         

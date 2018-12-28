@@ -59,4 +59,4 @@ export default class DoughnutGraph extends React.Component{
     );
 }
 }
-// export = DoughnutGraph;
+
