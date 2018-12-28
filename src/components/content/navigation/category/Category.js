@@ -71,8 +71,6 @@ export class Category extends React.Component{
         if (check) {
             params.append("check", check);
         }
-
-
         
         axios.post("http://13.125.89.0/chemical/items_limit.php", params)
             .then(res => {

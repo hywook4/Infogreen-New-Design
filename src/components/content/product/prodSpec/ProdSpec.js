@@ -360,7 +360,7 @@ export class ProdSpec extends React.Component{
                                         <p>자가검사번호: {this.state.code}</p>
                                     </div>
                                     <div className="desp-greenery-img">
-                                        <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
+                                        <img src={require('../../../../assets/images/icons/epa-usa.png')} alt=""/>
                                     </div>
                                     <div className="desp-greenery-rslt">
                                         <h1>Greenery Description Result</h1>

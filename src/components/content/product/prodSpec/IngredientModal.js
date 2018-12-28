@@ -23,14 +23,14 @@ export const IngredientModal = ()=>{
                     </div>
                     <p className="modal-para">주의성분</p>
                     <div className="popup-icon-level">
-                        <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
+                        <img src={require('../../../../assets/images/icons/epa-usa.png')} alt=""/>
                         <p>미 환경보호 (EPA): 유해성 논란 성분</p>
                     </div>
                     <div className="popup-category">
                         <p className="modal-para">유해성분</p>
                     </div>
                     <div className="popup-icon-level">
-                        <img src={require('../../../../assets/images/icons/icon1.png')} alt=""/>
+                        <img src={require('../../../../assets/images/icons/epa-usa.png')} alt=""/>
                         <p>국내 유해화학물질: 유독물질</p>
                     </div>
                     <div className="popup-category">

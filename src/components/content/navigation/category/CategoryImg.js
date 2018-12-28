@@ -26,7 +26,7 @@ export const CategoryImg = (props) =>{
                         </div>
                         <div className="sub-ctgy-rating">
                         <div style={{display:'inline-block',textAlign:'center',lineHeight:'12px',marginBottom:'20px'}}>
-                            <img style={props.imgStyle||{maxWidth:'40px'}} src={require('../../../../assets/images/icons/icon-ef.png')} alt=""/>
+                            <img style={props.imgStyle||{maxWidth:'40px'}} src={require('../../../../assets/images/icons/epa-usa.png')} alt=""/>
                             <br/>
                             <span style={{color:'grey',fontWeight:'bold',fontSize:10}}>친환경 인증</span>
                         </div>
