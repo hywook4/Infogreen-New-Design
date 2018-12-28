@@ -18,7 +18,7 @@ export class Category extends React.Component{
 
     onChange = e => {
         const searchText = e.target.value.trimLeft();
-        this.search(searchText, null)
+        this.search(searchText, this.state.category)
 
         this.setState({
             search: searchText
@@ -27,11 +27,15 @@ export class Category extends React.Component{
 
     onClick = e => {
         const category = e.target.innerHTML;
-        this.search(null, category);
+        this.search(this.state.search, category);
 
         this.setState({
             category
         })
+    }
+
+    onSort = e => {
+        const sort = e.target.name;
     }
 
     search(searchText, category) {
@@ -193,11 +197,11 @@ export class Category extends React.Component{
                                                             별점순  </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#tab_default_2" data-toggle="tab">
+                                                            <a href="#tab_default_2" data-toggle="tab" name="">
                                                             조회순</a>
                                                         </li>
                                                         <li>
-                                                            <a href="#tab_default_3" data-toggle="tab">
+                                                            <a href="#tab_default_3" data-toggle="tab" name="dateTime">
                                                             최신순 </a>
                                                         </li>
                                                     </ul>
